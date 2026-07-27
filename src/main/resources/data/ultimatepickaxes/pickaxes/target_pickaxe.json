@@ -1,0 +1,26 @@
+{
+  "id": "target_pickaxe",
+  "displayName": "Target Pickaxe",
+  "ingredient": "minecraft:target",
+  "durability": 600,
+  "miningSpeed": 7.0,
+  "attackDamage": 4.0,
+  "rarity": "UNCOMMON",
+  "cooldown": 30,
+  "tooltip": "Auto-locks onto the nearest enemy and fires an ethereal projectile.",
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "sonic_boom",
+        "effects": {
+          "sound": "entity.arrow.shoot",
+          "hudMessage": "§c🎯 Bullseye Projectile Fired!"
+        },
+        "params": {
+          "range": 16.0,
+          "damage": 8.0
+        }
+      }
+    ]
+  }
+}

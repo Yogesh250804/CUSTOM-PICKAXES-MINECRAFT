@@ -1,0 +1,27 @@
+{
+  "id": "ice_pickaxe",
+  "displayName": "Ice Pickaxe",
+  "ingredient": "minecraft:packed_ice",
+  "durability": 800,
+  "miningSpeed": 9.0,
+  "attackDamage": 4.0,
+  "rarity": "UNCOMMON",
+  "cooldown": 50,
+  "tooltip": "Erupts an icy blast freezing surrounding water and encasing mobs.",
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "freeze",
+        "effects": {
+          "sound": "block.glass.break",
+          "particle": "minecraft:snowflake",
+          "hudMessage": "§b❄️ Frost Nova Burst!"
+        },
+        "params": {
+          "radius": 7,
+          "duration": 120
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "terracotta_pickaxe",
+  "displayName": "Terracotta Pickaxe",
+  "ingredient": "minecraft:terracotta",
+  "durability": 900,
+  "miningSpeed": 8.0,
+  "attackDamage": 4.0,
+  "rarity": "UNCOMMON",
+  "cooldown": 40,
+  "tooltip": "Spawns a multi-patterned clay wall blocking incoming attacks.",
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "bridge",
+        "effects": {
+          "sound": "block.stone.place",
+          "hudMessage": "§6🧱 Clay Wall Spawns!"
+        },
+        "params": {
+          "material": "minecraft:terracotta",
+          "width": 3,
+          "length": 4
+        }
+      }
+    ]
+  }
+}

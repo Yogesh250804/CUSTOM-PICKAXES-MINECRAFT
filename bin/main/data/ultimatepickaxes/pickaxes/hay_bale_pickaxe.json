@@ -1,0 +1,26 @@
+{
+  "id": "hay_bale_pickaxe",
+  "displayName": "Hay Bale Pickaxe",
+  "ingredient": "minecraft:hay_block",
+  "durability": 400,
+  "miningSpeed": 5.0,
+  "attackDamage": 2.0,
+  "rarity": "COMMON",
+  "cooldown": 30,
+  "tooltip": "Launches a tumbling hay roll that knocks back mobs with high force.",
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "push_entities",
+        "effects": {
+          "sound": "block.crop.break",
+          "hudMessage": "§e🌾 Farm Rampage!"
+        },
+        "params": {
+          "radius": 6,
+          "force": 2.0
+        }
+      }
+    ]
+  }
+}

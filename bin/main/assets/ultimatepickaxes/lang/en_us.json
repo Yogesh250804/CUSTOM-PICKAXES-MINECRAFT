@@ -29,5 +29,26 @@
   "item.ultimatepickaxes.emerald_pickaxe": "Emerald Pickaxe",
   "item.ultimatepickaxes.prismarine_pickaxe": "Prismarine Pickaxe",
   "item.ultimatepickaxes.end_stone_pickaxe": "End Stone Pickaxe",
-  "item.ultimatepickaxes.shulker_pickaxe": "Shulker Pickaxe"
+  "item.ultimatepickaxes.shulker_pickaxe": "Shulker Pickaxe",
+
+  "item.ultimatepickaxes.beacon_pickaxe": "Beacon Pickaxe",
+  "item.ultimatepickaxes.bookshelf_pickaxe": "Bookshelf Pickaxe",
+  "item.ultimatepickaxes.copper_pickaxe": "Copper Pickaxe",
+  "item.ultimatepickaxes.ender_chest_pickaxe": "Ender Chest Pickaxe",
+  "item.ultimatepickaxes.bedrock_pickaxe": "Bedrock Pickaxe",
+  "item.ultimatepickaxes.crying_obsidian_pickaxe": "Crying Obsidian Pickaxe",
+  "item.ultimatepickaxes.hay_bale_pickaxe": "Hay Bale Pickaxe",
+  "item.ultimatepickaxes.ice_pickaxe": "Ice Pickaxe",
+  "item.ultimatepickaxes.moss_pickaxe": "Moss Pickaxe",
+  "item.ultimatepickaxes.nylium_pickaxe": "Nylium Pickaxe",
+  "item.ultimatepickaxes.prismarine_bricks_pickaxe": "Prismarine Bricks Pickaxe",
+  "item.ultimatepickaxes.purpur_pickaxe": "Purpur Pickaxe",
+  "item.ultimatepickaxes.quartz_pickaxe": "Quartz Pickaxe",
+  "item.ultimatepickaxes.soul_sand_pickaxe": "Soul Sand Pickaxe",
+  "item.ultimatepickaxes.target_pickaxe": "Target Pickaxe",
+  "item.ultimatepickaxes.terracotta_pickaxe": "Terracotta Pickaxe",
+  "item.ultimatepickaxes.warped_pickaxe": "Warped Pickaxe",
+  "item.ultimatepickaxes.wool_pickaxe": "Wool Pickaxe",
+  "item.ultimatepickaxes.bone_pickaxe": "Bone Pickaxe",
+  "item.ultimatepickaxes.enchanting_table_pickaxe": "Enchanting Table Pickaxe"
 }

@@ -1,0 +1,24 @@
+{
+  "id": "copper_pickaxe",
+  "displayName": "Copper Pickaxe",
+  "ingredient": "minecraft:copper_block",
+  "durability": 800,
+  "miningSpeed": 7.5,
+  "attackDamage": 3.5,
+  "rarity": "UNCOMMON",
+  "cooldown": 40,
+  "tooltip": "Conducts electrical charges, striking target blocks with lightning.",
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "summon_lightning",
+        "effects": {
+          "sound": "item.trident.thunder",
+          "screenShake": { "intensity": 0.8, "duration": 15 },
+          "hudMessage": "§e⚡ Lightning Rod Strike!"
+        },
+        "params": {}
+      }
+    ]
+  }
+}

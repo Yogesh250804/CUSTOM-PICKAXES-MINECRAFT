@@ -1,0 +1,27 @@
+{
+  "id": "purpur_pickaxe",
+  "displayName": "Purpur Pickaxe",
+  "ingredient": "minecraft:purpur_block",
+  "durability": 1600,
+  "miningSpeed": 10.0,
+  "attackDamage": 5.5,
+  "rarity": "RARE",
+  "cooldown": 60,
+  "tooltip": "Reverses gravity for mobs in area, sending them floating into outer space.",
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "status_effect",
+        "effects": {
+          "sound": "entity.shulker.bullet.hit",
+          "hudMessage": "§d🔮 Gravity Shift Active!"
+        },
+        "params": {
+          "effectId": "minecraft:levitation",
+          "duration": 100,
+          "amplifier": 2
+        }
+      }
+    ]
+  }
+}

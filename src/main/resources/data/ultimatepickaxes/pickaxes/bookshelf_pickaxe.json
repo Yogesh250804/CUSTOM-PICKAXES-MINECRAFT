@@ -1,0 +1,27 @@
+{
+  "id": "bookshelf_pickaxe",
+  "displayName": "Bookshelf Pickaxe",
+  "ingredient": "minecraft:bookshelf",
+  "durability": 600,
+  "miningSpeed": 7.0,
+  "attackDamage": 3.0,
+  "rarity": "UNCOMMON",
+  "cooldown": 50,
+  "tooltip": "Casts glowing arcane runes that disarm surrounding hostiles.",
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "push_entities",
+        "effects": {
+          "sound": "block.enchantment_table.use",
+          "particle": "minecraft:enchant",
+          "hudMessage": "§d📖 Spell Glyph Burst!"
+        },
+        "params": {
+          "radius": 8,
+          "force": 1.6
+        }
+      }
+    ]
+  }
+}

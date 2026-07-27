@@ -23,7 +23,14 @@ public class PickaxeJsonLoader {
         "glowstone_pickaxe.json", "netherite_pickaxe.json", "apple_pickaxe.json", "pumpkin_pickaxe.json",
         "cake_pickaxe.json", "sand_pickaxe.json", "gravel_pickaxe.json", "sculk_pickaxe.json",
         "wood_pickaxe.json", "lapis_pickaxe.json", "emerald_pickaxe.json", "prismarine_pickaxe.json",
-        "end_stone_pickaxe.json", "shulker_pickaxe.json"
+        "end_stone_pickaxe.json", "shulker_pickaxe.json",
+
+        // 20 NEW Pickaxes
+        "beacon_pickaxe.json", "bookshelf_pickaxe.json", "copper_pickaxe.json", "ender_chest_pickaxe.json",
+        "bedrock_pickaxe.json", "crying_obsidian_pickaxe.json", "hay_bale_pickaxe.json", "ice_pickaxe.json",
+        "moss_pickaxe.json", "nylium_pickaxe.json", "prismarine_bricks_pickaxe.json", "purpur_pickaxe.json",
+        "quartz_pickaxe.json", "soul_sand_pickaxe.json", "target_pickaxe.json", "terracotta_pickaxe.json",
+        "warped_pickaxe.json", "wool_pickaxe.json", "bone_pickaxe.json", "enchanting_table_pickaxe.json"
     };
 
     public static List<PickaxeDefinition> loadAll() {

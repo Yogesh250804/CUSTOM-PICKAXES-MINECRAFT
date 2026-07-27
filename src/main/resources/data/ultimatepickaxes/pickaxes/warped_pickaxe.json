@@ -1,0 +1,27 @@
+{
+  "id": "warped_pickaxe",
+  "displayName": "Warped Pickaxe",
+  "ingredient": "minecraft:warped_stem",
+  "durability": 1100,
+  "miningSpeed": 9.5,
+  "attackDamage": 4.5,
+  "rarity": "RARE",
+  "cooldown": 40,
+  "tooltip": "Blinks player forward leaving cyan warped particle trails.",
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "teleport",
+        "effects": {
+          "sound": "entity.enderman.teleport",
+          "particle": "minecraft:glow",
+          "hudMessage": "§3✨ Warped Teleport!"
+        },
+        "params": {
+          "distance": 10.0,
+          "random": false
+        }
+      }
+    ]
+  }
+}

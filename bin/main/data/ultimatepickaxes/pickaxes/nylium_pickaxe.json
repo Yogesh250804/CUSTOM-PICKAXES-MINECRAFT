@@ -1,0 +1,26 @@
+{
+  "id": "nylium_pickaxe",
+  "displayName": "Nylium Pickaxe",
+  "ingredient": "minecraft:crimson_nylium",
+  "durability": 900,
+  "miningSpeed": 8.5,
+  "attackDamage": 4.5,
+  "rarity": "RARE",
+  "cooldown": 50,
+  "tooltip": "Releases toxic Nether crimson spores blinding and burning hostiles.",
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "burn",
+        "effects": {
+          "sound": "block.nylium.place",
+          "hudMessage": "§c🔥 Nether Spores Burst!"
+        },
+        "params": {
+          "radius": 6,
+          "duration": 5
+        }
+      }
+    ]
+  }
+}

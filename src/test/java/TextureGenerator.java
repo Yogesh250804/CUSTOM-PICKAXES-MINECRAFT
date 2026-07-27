@@ -15,6 +15,7 @@ public class TextureGenerator {
         texturesDir.mkdirs();
 
         Map<String, Color[]> pickaxeColors = new HashMap<>();
+        // Original 30
         pickaxeColors.put("dirt_pickaxe", new Color[]{new Color(134, 96, 67), new Color(87, 61, 38), new Color(175, 128, 91)});
         pickaxeColors.put("cobblestone_pickaxe", new Color[]{new Color(120, 120, 120), new Color(80, 80, 80), new Color(160, 160, 160)});
         pickaxeColors.put("tnt_pickaxe", new Color[]{new Color(219, 57, 43), new Color(168, 36, 24), new Color(245, 245, 245)});
@@ -46,6 +47,28 @@ public class TextureGenerator {
         pickaxeColors.put("end_stone_pickaxe", new Color[]{new Color(222, 224, 162), new Color(170, 172, 110), new Color(245, 247, 195)});
         pickaxeColors.put("shulker_pickaxe", new Color[]{new Color(151, 103, 153), new Color(95, 60, 97), new Color(195, 145, 198)});
 
+        // 20 NEW Pickaxes
+        pickaxeColors.put("beacon_pickaxe", new Color[]{new Color(110, 225, 240), new Color(40, 140, 160), new Color(220, 255, 255)});
+        pickaxeColors.put("bookshelf_pickaxe", new Color[]{new Color(160, 105, 55), new Color(100, 60, 30), new Color(210, 160, 90)});
+        pickaxeColors.put("copper_pickaxe", new Color[]{new Color(195, 108, 77), new Color(135, 68, 45), new Color(235, 158, 127)});
+        pickaxeColors.put("ender_chest_pickaxe", new Color[]{new Color(32, 54, 56), new Color(15, 28, 30), new Color(60, 180, 140)});
+        pickaxeColors.put("bedrock_pickaxe", new Color[]{new Color(50, 50, 50), new Color(25, 25, 25), new Color(85, 85, 85)});
+        pickaxeColors.put("crying_obsidian_pickaxe", new Color[]{new Color(78, 26, 120), new Color(38, 8, 65), new Color(165, 75, 235)});
+        pickaxeColors.put("hay_bale_pickaxe", new Color[]{new Color(205, 175, 40), new Color(145, 115, 20), new Color(245, 215, 80)});
+        pickaxeColors.put("ice_pickaxe", new Color[]{new Color(145, 200, 255), new Color(85, 140, 205), new Color(215, 240, 255)});
+        pickaxeColors.put("moss_pickaxe", new Color[]{new Color(90, 130, 45), new Color(55, 85, 25), new Color(140, 185, 75)});
+        pickaxeColors.put("nylium_pickaxe", new Color[]{new Color(185, 30, 40), new Color(115, 15, 20), new Color(245, 80, 90)});
+        pickaxeColors.put("prismarine_bricks_pickaxe", new Color[]{new Color(100, 170, 155), new Color(60, 115, 100), new Color(155, 215, 200)});
+        pickaxeColors.put("purpur_pickaxe", new Color[]{new Color(170, 125, 170), new Color(110, 75, 110), new Color(215, 175, 215)});
+        pickaxeColors.put("quartz_pickaxe", new Color[]{new Color(235, 230, 225), new Color(185, 175, 165), new Color(255, 255, 255)});
+        pickaxeColors.put("soul_sand_pickaxe", new Color[]{new Color(85, 62, 50), new Color(45, 30, 20), new Color(125, 95, 80)});
+        pickaxeColors.put("target_pickaxe", new Color[]{new Color(225, 215, 195), new Color(185, 30, 30), new Color(255, 255, 255)});
+        pickaxeColors.put("terracotta_pickaxe", new Color[]{new Color(150, 90, 60), new Color(100, 55, 35), new Color(200, 130, 95)});
+        pickaxeColors.put("warped_pickaxe", new Color[]{new Color(45, 145, 145), new Color(20, 90, 90), new Color(90, 200, 190)});
+        pickaxeColors.put("wool_pickaxe", new Color[]{new Color(235, 235, 235), new Color(185, 185, 185), new Color(255, 255, 255)});
+        pickaxeColors.put("bone_pickaxe", new Color[]{new Color(225, 220, 200), new Color(175, 170, 150), new Color(255, 250, 235)});
+        pickaxeColors.put("enchanting_table_pickaxe", new Color[]{new Color(125, 30, 30), new Color(45, 55, 65), new Color(85, 185, 215)});
+
         for (Map.Entry<String, Color[]> entry : pickaxeColors.entrySet()) {
             String name = entry.getKey();
             Color mainColor = entry.getValue()[0];
@@ -55,11 +78,10 @@ public class TextureGenerator {
             BufferedImage img = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
             Graphics2D g = img.createGraphics();
 
-            // Stick colors (Standard Vanilla Wooden Handle)
             Color stickColor = new Color(134, 96, 67);
             Color stickDark = new Color(87, 61, 38);
 
-            // Handle Pixels (Diagonal from bottom-left to center)
+            // Handle Pixels
             setPx(img, 2, 13, stickDark);
             setPx(img, 3, 12, stickColor);
             setPx(img, 4, 11, stickColor);
@@ -69,8 +91,7 @@ public class TextureGenerator {
             setPx(img, 8, 7, stickColor);
             setPx(img, 9, 6, stickDark);
 
-            // Pickaxe Head - Authentic Vanilla Pickaxe T-Shape Silhouette
-            // Top Arc / Ridge (Highlights & Main)
+            // Pickaxe Head
             setPx(img, 6, 2, lightColor);
             setPx(img, 7, 2, lightColor);
             setPx(img, 8, 2, lightColor);
@@ -84,7 +105,6 @@ public class TextureGenerator {
             setPx(img, 4, 4, lightColor);
             setPx(img, 3, 5, lightColor);
 
-            // Main Body of Pickaxe Head
             setPx(img, 6, 3, mainColor);
             setPx(img, 7, 3, mainColor);
             setPx(img, 8, 3, mainColor);
@@ -96,19 +116,16 @@ public class TextureGenerator {
             setPx(img, 5, 4, mainColor);
             setPx(img, 4, 5, mainColor);
 
-            // Left Blade Tip
             setPx(img, 2, 6, darkColor);
             setPx(img, 3, 6, mainColor);
             setPx(img, 3, 7, darkColor);
             setPx(img, 4, 6, darkColor);
 
-            // Right Blade Tip
             setPx(img, 13, 5, darkColor);
             setPx(img, 13, 6, mainColor);
             setPx(img, 14, 6, darkColor);
             setPx(img, 13, 7, darkColor);
 
-            // Bottom Shadow & Connector Ring
             setPx(img, 7, 4, darkColor);
             setPx(img, 8, 4, darkColor);
             setPx(img, 9, 4, darkColor);
@@ -121,7 +138,6 @@ public class TextureGenerator {
             File texFile = new File(texturesDir, name + ".png");
             ImageIO.write(img, "png", texFile);
 
-            // Generate Item Model JSON
             File modelFile = new File(modelsDir, name + ".json");
             try (FileWriter writer = new FileWriter(modelFile)) {
                 writer.write("{\n");
@@ -133,7 +149,7 @@ public class TextureGenerator {
             }
         }
 
-        System.out.println("Generated 30 pixel-perfect vanilla pickaxe shape textures and handheld item models!");
+        System.out.println("Generated 50 pixel-perfect pickaxe textures and handheld models successfully!");
     }
 
     private static void setPx(BufferedImage img, int x, int y, Color c) {

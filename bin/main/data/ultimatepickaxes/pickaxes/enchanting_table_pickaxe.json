@@ -1,0 +1,28 @@
+{
+  "id": "enchanting_table_pickaxe",
+  "displayName": "Enchanting Table Pickaxe",
+  "ingredient": "minecraft:enchanting_table",
+  "durability": 3000,
+  "miningSpeed": 16.0,
+  "attackDamage": 8.0,
+  "rarity": "LEGENDARY",
+  "cooldown": 70,
+  "tooltip": "Releases glowing enchantment runes that overload target mobs with magic.",
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "status_effect",
+        "effects": {
+          "sound": "block.enchantment_table.use",
+          "particle": "minecraft:enchant",
+          "hudMessage": "§d✨ Arcane Overload!"
+        },
+        "params": {
+          "effectId": "minecraft:strength",
+          "duration": 200,
+          "amplifier": 2
+        }
+      }
+    ]
+  }
+}

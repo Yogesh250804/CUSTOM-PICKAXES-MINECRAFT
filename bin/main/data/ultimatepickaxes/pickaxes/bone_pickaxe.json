@@ -1,0 +1,27 @@
+{
+  "id": "bone_pickaxe",
+  "displayName": "Bone Pickaxe",
+  "ingredient": "minecraft:bone_block",
+  "durability": 650,
+  "miningSpeed": 7.0,
+  "attackDamage": 4.0,
+  "rarity": "UNCOMMON",
+  "cooldown": 40,
+  "tooltip": "Summons ethereal bone spears piercing surrounding hostiles.",
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "push_entities",
+        "effects": {
+          "sound": "entity.skeleton.hurt",
+          "particle": "minecraft:crit",
+          "hudMessage": "§f💀 Bone Barrage!"
+        },
+        "params": {
+          "radius": 7,
+          "force": 2.2
+        }
+      }
+    ]
+  }
+}

@@ -1,7 +1,6 @@
 package com.ultimatepickaxes.items;
 
 import com.ultimatepickaxes.engine.ability.AbilityContext;
-import com.ultimatepickaxes.engine.cooldown.CooldownManager;
 import com.ultimatepickaxes.engine.trigger.TriggerDispatcher;
 import com.ultimatepickaxes.engine.trigger.TriggerType;
 import com.ultimatepickaxes.registry.PickaxeDefinition;
@@ -13,8 +12,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.tooltip.TooltipType;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
@@ -50,18 +47,9 @@ public class UltimatePickaxeItem extends PickaxeItem {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
         if (!world.isClient) {
-            if (CooldownManager.isOnCooldown(user.getUuid(), definition.getId())) {
-                int remaining = CooldownManager.getRemainingTicks(user.getUuid(), definition.getId());
-                float remainingSec = remaining / 20.0f;
-                user.sendMessage(Text.literal(String.format("§cAbility on Cooldown (%.1fs remaining)", remainingSec)), true);
-                world.playSound(null, user.getBlockPos(), SoundEvents.BLOCK_NOTE_BLOCK_BASS.value(), SoundCategory.PLAYERS, 0.5f, 0.5f);
-                return TypedActionResult.fail(stack);
-            }
-
             AbilityContext ctx = new AbilityContext(world, user, stack, user.getBlockPos(), null, null, null, TriggerType.ON_RIGHT_CLICK);
             boolean executed = TriggerDispatcher.dispatch(TriggerType.ON_RIGHT_CLICK, ctx);
             if (executed) {
-                CooldownManager.setCooldown(user.getUuid(), definition.getId(), definition.getCooldown());
                 return TypedActionResult.success(stack);
             }
         }
@@ -90,7 +78,6 @@ public class UltimatePickaxeItem extends PickaxeItem {
         // Display ONLY:
         // ⚡ Ability Name
         // One short exciting sentence
-        // Cooldown: Xs
 
         String abilityName = getAbilityTitle(definition.getId());
         tooltip.add(Text.literal(abilityName).formatted(Formatting.GOLD, Formatting.BOLD));
@@ -98,9 +85,6 @@ public class UltimatePickaxeItem extends PickaxeItem {
         if (!definition.getTooltip().isEmpty()) {
             tooltip.add(Text.literal(definition.getTooltip()).formatted(Formatting.GRAY));
         }
-
-        int secs = (int) Math.ceil(definition.getCooldown() / 20.0);
-        tooltip.add(Text.literal(String.format("⏱ Cooldown: %ds", secs)).formatted(Formatting.DARK_GREEN));
     }
 
     private String getAbilityTitle(String id) {
@@ -135,6 +119,26 @@ public class UltimatePickaxeItem extends PickaxeItem {
             case "prismarine_pickaxe" -> "⚡ Tidal Surge";
             case "end_stone_pickaxe" -> "⚡ Gravity Flip";
             case "shulker_pickaxe" -> "⚡ Levitation Blast";
+            case "beacon_pickaxe" -> "⚡ Orbital Laser";
+            case "bookshelf_pickaxe" -> "⚡ Spell Glyph";
+            case "copper_pickaxe" -> "⚡ Lightning Rod";
+            case "ender_chest_pickaxe" -> "⚡ Void Stash";
+            case "bedrock_pickaxe" -> "⚡ Seismic Slam";
+            case "crying_obsidian_pickaxe" -> "⚡ Soul Tear";
+            case "hay_bale_pickaxe" -> "⚡ Farm Rampage";
+            case "ice_pickaxe" -> "⚡ Frost Nova";
+            case "moss_pickaxe" -> "⚡ Nature Overgrowth";
+            case "nylium_pickaxe" -> "⚡ Nether Spores";
+            case "prismarine_bricks_pickaxe" -> "⚡ Ocean Trench";
+            case "purpur_pickaxe" -> "⚡ Gravity Shift";
+            case "quartz_pickaxe" -> "⚡ Solar Flash";
+            case "soul_sand_pickaxe" -> "⚡ Soul Drag";
+            case "target_pickaxe" -> "⚡ Bullseye";
+            case "terracotta_pickaxe" -> "⚡ Clay Wall";
+            case "warped_pickaxe" -> "⚡ Warped Teleport";
+            case "wool_pickaxe" -> "⚡ Cushion Bounce";
+            case "bone_pickaxe" -> "⚡ Bone Barrage";
+            case "enchanting_table_pickaxe" -> "⚡ Arcane Overload";
             default -> "⚡ Superpower";
         };
     }

@@ -1,0 +1,27 @@
+{
+  "id": "bedrock_pickaxe",
+  "displayName": "Bedrock Pickaxe",
+  "ingredient": "minecraft:bedrock",
+  "durability": 9999,
+  "miningSpeed": 30.0,
+  "attackDamage": 15.0,
+  "rarity": "DIVINE",
+  "cooldown": 100,
+  "tooltip": "Slams the ground creating an unyielding bedrock barrier and shockwave.",
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "push_entities",
+        "effects": {
+          "sound": "block.anvil.place",
+          "screenShake": { "intensity": 1.5, "duration": 25 },
+          "hudMessage": "§8💥 Seismic Bedrock Slam!"
+        },
+        "params": {
+          "radius": 12,
+          "force": 3.0
+        }
+      }
+    ]
+  }
+}

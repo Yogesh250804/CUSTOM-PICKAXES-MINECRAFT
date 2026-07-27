@@ -1,0 +1,27 @@
+{
+  "id": "quartz_pickaxe",
+  "displayName": "Quartz Pickaxe",
+  "ingredient": "minecraft:quartz_block",
+  "durability": 1000,
+  "miningSpeed": 11.0,
+  "attackDamage": 5.0,
+  "rarity": "UNCOMMON",
+  "cooldown": 40,
+  "tooltip": "Reflects brilliant Nether quartz light blinding mobs and dealing holy fire damage.",
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "burn",
+        "effects": {
+          "sound": "block.glass.place",
+          "particle": "minecraft:end_rod",
+          "hudMessage": "§f☀️ Solar Flash Burst!"
+        },
+        "params": {
+          "radius": 6,
+          "duration": 4
+        }
+      }
+    ]
+  }
+}
