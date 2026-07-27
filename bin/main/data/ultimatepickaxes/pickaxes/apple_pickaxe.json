@@ -1,0 +1,30 @@
+{
+  "id": "apple_pickaxe",
+  "displayName": "Apple Pickaxe",
+  "ingredient": "minecraft:apple",
+  "durability": 300,
+  "miningSpeed": 5.0,
+  "attackDamage": 2.0,
+  "rarity": "COMMON",
+  "cooldown": 40,
+  "tooltip": "Crisp and juicy tool that restores health on activation!",
+  "lore": [
+    "§cAn apple a day keeps the creepers away."
+  ],
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "status_effect",
+        "effects": {
+          "sound": "entity.generic.eat",
+          "hudMessage": "§c🍎 Regeneration Active!"
+        },
+        "params": {
+          "effectId": "minecraft:regeneration",
+          "duration": 100,
+          "amplifier": 1
+        }
+      }
+    ]
+  }
+}

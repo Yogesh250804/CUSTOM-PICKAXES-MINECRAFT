@@ -1,0 +1,22 @@
+{
+  "id": "sand_pickaxe",
+  "displayName": "Sand Pickaxe",
+  "ingredient": "minecraft:sand",
+  "durability": 250,
+  "miningSpeed": 5.0,
+  "attackDamage": 1.5,
+  "rarity": "COMMON",
+  "cooldown": 30,
+  "tooltip": "Auto-smelts mined sand into glass blocks instantly!",
+  "lore": [
+    "§eGritty desert sands."
+  ],
+  "triggers": {
+    "onMine": [
+      {
+        "ability": "auto_smelt",
+        "params": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "diamond_pickaxe",
+  "displayName": "Ultimate Diamond Pickaxe",
+  "ingredient": "minecraft:diamond_block",
+  "durability": 2500,
+  "miningSpeed": 14.0,
+  "attackDamage": 7.0,
+  "rarity": "LEGENDARY",
+  "cooldown": 120,
+  "tooltip": "Vein mines connected ores and grants Diamond Aegis protection!",
+  "lore": [
+    "§7Forged from solid compressed diamond blocks.",
+    "§bThe pinnacle of mining efficiency."
+  ],
+  "triggers": {
+    "onMine": [
+      {
+        "ability": "vein_mine",
+        "params": {
+          "maxBlocks": 48
+        }
+      }
+    ],
+    "onRightClick": [
+      {
+        "ability": "status_effect",
+        "effects": {
+          "sound": "item.armor.equip_diamond",
+          "hudMessage": "§b💎 Diamond Aegis Activated!"
+        },
+        "params": {
+          "effectId": "minecraft:resistance",
+          "duration": 200,
+          "amplifier": 2
+        }
+      }
+    ]
+  }
+}

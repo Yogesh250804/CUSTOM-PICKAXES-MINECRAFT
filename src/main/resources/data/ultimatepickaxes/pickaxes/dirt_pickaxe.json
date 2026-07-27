@@ -1,0 +1,28 @@
+{
+  "id": "dirt_pickaxe",
+  "displayName": "Dirt Pickaxe",
+  "ingredient": "minecraft:dirt",
+  "durability": 150,
+  "miningSpeed": 4.0,
+  "attackDamage": 1.5,
+  "rarity": "COMMON",
+  "cooldown": 20,
+  "tooltip": "Humble earth tool that enriches crops and fertile soil!",
+  "lore": [
+    "§7Simple, earthy, and nutrient-dense."
+  ],
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "plant_growth",
+        "effects": {
+          "sound": "item.bone_meal.use",
+          "hudMessage": "§2🌱 Earth Fertilized!"
+        },
+        "params": {
+          "radius": 4
+        }
+      }
+    ]
+  }
+}

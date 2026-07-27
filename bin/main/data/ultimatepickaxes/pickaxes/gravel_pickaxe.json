@@ -1,0 +1,30 @@
+{
+  "id": "gravel_pickaxe",
+  "displayName": "Gravel Pickaxe",
+  "ingredient": "minecraft:gravel",
+  "durability": 300,
+  "miningSpeed": 5.2,
+  "attackDamage": 2.0,
+  "rarity": "COMMON",
+  "cooldown": 40,
+  "tooltip": "Instantly collapses gravel ceilings and generates flint drops!",
+  "lore": [
+    "§8Coarse riverbed pebbles."
+  ],
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "area_mine",
+        "effects": {
+          "sound": "block.gravel.break",
+          "hudMessage": "§8🪨 Gravel Landslide Clear!"
+        },
+        "params": {
+          "width": 3,
+          "height": 3,
+          "depth": 1
+        }
+      }
+    ]
+  }
+}

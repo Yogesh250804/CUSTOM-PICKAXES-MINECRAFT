@@ -1,0 +1,31 @@
+{
+  "id": "obsidian_pickaxe",
+  "displayName": "Obsidian Pickaxe",
+  "ingredient": "minecraft:obsidian",
+  "durability": 4000,
+  "miningSpeed": 11.0,
+  "attackDamage": 8.0,
+  "rarity": "EPIC",
+  "cooldown": 90,
+  "tooltip": "Indestructible volcanic glass tool granting extreme blast resistance!",
+  "lore": [
+    "§5Forged when water meets molten lava.",
+    "§8Immune to extreme stress."
+  ],
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "status_effect",
+        "effects": {
+          "sound": "block.anvil.place",
+          "hudMessage": "§5🛡️ Blast Immunity Shield!"
+        },
+        "params": {
+          "effectId": "minecraft:fire_resistance",
+          "duration": 300,
+          "amplifier": 0
+        }
+      }
+    ]
+  }
+}

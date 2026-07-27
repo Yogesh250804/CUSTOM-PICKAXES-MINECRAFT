@@ -1,0 +1,31 @@
+{
+  "id": "sculk_pickaxe",
+  "displayName": "Sculk Warden Pickaxe",
+  "ingredient": "minecraft:sculk_catalyst",
+  "durability": 3000,
+  "miningSpeed": 15.0,
+  "attackDamage": 9.0,
+  "rarity": "EPIC",
+  "cooldown": 70,
+  "tooltip": "Fires Warden sonic boom shockwaves that pierce through obstacles!",
+  "lore": [
+    "§3Resonates with ancient Deep Dark energy.",
+    "§1Hears every vibration in the dark."
+  ],
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "sonic_boom",
+        "effects": {
+          "sound": "entity.warden.sonic_boom",
+          "screenShake": { "intensity": 0.9, "duration": 20 },
+          "hudMessage": "§3🔊 Warden Sonic Boom Fired!"
+        },
+        "params": {
+          "range": 16.0,
+          "damage": 12.0
+        }
+      }
+    ]
+  }
+}

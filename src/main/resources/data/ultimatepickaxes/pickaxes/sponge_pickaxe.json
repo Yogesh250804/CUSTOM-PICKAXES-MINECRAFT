@@ -1,0 +1,29 @@
+{
+  "id": "sponge_pickaxe",
+  "displayName": "Sponge Pickaxe",
+  "ingredient": "minecraft:sponge",
+  "durability": 450,
+  "miningSpeed": 7.0,
+  "attackDamage": 2.0,
+  "rarity": "RARE",
+  "cooldown": 60,
+  "tooltip": "Absorbs nearby water instantly upon activation!",
+  "lore": [
+    "§7Dries out ocean monuments with ease."
+  ],
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "freeze",
+        "effects": {
+          "sound": "block.sponge.absorb",
+          "particle": "minecraft:splash",
+          "hudMessage": "§3🌊 Water Absorbed!"
+        },
+        "params": {
+          "radius": 6
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "lapis_pickaxe",
+  "displayName": "Lapis Lazuli Pickaxe",
+  "ingredient": "minecraft:lapis_block",
+  "durability": 850,
+  "miningSpeed": 9.5,
+  "attackDamage": 4.0,
+  "rarity": "RARE",
+  "cooldown": 40,
+  "tooltip": "Infused with mystical enchantments that yield extra XP!",
+  "lore": [
+    "§9Deep royal blue crystal of ancient magic."
+  ],
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "status_effect",
+        "effects": {
+          "sound": "block.enchantment_table.use",
+          "particle": "minecraft:enchant",
+          "hudMessage": "§9✨ Mystical XP Surge!"
+        },
+        "params": {
+          "effectId": "minecraft:luck",
+          "duration": 200,
+          "amplifier": 2
+        }
+      }
+    ]
+  }
+}

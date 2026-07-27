@@ -1,0 +1,29 @@
+{
+  "id": "honey_pickaxe",
+  "displayName": "Honey Pickaxe",
+  "ingredient": "minecraft:honey_block",
+  "durability": 500,
+  "miningSpeed": 6.5,
+  "attackDamage": 3.0,
+  "rarity": "RARE",
+  "cooldown": 80,
+  "tooltip": "Emits a sticky honey aura that slows down nearby monsters!",
+  "lore": [
+    "§7Sweet, sticky, and dangerously adhesive."
+  ],
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "freeze",
+        "effects": {
+          "sound": "block.honey_block.slide",
+          "hudMessage": "§e🍯 Sticky Honey Trap Activated!"
+        },
+        "params": {
+          "radius": 5,
+          "duration": 120
+        }
+      }
+    ]
+  }
+}

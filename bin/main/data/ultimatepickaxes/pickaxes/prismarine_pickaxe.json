@@ -1,0 +1,31 @@
+{
+  "id": "prismarine_pickaxe",
+  "displayName": "Prismarine Ocean Pickaxe",
+  "ingredient": "minecraft:prismarine",
+  "durability": 1500,
+  "miningSpeed": 11.0,
+  "attackDamage": 5.5,
+  "rarity": "RARE",
+  "cooldown": 60,
+  "tooltip": "Grants aquatic propulsion and underwater mining efficiency!",
+  "lore": [
+    "§3Carved from ancient ocean monument stone."
+  ],
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "status_effect",
+        "effects": {
+          "sound": "ambient.underwater.enter",
+          "particle": "minecraft:bubble",
+          "hudMessage": "§3🌊 Water Breathing & Conduit Power!"
+        },
+        "params": {
+          "effectId": "minecraft:conduit_power",
+          "duration": 300,
+          "amplifier": 0
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "ultimatepickaxes",
+  "version": "${version}",
+  "name": "Ultimate Pickaxes",
+  "description": "Scalable data-driven pickaxe engine allowing almost every block and item in Minecraft to be crafted into unique pickaxes with custom abilities, triggers, conditions, and enchantments.",
+  "authors": [
+    "UltimatePickaxes Team"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net"
+  },
+  "license": "MIT",
+  "icon": "assets/ultimatepickaxes/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.ultimatepickaxes.UltimatePickaxes"
+    ],
+    "client": [
+      "com.ultimatepickaxes.UltimatePickaxesClient"
+    ]
+  },
+  "mixins": [
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

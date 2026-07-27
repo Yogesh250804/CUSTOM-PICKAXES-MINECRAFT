@@ -1,0 +1,42 @@
+{
+  "id": "netherite_pickaxe",
+  "displayName": "Ultimate Netherite Pickaxe",
+  "ingredient": "minecraft:netherite_block",
+  "durability": 4500,
+  "miningSpeed": 20.0,
+  "attackDamage": 10.0,
+  "rarity": "MYTHIC",
+  "cooldown": 90,
+  "tooltip": "Unstoppable ancient alloy that unleashes dark void power!",
+  "lore": [
+    "§8Forged in Nether hellfire.",
+    "§4Devours obsidian like paper."
+  ],
+  "triggers": {
+    "onMine": [
+      {
+        "ability": "area_mine",
+        "params": {
+          "width": 3,
+          "height": 3,
+          "depth": 2
+        }
+      }
+    ],
+    "onRightClick": [
+      {
+        "ability": "status_effect",
+        "effects": {
+          "sound": "item.armor.equip_netherite",
+          "particle": "minecraft:smoke",
+          "hudMessage": "§8🔥 Void Might Unleashed!"
+        },
+        "params": {
+          "effectId": "minecraft:strength",
+          "duration": 240,
+          "amplifier": 2
+        }
+      }
+    ]
+  }
+}

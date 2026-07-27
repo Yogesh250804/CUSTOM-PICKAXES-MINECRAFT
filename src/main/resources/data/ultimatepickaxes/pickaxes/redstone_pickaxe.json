@@ -1,0 +1,31 @@
+{
+  "id": "redstone_pickaxe",
+  "displayName": "Redstone Pickaxe",
+  "ingredient": "minecraft:redstone_block",
+  "durability": 800,
+  "miningSpeed": 16.0,
+  "attackDamage": 4.0,
+  "rarity": "UNCOMMON",
+  "cooldown": 50,
+  "tooltip": "Pulsating with electrical current, granting insane mining haste!",
+  "lore": [
+    "§cHigh-voltage energetic core."
+  ],
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "status_effect",
+        "effects": {
+          "sound": "block.redstone_torch.burnout",
+          "particle": "minecraft:dust",
+          "hudMessage": "§c⚡ Redstone Surge Active!"
+        },
+        "params": {
+          "effectId": "minecraft:haste",
+          "duration": 160,
+          "amplifier": 2
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "amethyst_pickaxe",
+  "displayName": "Amethyst Pickaxe",
+  "ingredient": "minecraft:amethyst_block",
+  "durability": 900,
+  "miningSpeed": 10.0,
+  "attackDamage": 5.0,
+  "rarity": "RARE",
+  "cooldown": 60,
+  "tooltip": "Emits crystalline sonic chimes that shock nearby hostiles!",
+  "lore": [
+    "§dResonates with musical harmonic frequencies."
+  ],
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "push_entities",
+        "effects": {
+          "sound": "block.amethyst_block.chime",
+          "particle": "minecraft:glow",
+          "hudMessage": "§d🔮 Crystal Sonic Wave!"
+        },
+        "params": {
+          "radius": 8,
+          "force": 2.0
+        }
+      }
+    ]
+  }
+}

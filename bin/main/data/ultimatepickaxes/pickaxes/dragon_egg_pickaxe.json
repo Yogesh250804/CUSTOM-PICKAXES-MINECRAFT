@@ -1,0 +1,44 @@
+{
+  "id": "dragon_egg_pickaxe",
+  "displayName": "Dragon Egg Pickaxe",
+  "ingredient": "minecraft:dragon_egg",
+  "durability": 5000,
+  "miningSpeed": 25.0,
+  "attackDamage": 12.0,
+  "rarity": "DIVINE",
+  "cooldown": 40,
+  "tooltip": "Distorts space-time to teleport instantly and break reality!",
+  "lore": [
+    "§dContains the primal essence of the Ender Dragon.",
+    "§5Bends dimensions with every swing."
+  ],
+  "triggers": {
+    "onMine": [
+      {
+        "ability": "teleport",
+        "conditions": [
+          { "type": "chance", "value": 0.25 }
+        ],
+        "params": {
+          "distance": 6.0,
+          "random": true
+        }
+      }
+    ],
+    "onRightClick": [
+      {
+        "ability": "teleport",
+        "effects": {
+          "sound": "entity.enderman.teleport",
+          "particle": "minecraft:dragon_breath",
+          "screenShake": { "intensity": 0.6, "duration": 10 },
+          "hudMessage": "§d✨ Dimensional Blink Teleport!"
+        },
+        "params": {
+          "distance": 16.0,
+          "random": false
+        }
+      }
+    ]
+  }
+}

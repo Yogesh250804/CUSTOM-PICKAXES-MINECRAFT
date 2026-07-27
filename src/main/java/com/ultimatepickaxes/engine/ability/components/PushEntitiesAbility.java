@@ -1,0 +1,32 @@
+package com.ultimatepickaxes.engine.ability.components;
+
+import com.google.gson.JsonObject;
+import com.ultimatepickaxes.engine.ability.AbilityComponent;
+import com.ultimatepickaxes.engine.ability.AbilityContext;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.Box;
+import net.minecraft.util.math.Vec3d;
+
+public class PushEntitiesAbility implements AbilityComponent {
+
+    @Override
+    public boolean execute(JsonObject params, AbilityContext context) {
+        if (!(context.getWorld() instanceof ServerWorld world) || context.getPlayer() == null) {
+            return false;
+        }
+
+        double radius = params.has("radius") ? params.get("radius").getAsDouble() : 6.0;
+        double force = params.has("force") ? params.get("force").getAsDouble() : 1.5;
+
+        Vec3d center = context.getPlayer().getPos();
+        Box area = new Box(center.x - radius, center.y - radius, center.z - radius, center.x + radius, center.y + radius, center.z + radius);
+
+        for (LivingEntity entity : world.getEntitiesByClass(LivingEntity.class, area, e -> e != context.getPlayer())) {
+            Vec3d push = entity.getPos().subtract(center).normalize().multiply(force).add(0, 0.4, 0);
+            entity.setVelocity(push);
+            entity.velocityModified = true;
+        }
+        return true;
+    }
+}

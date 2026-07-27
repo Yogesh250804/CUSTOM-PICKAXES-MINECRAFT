@@ -1,0 +1,29 @@
+{
+  "id": "slime_pickaxe",
+  "displayName": "Slime Pickaxe",
+  "ingredient": "minecraft:slime_block",
+  "durability": 600,
+  "miningSpeed": 7.0,
+  "attackDamage": 3.0,
+  "rarity": "UNCOMMON",
+  "cooldown": 40,
+  "tooltip": "Launches player into the air with super elastic spring bounce!",
+  "lore": [
+    "§7Boing! Super bouncy green gel."
+  ],
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "launch_player",
+        "effects": {
+          "sound": "block.slime_block.place",
+          "hudMessage": "§a🟢 Slime Bounce!"
+        },
+        "params": {
+          "upwardForce": 1.4,
+          "forwardForce": 0.8
+        }
+      }
+    ]
+  }
+}

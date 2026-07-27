@@ -1,0 +1,29 @@
+{
+  "id": "pumpkin_pickaxe",
+  "displayName": "Pumpkin Pickaxe",
+  "ingredient": "minecraft:carved_pumpkin",
+  "durability": 450,
+  "miningSpeed": 6.0,
+  "attackDamage": 3.0,
+  "rarity": "UNCOMMON",
+  "cooldown": 50,
+  "tooltip": "Spooky carved pumpkin tool that scares away surrounding hostiles!",
+  "lore": [
+    "§6Happy Halloween! Glowing jack-o'-lantern power."
+  ],
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "push_entities",
+        "effects": {
+          "sound": "entity.witch.ambient",
+          "hudMessage": "§6🎃 Spooky Pumpkin Blast!"
+        },
+        "params": {
+          "radius": 7,
+          "force": 1.8
+        }
+      }
+    ]
+  }
+}

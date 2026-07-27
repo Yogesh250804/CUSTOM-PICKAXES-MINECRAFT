@@ -1,0 +1,30 @@
+{
+  "id": "end_stone_pickaxe",
+  "displayName": "End Stone Pickaxe",
+  "ingredient": "minecraft:end_stone",
+  "durability": 1200,
+  "miningSpeed": 9.0,
+  "attackDamage": 4.5,
+  "rarity": "RARE",
+  "cooldown": 70,
+  "tooltip": "Flips entity gravity and grants levitation float!",
+  "lore": [
+    "§ePorous yellow stone from the Void dimension."
+  ],
+  "triggers": {
+    "onRightClick": [
+      {
+        "ability": "status_effect",
+        "effects": {
+          "sound": "entity.shulker.bullet.hit",
+          "hudMessage": "§e🛸 Zero Gravity Levitation!"
+        },
+        "params": {
+          "effectId": "minecraft:levitation",
+          "duration": 80,
+          "amplifier": 1
+        }
+      }
+    ]
+  }
+}
