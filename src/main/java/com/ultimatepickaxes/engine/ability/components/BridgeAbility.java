@@ -25,22 +25,19 @@ public class BridgeAbility implements AbilityComponent {
         int length = params.has("length") ? params.get("length").getAsInt() : 5;
         int width = params.has("width") ? params.get("width").getAsInt() : 3;
 
-        BlockPos playerPos = context.getPlayer().getBlockPos().down();
+        BlockPos playerPos = context.getPlayer().getBlockPos().offset(context.getPlayer().getHorizontalFacing(), 1);
         var facing = context.getPlayer().getHorizontalFacing();
 
         int halfW = width / 2;
-        boolean placedAny = false;
 
         for (int l = 0; l < length; l++) {
             BlockPos step = playerPos.offset(facing, l);
             for (int w = -halfW; w <= halfW; w++) {
                 BlockPos target = step.offset(facing.rotateYClockwise(), w);
-                if (world.getBlockState(target).isAir()) {
-                    world.setBlockState(target, block.getDefaultState());
-                    placedAny = true;
-                }
+                world.setBlockState(target, block.getDefaultState());
+                world.setBlockState(target.up(), block.getDefaultState());
             }
         }
-        return placedAny;
+        return true;
     }
 }

@@ -5,42 +5,34 @@ import com.ultimatepickaxes.engine.ability.AbilityComponent;
 import com.ultimatepickaxes.engine.ability.AbilityContext;
 import net.minecraft.block.BlockState;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 
 public class AreaMiningAbility implements AbilityComponent {
 
     @Override
     public boolean execute(JsonObject params, AbilityContext context) {
-        if (!(context.getWorld() instanceof ServerWorld world) || context.getPos() == null || context.getPlayer() == null) {
+        if (!(context.getWorld() instanceof ServerWorld world) || context.getPlayer() == null) {
             return false;
         }
 
-        int width = params.has("width") ? params.get("width").getAsInt() : 3;
-        int height = params.has("height") ? params.get("height").getAsInt() : 3;
-        int depth = params.has("depth") ? params.get("depth").getAsInt() : 1;
-
-        Direction side = context.getSide();
-        if (side == null) side = context.getPlayer().getHorizontalFacing().getOpposite();
-
+        int radius = params.has("radius") ? params.get("radius").getAsInt() : 1;
         BlockPos center = context.getPos();
-        int halfW = width / 2;
-        int halfH = height / 2;
 
-        for (int x = -halfW; x <= halfW; x++) {
-            for (int y = -halfH; y <= halfH; y++) {
-                for (int z = 0; z < depth; z++) {
-                    if (x == 0 && y == 0 && z == 0) continue;
+        if (center == null) {
+            HitResult hit = context.getPlayer().raycast(5.0, 0.0f, false);
+            if (hit instanceof BlockHitResult blockHit) {
+                center = blockHit.getBlockPos();
+            } else {
+                center = context.getPlayer().getBlockPos().offset(context.getPlayer().getHorizontalFacing(), 2);
+            }
+        }
 
-                    BlockPos targetPos;
-                    if (side.getAxis() == Direction.Axis.Y) {
-                        targetPos = center.add(x, 0, y);
-                    } else if (side.getAxis() == Direction.Axis.X) {
-                        targetPos = center.add(z * side.getOffsetX(), y, x);
-                    } else {
-                        targetPos = center.add(x, y, z * side.getOffsetZ());
-                    }
-
+        for (int x = -radius; x <= radius; x++) {
+            for (int y = -radius; y <= radius; y++) {
+                for (int z = -radius; z <= radius; z++) {
+                    BlockPos targetPos = center.add(x, y, z);
                     BlockState state = world.getBlockState(targetPos);
                     if (!state.isAir() && state.getHardness(world, targetPos) >= 0) {
                         world.breakBlock(targetPos, true, context.getPlayer());

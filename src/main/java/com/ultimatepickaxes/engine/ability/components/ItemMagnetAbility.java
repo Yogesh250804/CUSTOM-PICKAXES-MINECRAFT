@@ -5,6 +5,8 @@ import com.ultimatepickaxes.engine.ability.AbilityComponent;
 import com.ultimatepickaxes.engine.ability.AbilityContext;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 
@@ -16,18 +18,22 @@ public class ItemMagnetAbility implements AbilityComponent {
             return false;
         }
 
-        double radius = params.has("radius") ? params.get("radius").getAsDouble() : 8.0;
-        double pullForce = params.has("pullForce") ? params.get("pullForce").getAsDouble() : 0.4;
+        double radius = params.has("radius") ? params.get("radius").getAsDouble() : 16.0;
 
         Vec3d playerPos = context.getPlayer().getPos();
         Box area = new Box(playerPos.add(-radius, -radius, -radius), playerPos.add(radius, radius, radius));
 
         boolean pulledAny = false;
         for (ItemEntity item : world.getEntitiesByClass(ItemEntity.class, area, e -> true)) {
-            Vec3d dir = playerPos.subtract(item.getPos()).normalize().multiply(pullForce);
-            item.setVelocity(dir);
+            item.setPosition(playerPos.x, playerPos.y + 0.5, playerPos.z);
+            item.setPickupDelay(0);
+            item.velocityModified = true;
             pulledAny = true;
         }
-        return pulledAny;
+
+        if (pulledAny) {
+            world.playSound(null, context.getPlayer().getBlockPos(), SoundEvents.ENTITY_ITEM_PICKUP, SoundCategory.PLAYERS, 1.0f, 1.2f);
+        }
+        return true;
     }
 }

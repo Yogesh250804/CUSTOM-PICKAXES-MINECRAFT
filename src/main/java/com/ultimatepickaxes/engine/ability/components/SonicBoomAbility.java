@@ -19,8 +19,8 @@ public class SonicBoomAbility implements AbilityComponent {
             return false;
         }
 
-        double range = params.has("range") ? params.get("range").getAsDouble() : 12.0;
-        float damage = params.has("damage") ? params.get("damage").getAsFloat() : 10.0f;
+        double range = params.has("range") ? params.get("range").getAsDouble() : 16.0;
+        float damage = params.has("damage") ? params.get("damage").getAsFloat() : 12.0f;
 
         Vec3d eyePos = context.getPlayer().getEyePos();
         Vec3d look = context.getPlayer().getRotationVector();
@@ -28,15 +28,15 @@ public class SonicBoomAbility implements AbilityComponent {
 
         world.playSound(null, context.getPlayer().getBlockPos(), SoundEvents.ENTITY_WARDEN_SONIC_BOOM, SoundCategory.PLAYERS, 2.0f, 1.0f);
 
-        for (int i = 0; i < (int) range * 2; i++) {
-            Vec3d point = eyePos.add(look.multiply(i * 0.5));
+        for (int i = 1; i <= (int) range; i++) {
+            Vec3d point = eyePos.add(look.multiply(i));
             world.spawnParticles(ParticleTypes.SONIC_BOOM, point.x, point.y, point.z, 1, 0, 0, 0, 0);
         }
 
-        Box box = new Box(eyePos, target).expand(1.5);
+        Box box = new Box(eyePos, target).expand(2.0);
         for (LivingEntity entity : world.getEntitiesByClass(LivingEntity.class, box, e -> e != context.getPlayer())) {
             entity.damage(world.getDamageSources().playerAttack(context.getPlayer()), damage);
-            entity.setVelocity(look.multiply(1.5));
+            entity.setVelocity(look.multiply(2.0).add(0, 0.4, 0));
             entity.velocityModified = true;
         }
         return true;
