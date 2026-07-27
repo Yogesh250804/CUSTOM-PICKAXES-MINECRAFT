@@ -18,11 +18,11 @@ public class TextureGenerator {
         pickaxeColors.put("dirt_pickaxe", new Color[]{new Color(134, 96, 67), new Color(87, 61, 38), new Color(175, 128, 91)});
         pickaxeColors.put("cobblestone_pickaxe", new Color[]{new Color(120, 120, 120), new Color(80, 80, 80), new Color(160, 160, 160)});
         pickaxeColors.put("tnt_pickaxe", new Color[]{new Color(219, 57, 43), new Color(168, 36, 24), new Color(245, 245, 245)});
-        pickaxeColors.put("glass_pickaxe", new Color[]{new Color(188, 231, 236, 200), new Color(128, 194, 204, 180), new Color(232, 250, 252, 240)});
+        pickaxeColors.put("glass_pickaxe", new Color[]{new Color(188, 231, 236, 220), new Color(128, 194, 204, 180), new Color(232, 250, 252, 255)});
         pickaxeColors.put("sponge_pickaxe", new Color[]{new Color(194, 184, 54), new Color(140, 133, 35), new Color(225, 215, 80)});
-        pickaxeColors.put("honey_pickaxe", new Color[]{new Color(237, 157, 27, 230), new Color(180, 110, 15, 210), new Color(247, 194, 94, 250)});
+        pickaxeColors.put("honey_pickaxe", new Color[]{new Color(237, 157, 27, 240), new Color(180, 110, 15, 220), new Color(247, 194, 94, 255)});
         pickaxeColors.put("magma_pickaxe", new Color[]{new Color(232, 85, 23), new Color(59, 19, 14), new Color(247, 148, 29)});
-        pickaxeColors.put("slime_pickaxe", new Color[]{new Color(89, 179, 74, 230), new Color(50, 120, 40, 210), new Color(133, 224, 119, 250)});
+        pickaxeColors.put("slime_pickaxe", new Color[]{new Color(89, 179, 74, 230), new Color(50, 120, 40, 210), new Color(133, 224, 119, 255)});
         pickaxeColors.put("coal_pickaxe", new Color[]{new Color(38, 38, 38), new Color(18, 18, 18), new Color(70, 70, 70)});
         pickaxeColors.put("diamond_pickaxe", new Color[]{new Color(44, 224, 212), new Color(20, 145, 136), new Color(150, 255, 245)});
         pickaxeColors.put("dragon_egg_pickaxe", new Color[]{new Color(43, 12, 56), new Color(18, 3, 24), new Color(178, 61, 232)});
@@ -48,72 +48,80 @@ public class TextureGenerator {
 
         for (Map.Entry<String, Color[]> entry : pickaxeColors.entrySet()) {
             String name = entry.getKey();
-            Color primary = entry.getValue()[0];
-            Color shadow = entry.getValue()[1];
-            Color highlight = entry.getValue()[2];
+            Color mainColor = entry.getValue()[0];
+            Color darkColor = entry.getValue()[1];
+            Color lightColor = entry.getValue()[2];
 
-            // 1. Generate 16x16 PNG Texture
             BufferedImage img = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
             Graphics2D g = img.createGraphics();
 
-            // Handle Stick (Diagonal bottom-left to center)
-            Color stickBase = new Color(110, 75, 42);
-            Color stickDark = new Color(70, 45, 22);
+            // Stick colors (Standard Vanilla Wooden Handle)
+            Color stickColor = new Color(134, 96, 67);
+            Color stickDark = new Color(87, 61, 38);
 
-            drawPixel(g, 1, 14, stickDark);
-            drawPixel(g, 2, 13, stickBase);
-            drawPixel(g, 3, 12, stickBase);
-            drawPixel(g, 4, 11, stickBase);
-            drawPixel(g, 5, 10, stickBase);
-            drawPixel(g, 6, 9, stickBase);
-            drawPixel(g, 7, 8, stickBase);
-            drawPixel(g, 8, 7, stickBase);
-            drawPixel(g, 9, 6, stickDark);
+            // Handle Pixels (Diagonal from bottom-left to center)
+            setPx(img, 2, 13, stickDark);
+            setPx(img, 3, 12, stickColor);
+            setPx(img, 4, 11, stickColor);
+            setPx(img, 5, 10, stickColor);
+            setPx(img, 6, 9, stickColor);
+            setPx(img, 7, 8, stickColor);
+            setPx(img, 8, 7, stickColor);
+            setPx(img, 9, 6, stickDark);
 
-            // Pickaxe Head / Blade
+            // Pickaxe Head - Authentic Vanilla Pickaxe T-Shape Silhouette
+            // Top Arc / Ridge (Highlights & Main)
+            setPx(img, 6, 2, lightColor);
+            setPx(img, 7, 2, lightColor);
+            setPx(img, 8, 2, lightColor);
+            setPx(img, 9, 2, lightColor);
+            setPx(img, 10, 2, lightColor);
+            setPx(img, 11, 3, lightColor);
+            setPx(img, 12, 3, lightColor);
+            setPx(img, 13, 4, lightColor);
+
+            setPx(img, 5, 3, lightColor);
+            setPx(img, 4, 4, lightColor);
+            setPx(img, 3, 5, lightColor);
+
+            // Main Body of Pickaxe Head
+            setPx(img, 6, 3, mainColor);
+            setPx(img, 7, 3, mainColor);
+            setPx(img, 8, 3, mainColor);
+            setPx(img, 9, 3, mainColor);
+            setPx(img, 10, 3, mainColor);
+            setPx(img, 11, 4, mainColor);
+            setPx(img, 12, 4, mainColor);
+
+            setPx(img, 5, 4, mainColor);
+            setPx(img, 4, 5, mainColor);
+
             // Left Blade Tip
-            drawPixel(g, 2, 8, shadow);
-            drawPixel(g, 3, 9, primary);
-            drawPixel(g, 4, 10, primary);
-
-            // Top Arch
-            drawPixel(g, 5, 11, highlight);
-            drawPixel(g, 6, 12, highlight);
-            drawPixel(g, 7, 13, highlight);
-            drawPixel(g, 8, 13, highlight);
-            drawPixel(g, 9, 13, highlight);
-            drawPixel(g, 10, 13, highlight);
-            drawPixel(g, 11, 13, highlight);
-            drawPixel(g, 12, 12, highlight);
-
-            // Inner Fill
-            drawPixel(g, 5, 10, primary);
-            drawPixel(g, 6, 11, primary);
-            drawPixel(g, 7, 12, primary);
-            drawPixel(g, 8, 12, primary);
-            drawPixel(g, 9, 12, primary);
-            drawPixel(g, 10, 12, primary);
-            drawPixel(g, 11, 12, primary);
-            drawPixel(g, 12, 11, primary);
+            setPx(img, 2, 6, darkColor);
+            setPx(img, 3, 6, mainColor);
+            setPx(img, 3, 7, darkColor);
+            setPx(img, 4, 6, darkColor);
 
             // Right Blade Tip
-            drawPixel(g, 13, 10, primary);
-            drawPixel(g, 14, 9, shadow);
-            drawPixel(g, 13, 8, shadow);
+            setPx(img, 13, 5, darkColor);
+            setPx(img, 13, 6, mainColor);
+            setPx(img, 14, 6, darkColor);
+            setPx(img, 13, 7, darkColor);
 
-            // Under Head Shadow
-            drawPixel(g, 7, 10, shadow);
-            drawPixel(g, 8, 10, shadow);
-            drawPixel(g, 9, 10, shadow);
-            drawPixel(g, 10, 11, shadow);
-            drawPixel(g, 11, 10, shadow);
+            // Bottom Shadow & Connector Ring
+            setPx(img, 7, 4, darkColor);
+            setPx(img, 8, 4, darkColor);
+            setPx(img, 9, 4, darkColor);
+            setPx(img, 10, 4, darkColor);
+            setPx(img, 8, 5, darkColor);
+            setPx(img, 9, 5, darkColor);
 
             g.dispose();
 
             File texFile = new File(texturesDir, name + ".png");
             ImageIO.write(img, "png", texFile);
 
-            // 2. Generate Item Model JSON
+            // Generate Item Model JSON
             File modelFile = new File(modelsDir, name + ".json");
             try (FileWriter writer = new FileWriter(modelFile)) {
                 writer.write("{\n");
@@ -125,12 +133,12 @@ public class TextureGenerator {
             }
         }
 
-        System.out.println("Generated 30 16x16 Pickaxe PNG textures and 30 Item Model JSONs successfully!");
+        System.out.println("Generated 30 pixel-perfect vanilla pickaxe shape textures and handheld item models!");
     }
 
-    private static void drawPixel(Graphics2D g, int x, int y, Color c) {
-        g.setColor(c);
-        // Flips Y for standard 16x16 top-down rendering
-        g.fillRect(x, 15 - y, 1, 1);
+    private static void setPx(BufferedImage img, int x, int y, Color c) {
+        if (x >= 0 && x < 16 && y >= 0 && y < 16) {
+            img.setRGB(x, y, c.getRGB());
+        }
     }
 }

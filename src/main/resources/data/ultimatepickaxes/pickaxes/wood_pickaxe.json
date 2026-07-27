@@ -1,28 +1,25 @@
 {
   "id": "wood_pickaxe",
-  "displayName": "Oak Wood Pickaxe",
+  "displayName": "Wooden Pickaxe",
   "ingredient": "minecraft:oak_log",
   "durability": 200,
   "miningSpeed": 3.5,
   "attackDamage": 1.5,
   "rarity": "COMMON",
-  "cooldown": 30,
-  "tooltip": "Carved timber tool capable of building wooden bridges!",
-  "lore": [
-    "§6Freshly chopped natural oak."
-  ],
+  "cooldown": 40,
+  "tooltip": "Spawns wooden log barricades that launch forward.",
   "triggers": {
     "onRightClick": [
       {
         "ability": "bridge",
         "effects": {
           "sound": "block.wood.place",
-          "hudMessage": "§6🪵 Wooden Walkway Placed!"
+          "hudMessage": "§6🪵 Timber Strike!"
         },
         "params": {
-          "material": "minecraft:oak_planks",
+          "material": "minecraft:oak_log",
           "width": 3,
-          "length": 5
+          "length": 4
         }
       }
     ]

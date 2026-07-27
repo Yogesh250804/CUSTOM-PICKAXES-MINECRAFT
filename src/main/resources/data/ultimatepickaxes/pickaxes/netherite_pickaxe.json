@@ -1,40 +1,26 @@
 {
   "id": "netherite_pickaxe",
-  "displayName": "Ultimate Netherite Pickaxe",
+  "displayName": "Netherite Pickaxe",
   "ingredient": "minecraft:netherite_block",
   "durability": 4500,
   "miningSpeed": 20.0,
   "attackDamage": 10.0,
   "rarity": "MYTHIC",
-  "cooldown": 90,
-  "tooltip": "Unstoppable ancient alloy that unleashes dark void power!",
-  "lore": [
-    "§8Forged in Nether hellfire.",
-    "§4Devours obsidian like paper."
-  ],
+  "cooldown": 100,
+  "tooltip": "Summons a fiery nether meteor crashing down from the sky.",
   "triggers": {
-    "onMine": [
-      {
-        "ability": "area_mine",
-        "params": {
-          "width": 3,
-          "height": 3,
-          "depth": 2
-        }
-      }
-    ],
     "onRightClick": [
       {
-        "ability": "status_effect",
+        "ability": "explosion",
         "effects": {
-          "sound": "item.armor.equip_netherite",
-          "particle": "minecraft:smoke",
-          "hudMessage": "§8🔥 Void Might Unleashed!"
+          "sound": "entity.dragon_fireball.explode",
+          "particle": "minecraft:flame",
+          "screenShake": { "intensity": 1.2, "duration": 25 },
+          "hudMessage": "§4☄️ Meteor Strike!"
         },
         "params": {
-          "effectId": "minecraft:strength",
-          "duration": 240,
-          "amplifier": 2
+          "power": 5.0,
+          "launchProjectile": true
         }
       }
     ]

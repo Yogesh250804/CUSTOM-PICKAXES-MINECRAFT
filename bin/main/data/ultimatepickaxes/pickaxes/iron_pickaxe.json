@@ -1,28 +1,24 @@
 {
   "id": "iron_pickaxe",
-  "displayName": "Ultimate Iron Pickaxe",
+  "displayName": "Iron Pickaxe",
   "ingredient": "minecraft:iron_block",
   "durability": 1200,
   "miningSpeed": 9.0,
   "attackDamage": 4.5,
-  "rarity": "COMMON",
+  "rarity": "UNCOMMON",
   "cooldown": 60,
-  "tooltip": "Heavy-duty iron tool with Iron Guard armor bonus!",
-  "lore": [
-    "§7Solid forged metallic strength."
-  ],
+  "tooltip": "Generates a magnetic storm dragging metallic items and mobs.",
   "triggers": {
     "onRightClick": [
       {
-        "ability": "status_effect",
+        "ability": "item_magnet",
         "effects": {
           "sound": "item.armor.equip_iron",
-          "hudMessage": "§7🛡️ Iron Guard Active!"
+          "hudMessage": "§7⚡ Magnet Storm!"
         },
         "params": {
-          "effectId": "minecraft:resistance",
-          "duration": 140,
-          "amplifier": 1
+          "radius": 12,
+          "pullForce": 1.2
         }
       }
     ]

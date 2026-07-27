@@ -6,21 +6,20 @@
   "miningSpeed": 4.0,
   "attackDamage": 1.5,
   "rarity": "COMMON",
-  "cooldown": 20,
-  "tooltip": "Humble earth tool that enriches crops and fertile soil!",
-  "lore": [
-    "§7Simple, earthy, and nutrient-dense."
-  ],
+  "cooldown": 40,
+  "tooltip": "Launches a rolling wave of earth blocks that flings mobs.",
   "triggers": {
     "onRightClick": [
       {
-        "ability": "plant_growth",
+        "ability": "push_entities",
         "effects": {
-          "sound": "item.bone_meal.use",
-          "hudMessage": "§2🌱 Earth Fertilized!"
+          "sound": "block.grass.place",
+          "particle": "minecraft:poof",
+          "hudMessage": "§2⚡ Earth Wave!"
         },
         "params": {
-          "radius": 4
+          "radius": 6,
+          "force": 1.8
         }
       }
     ]

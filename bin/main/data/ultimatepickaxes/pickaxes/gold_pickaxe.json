@@ -1,27 +1,25 @@
 {
   "id": "gold_pickaxe",
-  "displayName": "Gold Rush Pickaxe",
+  "displayName": "Golden Pickaxe",
   "ingredient": "minecraft:gold_block",
   "durability": 600,
   "miningSpeed": 18.0,
   "attackDamage": 3.0,
   "rarity": "UNCOMMON",
-  "cooldown": 40,
-  "tooltip": "Super-fast miner that draws surrounding gold and items toward you!",
-  "lore": [
-    "§eShining brightly with golden fortune."
-  ],
+  "cooldown": 50,
+  "tooltip": "Strikes targets with golden energy causing bonus particle bursts.",
   "triggers": {
     "onRightClick": [
       {
-        "ability": "item_magnet",
+        "ability": "push_entities",
         "effects": {
           "sound": "entity.experience_orb.pickup",
-          "hudMessage": "§e💰 Golden Magnet Pulled Items!"
+          "particle": "minecraft:glow",
+          "hudMessage": "§e✨ Midas Touch!"
         },
         "params": {
-          "radius": 12,
-          "pullForce": 0.8
+          "radius": 8,
+          "force": 2.0
         }
       }
     ]

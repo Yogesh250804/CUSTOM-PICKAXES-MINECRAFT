@@ -11,7 +11,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.PickaxeItem;
-
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.sound.SoundCategory;
@@ -87,26 +86,56 @@ public class UltimatePickaxeItem extends PickaxeItem {
     }
 
     @Override
-    public boolean hasGlint(ItemStack stack) {
-        return definition.getRarity().isGlowing() || super.hasGlint(stack);
-    }
-
-    @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-        tooltip.add(Text.literal(definition.getRarity().getDisplayName() + " Pickaxe").formatted(definition.getRarity().getColor(), Formatting.BOLD));
+        // Display ONLY:
+        // ⚡ Ability Name
+        // One short exciting sentence
+        // Cooldown: Xs
+
+        String abilityName = getAbilityTitle(definition.getId());
+        tooltip.add(Text.literal(abilityName).formatted(Formatting.GOLD, Formatting.BOLD));
 
         if (!definition.getTooltip().isEmpty()) {
             tooltip.add(Text.literal(definition.getTooltip()).formatted(Formatting.GRAY));
         }
 
-        tooltip.add(Text.literal(String.format("⚡ Mining Speed: %.1f | Durability: %d", definition.getMiningSpeed(), definition.getDurability())).formatted(Formatting.DARK_AQUA));
-        tooltip.add(Text.literal(String.format("⏱ Cooldown: %.1fs", definition.getCooldown() / 20.0f)).formatted(Formatting.GOLD));
+        int secs = (int) Math.ceil(definition.getCooldown() / 20.0);
+        tooltip.add(Text.literal(String.format("⏱ Cooldown: %ds", secs)).formatted(Formatting.DARK_GREEN));
+    }
 
-        if (definition.getLore() != null && !definition.getLore().isEmpty()) {
-            tooltip.add(Text.empty());
-            for (String line : definition.getLore()) {
-                tooltip.add(Text.literal(line));
-            }
-        }
+    private String getAbilityTitle(String id) {
+        return switch (id) {
+            case "dirt_pickaxe" -> "⚡ Earth Wave";
+            case "cobblestone_pickaxe" -> "⚡ Rock Slide";
+            case "tnt_pickaxe" -> "⚡ Cluster Bomb";
+            case "glass_pickaxe" -> "⚡ Prism Beam";
+            case "sponge_pickaxe" -> "⚡ Tsunami Siphon";
+            case "honey_pickaxe" -> "⚡ Sticky Trap";
+            case "magma_pickaxe" -> "⚡ Flame Eruption";
+            case "slime_pickaxe" -> "⚡ Super Slime Bounce";
+            case "coal_pickaxe" -> "⚡ Shadow Dash";
+            case "diamond_pickaxe" -> "⚡ Crystal Prison";
+            case "dragon_egg_pickaxe" -> "⚡ Portal Rift";
+            case "amethyst_pickaxe" -> "⚡ Sonic Shockwave";
+            case "redstone_pickaxe" -> "⚡ Overcharge Impulse";
+            case "gold_pickaxe" -> "⚡ Midas Touch";
+            case "iron_pickaxe" -> "⚡ Magnet Storm";
+            case "obsidian_pickaxe" -> "⚡ Void Shield";
+            case "glowstone_pickaxe" -> "⚡ Flashbang";
+            case "netherite_pickaxe" -> "⚡ Meteor Strike";
+            case "apple_pickaxe" -> "⚡ Golden Feast";
+            case "pumpkin_pickaxe" -> "⚡ Pumpkin Scare";
+            case "cake_pickaxe" -> "⚡ Sweet Rush";
+            case "sand_pickaxe" -> "⚡ Sandstorm Vortex";
+            case "gravel_pickaxe" -> "⚡ Avalanche";
+            case "sculk_pickaxe" -> "⚡ Warden Sonic Pulse";
+            case "wood_pickaxe" -> "⚡ Timber Strike";
+            case "lapis_pickaxe" -> "⚡ Arcane Pulse";
+            case "emerald_pickaxe" -> "⚡ Wealth Shock";
+            case "prismarine_pickaxe" -> "⚡ Tidal Surge";
+            case "end_stone_pickaxe" -> "⚡ Gravity Flip";
+            case "shulker_pickaxe" -> "⚡ Levitation Blast";
+            default -> "⚡ Superpower";
+        };
     }
 }
