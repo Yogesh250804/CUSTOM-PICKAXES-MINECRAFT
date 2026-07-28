@@ -1,21 +1,21 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "category": "equipment",
-    "pattern": [
-        "###",
-        " S ",
-        " S "
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:grindstone"
-        },
-        "S": {
-            "item": "minecraft:stick"
-        }
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "###",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:grindstone"
     },
-    "result": {
-        "id": "ultimatepickaxes:grindstone_pickaxe",
-        "count": 1
+    "S": {
+      "item": "minecraft:stick"
     }
+  },
+  "result": {
+    "id": "ultimatepickaxes:grindstone_pickaxe",
+    "count": 1
+  }
 }

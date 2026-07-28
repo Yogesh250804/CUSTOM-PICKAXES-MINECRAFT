@@ -1,21 +1,21 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "category": "equipment",
-    "pattern": [
-        "###",
-        " S ",
-        " S "
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:brown_terracotta"
-        },
-        "S": {
-            "item": "minecraft:stick"
-        }
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "###",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:brown_terracotta"
     },
-    "result": {
-        "id": "ultimatepickaxes:brown_terracotta_pickaxe",
-        "count": 1
+    "S": {
+      "item": "minecraft:stick"
     }
+  },
+  "result": {
+    "id": "ultimatepickaxes:brown_terracotta_pickaxe",
+    "count": 1
+  }
 }

@@ -1,21 +1,21 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "category": "equipment",
-    "pattern": [
-        "###",
-        " S ",
-        " S "
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:cyan_concrete"
-        },
-        "S": {
-            "item": "minecraft:stick"
-        }
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "###",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cyan_concrete"
     },
-    "result": {
-        "id": "ultimatepickaxes:cyan_concrete_pickaxe",
-        "count": 1
+    "S": {
+      "item": "minecraft:stick"
     }
+  },
+  "result": {
+    "id": "ultimatepickaxes:cyan_concrete_pickaxe",
+    "count": 1
+  }
 }

@@ -1,21 +1,21 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "category": "equipment",
-    "pattern": [
-        "###",
-        " S ",
-        " S "
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:brown_mushroom"
-        },
-        "S": {
-            "item": "minecraft:stick"
-        }
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "###",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:brown_mushroom"
     },
-    "result": {
-        "id": "ultimatepickaxes:brown_mushroom_pickaxe",
-        "count": 1
+    "S": {
+      "item": "minecraft:stick"
     }
+  },
+  "result": {
+    "id": "ultimatepickaxes:brown_mushroom_pickaxe",
+    "count": 1
+  }
 }

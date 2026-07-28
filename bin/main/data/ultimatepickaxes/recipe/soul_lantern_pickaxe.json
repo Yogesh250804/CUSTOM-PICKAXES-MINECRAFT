@@ -1,21 +1,21 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "category": "equipment",
-    "pattern": [
-        "###",
-        " S ",
-        " S "
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:soul_lantern"
-        },
-        "S": {
-            "item": "minecraft:stick"
-        }
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "###",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:soul_lantern"
     },
-    "result": {
-        "id": "ultimatepickaxes:soul_lantern_pickaxe",
-        "count": 1
+    "S": {
+      "item": "minecraft:stick"
     }
+  },
+  "result": {
+    "id": "ultimatepickaxes:soul_lantern_pickaxe",
+    "count": 1
+  }
 }
