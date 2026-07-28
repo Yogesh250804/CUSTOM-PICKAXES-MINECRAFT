@@ -1,22 +1,21 @@
-﻿{
-    "id":  "moss_pickaxe",
-    "displayName":  "Moss Pickaxe",
-    "ingredient":  "minecraft:moss_block",
-    "durability":  500,
-    "miningSpeed":  6.0,
-    "attackDamage":  2.5,
-    "rarity":  "COMMON",
-    "cooldown":  30,
-    "tooltip":  "âš¡ Root Snare - Entangles enemies in vine roots!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "duration":  100,
-                                                             "radius":  6
-                                                         },
-                                              "ability":  "root_snare"
-                                          }
-                                      ]
-                 }
+{
+    "id": "moss_pickaxe",
+    "displayName": "Moss Pickaxe",
+    "ingredient": "minecraft:moss_block",
+    "durability": 400,
+    "miningSpeed": 5.5,
+    "attackDamage": 3.5,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Unleashes a razor-leaf forest storm.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "forest_wrath",
+                "params": {
+                    "radius": 3
+                }
+            }
+        ]
+    }
 }

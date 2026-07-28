@@ -1,0 +1,24 @@
+{
+    "id": "dead_brain_coral_fan_pickaxe",
+    "displayName": "Dead Brain Coral Fan Pickaxe",
+    "ingredient": "minecraft:dead_brain_coral_fan",
+    "durability": 800,
+    "miningSpeed": 7.0,
+    "attackDamage": 4.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Instantly siphons all water in a 5-block radius.",
+    "lore": [
+        "Crafted from Dead Brain Coral Fan."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "sponge_absorb",
+                "params": {
+                    "radius": 5
+                }
+            }
+        ]
+    }
+}

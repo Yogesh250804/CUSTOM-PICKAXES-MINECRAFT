@@ -1,22 +1,24 @@
-﻿{
-    "id":  "prismarine_bricks_pickaxe",
-    "displayName":  "Prismarine Bricks Pickaxe",
-    "ingredient":  "minecraft:prismarine_bricks",
-    "durability":  1800,
-    "miningSpeed":  12.0,
-    "attackDamage":  6.0,
-    "rarity":  "RARE",
-    "cooldown":  60,
-    "tooltip":  "âš¡ Guardian Beam - Fires guardian laser beam attack!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "range":  18,
-                                                             "damage":  14
-                                                         },
-                                              "ability":  "guardian_beam"
-                                          }
-                                      ]
-                 }
+{
+    "id": "prismarine_bricks_pickaxe",
+    "displayName": "Prismarine Bricks Pickaxe",
+    "ingredient": "minecraft:prismarine_bricks",
+    "durability": 1000,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a laser beam like an Elder Guardian.",
+    "lore": [
+        "Crafted from Prismarine Bricks."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "guardian_beam",
+                "params": {
+                    "damage": 8.0
+                }
+            }
+        ]
+    }
 }

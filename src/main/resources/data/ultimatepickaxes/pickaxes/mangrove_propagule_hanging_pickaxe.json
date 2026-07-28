@@ -1,0 +1,25 @@
+{
+    "id": "mangrove_propagule_hanging_pickaxe",
+    "displayName": "Mangrove Propagule Hanging Pickaxe",
+    "ingredient": "minecraft:mangrove_propagule_hanging",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Mangrove Propagule Hanging."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "push_entities",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "ultimatepickaxes:item/brown_concrete_powder_pickaxe"
+    }
+}

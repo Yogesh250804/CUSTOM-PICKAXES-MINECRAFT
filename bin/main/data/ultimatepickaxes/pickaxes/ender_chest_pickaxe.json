@@ -1,21 +1,22 @@
-﻿{
-    "id":  "ender_chest_pickaxe",
-    "displayName":  "Ender Chest Pickaxe",
-    "ingredient":  "minecraft:ender_chest",
-    "durability":  3000,
-    "miningSpeed":  14.0,
-    "attackDamage":  7.0,
-    "rarity":  "EPIC",
-    "cooldown":  60,
-    "tooltip":  "âš¡ Void Storage - Opens void stash to Ender Chest!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-
-                                                         },
-                                              "ability":  "void_storage"
-                                          }
-                                      ]
-                 }
+{
+    "id": "ender_chest_pickaxe",
+    "displayName": "Ender Chest Pickaxe",
+    "ingredient": "minecraft:ender_chest",
+    "durability": 2000,
+    "miningSpeed": 10.0,
+    "attackDamage": 7.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Opens your Ender Chest void storage anywhere.",
+    "lore": [
+        "Crafted from Ender Chest."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "void_storage",
+                "params": {}
+            }
+        ]
+    }
 }

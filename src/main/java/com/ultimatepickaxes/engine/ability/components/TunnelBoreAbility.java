@@ -23,10 +23,28 @@ public class TunnelBoreAbility implements AbilityComponent {
         int width = params.has("width") ? params.get("width").getAsInt() : 3;
         int height = params.has("height") ? params.get("height").getAsInt() : 3;
 
-        Direction facing = context.getPlayer().getHorizontalFacing();
-        Direction right = facing.rotateYClockwise();
-        BlockPos start = context.getPlayer().getBlockPos().offset(facing, 1);
+        float pitch = context.getPlayer().getPitch();
+        Direction facing;
+        if (pitch < -45.0f) {
+            facing = Direction.UP;
+        } else if (pitch > 45.0f) {
+            facing = Direction.DOWN;
+        } else {
+            facing = context.getPlayer().getHorizontalFacing();
+        }
 
+        Direction right;
+        Direction up;
+        if (facing == Direction.UP || facing == Direction.DOWN) {
+            Direction horiz = context.getPlayer().getHorizontalFacing();
+            right = horiz.rotateYClockwise();
+            up = facing == Direction.UP ? horiz : horiz.getOpposite();
+        } else {
+            right = facing.rotateYClockwise();
+            up = Direction.UP;
+        }
+
+        BlockPos start = context.getPlayer().getBlockPos().offset(facing, 1);
         int halfW = width / 2;
         int mined = 0;
 
@@ -38,7 +56,7 @@ public class TunnelBoreAbility implements AbilityComponent {
                     BlockPos targetPos = start
                             .offset(facing, d)
                             .offset(right, w)
-                            .offset(Direction.UP, h);
+                            .offset(up, h);
                     BlockState state = world.getBlockState(targetPos);
                     if (!state.isAir() && state.getHardness(world, targetPos) >= 0
                             && state.getHardness(world, targetPos) < 50) {
@@ -47,19 +65,11 @@ public class TunnelBoreAbility implements AbilityComponent {
                     }
                 }
             }
-            // Spawn drilling particles at the tunnel face
-            BlockPos faceCenter = start.offset(facing, d).offset(Direction.UP, 1);
+            BlockPos faceCenter = start.offset(facing, d).offset(up, 1);
             world.spawnParticles(ParticleTypes.CLOUD, faceCenter.getX() + 0.5, faceCenter.getY() + 0.5, faceCenter.getZ() + 0.5, 5, 0.5, 0.5, 0.5, 0.02);
-        }
-
-        // Place torches every 4 blocks for light
-        for (int d = 0; d < length; d += 4) {
-            BlockPos torchPos = start.offset(facing, d).offset(Direction.UP, 1).offset(right, halfW + 1);
-            if (world.getBlockState(torchPos).isAir() && !world.getBlockState(torchPos.down()).isAir()) {
-                world.setBlockState(torchPos, net.minecraft.block.Blocks.TORCH.getDefaultState());
-            }
         }
 
         return mined > 0;
     }
 }
+

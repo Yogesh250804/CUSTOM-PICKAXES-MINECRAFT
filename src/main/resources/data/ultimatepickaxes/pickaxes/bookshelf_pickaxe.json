@@ -1,21 +1,25 @@
-﻿{
-    "id":  "bookshelf_pickaxe",
-    "displayName":  "Bookshelf Pickaxe",
-    "ingredient":  "minecraft:bookshelf",
-    "durability":  600,
-    "miningSpeed":  7.0,
-    "attackDamage":  3.0,
-    "rarity":  "UNCOMMON",
-    "cooldown":  50,
-    "tooltip":  "âš¡ Spell Roulette - Casts random powerful spell buffs!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-
-                                                         },
-                                              "ability":  "spell_roulette"
-                                          }
-                                      ]
-                 }
+{
+    "id": "bookshelf_pickaxe",
+    "displayName": "Bookshelf Pickaxe",
+    "ingredient": "minecraft:bookshelf",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Bookshelf."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "launch_player",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
 }

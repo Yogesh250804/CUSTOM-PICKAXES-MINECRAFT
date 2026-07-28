@@ -1,21 +1,22 @@
-﻿{
-    "id":  "crimson_pickaxe",
-    "displayName":  "Crimson Pickaxe",
-    "ingredient":  "minecraft:crimson_hyphae",
-    "durability":  600,
-    "miningSpeed":  7,
-    "attackDamage":  4,
-    "rarity":  "UNCOMMON",
-    "cooldown":  50,
-    "tooltip":  "âš¡ Blood Rage - Strength, Regen, and Resistance mode!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "duration":  200
-                                                         },
-                                              "ability":  "lifesteal"
-                                          }
-                                      ]
-                 }
+{
+    "id": "crimson_pickaxe",
+    "displayName": "Crimson Pickaxe",
+    "ingredient": "minecraft:crimson_hyphae",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Drills deep into bedrock and stone.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "deep_drill",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
 }

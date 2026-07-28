@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+        "###",
+        " S ",
+        " S "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:dead_brain_coral"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "id": "ultimatepickaxes:dead_brain_coral_pickaxe",
+        "count": 1
+    }
+}

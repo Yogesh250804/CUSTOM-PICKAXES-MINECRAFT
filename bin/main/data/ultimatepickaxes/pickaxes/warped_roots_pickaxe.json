@@ -1,0 +1,25 @@
+{
+    "id": "warped_roots_pickaxe",
+    "displayName": "Warped Roots Pickaxe",
+    "ingredient": "minecraft:warped_roots",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Drills deep into bedrock and stone.",
+    "lore": [
+        "Crafted from Warped Roots."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "deep_drill",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

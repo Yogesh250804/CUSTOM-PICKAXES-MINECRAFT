@@ -1,25 +1,25 @@
-﻿{
-    "id":  "end_stone_pickaxe",
-    "displayName":  "End Stone Pickaxe",
-    "ingredient":  "minecraft:end_stone",
-    "durability":  1200,
-    "miningSpeed":  9.0,
-    "attackDamage":  4.5,
-    "rarity":  "RARE",
-    "cooldown":  70,
-    "tooltip":  "âš¡ Gravity Flip - Reverses gravity floating mobs!",
-    "lore":  [
-                 "Â§ePorous yellow stone from the Void dimension."
-             ],
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "duration":  100,
-                                                             "radius":  12
-                                                         },
-                                              "ability":  "gravity_flip"
-                                          }
-                                      ]
-                 }
+{
+    "id": "end_stone_pickaxe",
+    "displayName": "End Stone Pickaxe",
+    "ingredient": "minecraft:end_stone",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from End Stone."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "item_magnet",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
 }

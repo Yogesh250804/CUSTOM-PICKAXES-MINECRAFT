@@ -1,0 +1,24 @@
+{
+    "id": "grass_block_snow_pickaxe",
+    "displayName": "Grass Block Snow Pickaxe",
+    "ingredient": "minecraft:grass_block_snow",
+    "durability": 800,
+    "miningSpeed": 7.0,
+    "attackDamage": 4.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Flash-freezes a 20-block zone and encases enemies in ice.",
+    "lore": [
+        "Crafted from Grass Block Snow."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "ice_age",
+                "params": {
+                    "radius": 6
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "id": "bone_block_pickaxe",
+    "displayName": "Bone Block Pickaxe",
+    "ingredient": "minecraft:bone_block",
+    "durability": 1500,
+    "miningSpeed": 9.0,
+    "attackDamage": 6.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Summons a loyal army of undead warriors to protect you.",
+    "lore": [
+        "Crafted from Bone Block."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "mob_swarm",
+                "params": {
+                    "count": 4
+                }
+            }
+        ]
+    }
+}

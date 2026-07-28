@@ -1,22 +1,24 @@
-﻿{
-    "id":  "crying_obsidian_pickaxe",
-    "displayName":  "Crying Obsidian Pickaxe",
-    "ingredient":  "minecraft:crying_obsidian",
-    "durability":  3500,
-    "miningSpeed":  15.0,
-    "attackDamage":  8.5,
-    "rarity":  "EPIC",
-    "cooldown":  70,
-    "tooltip":  "âš¡ Soul Tear - Rips souls from nearby mobs!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "damage":  18,
-                                                             "radius":  10
-                                                         },
-                                              "ability":  "soul_copy"
-                                          }
-                                      ]
-                 }
+{
+    "id": "crying_obsidian_pickaxe",
+    "displayName": "Crying Obsidian Pickaxe",
+    "ingredient": "minecraft:crying_obsidian",
+    "durability": 4000,
+    "miningSpeed": 16.0,
+    "attackDamage": 12.0,
+    "rarity": "MYTHIC",
+    "cooldown": 0,
+    "tooltip": "Tears open a void rift, teleporting mobs 100 blocks up.",
+    "lore": [
+        "Crafted from Crying Obsidian."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "dimensional_rift",
+                "params": {
+                    "distance": 10
+                }
+            }
+        ]
+    }
 }

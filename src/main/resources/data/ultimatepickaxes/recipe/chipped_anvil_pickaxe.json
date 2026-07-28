@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+        "###",
+        " S ",
+        " S "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:chipped_anvil"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "id": "ultimatepickaxes:chipped_anvil_pickaxe",
+        "count": 1
+    }
+}

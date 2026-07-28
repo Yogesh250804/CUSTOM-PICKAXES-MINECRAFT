@@ -1,0 +1,24 @@
+{
+    "id": "dark_prismarine_pickaxe",
+    "displayName": "Dark Prismarine Pickaxe",
+    "ingredient": "minecraft:dark_prismarine",
+    "durability": 1000,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a laser beam like an Elder Guardian.",
+    "lore": [
+        "Crafted from Dark Prismarine."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "guardian_beam",
+                "params": {
+                    "damage": 8.0
+                }
+            }
+        ]
+    }
+}

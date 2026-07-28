@@ -1,0 +1,24 @@
+{
+    "id": "blue_terracotta_pickaxe",
+    "displayName": "Blue Terracotta Pickaxe",
+    "ingredient": "minecraft:blue_terracotta",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a focused beam of light.",
+    "lore": [
+        "Crafted from Blue Terracotta."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "prism_beam",
+                "params": {
+                    "length": 6
+                }
+            }
+        ]
+    }
+}

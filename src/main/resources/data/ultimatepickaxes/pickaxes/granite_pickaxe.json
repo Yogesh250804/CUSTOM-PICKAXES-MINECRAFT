@@ -1,22 +1,24 @@
-﻿{
-    "id":  "granite_pickaxe",
-    "displayName":  "Granite Pickaxe",
-    "ingredient":  "minecraft:granite",
-    "durability":  450,
-    "miningSpeed":  6,
-    "attackDamage":  3,
-    "rarity":  "COMMON",
-    "cooldown":  40,
-    "tooltip":  "âš¡ Tectonic Slam - Creates ground fissures!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "damage":  10,
-                                                             "length":  10
-                                                         },
-                                              "ability":  "tectonic_slam"
-                                          }
-                                      ]
-                 }
+{
+    "id": "granite_pickaxe",
+    "displayName": "Granite Pickaxe",
+    "ingredient": "minecraft:granite",
+    "durability": 800,
+    "miningSpeed": 7.5,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Erupts sharp stone spikes from the ground.",
+    "lore": [
+        "Crafted from Granite."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "stone_spike",
+                "params": {
+                    "count": 4
+                }
+            }
+        ]
+    }
 }

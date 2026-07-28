@@ -1,0 +1,24 @@
+{
+    "id": "chorus_flower_pickaxe",
+    "displayName": "Chorus Flower Pickaxe",
+    "ingredient": "minecraft:chorus_flower",
+    "durability": 350,
+    "miningSpeed": 5.0,
+    "attackDamage": 3.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Instantly grows crops and plants around you.",
+    "lore": [
+        "Crafted from Chorus Flower."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "plant_growth",
+                "params": {
+                    "radius": 3
+                }
+            }
+        ]
+    }
+}

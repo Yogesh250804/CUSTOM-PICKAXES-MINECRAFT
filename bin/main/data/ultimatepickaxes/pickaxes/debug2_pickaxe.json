@@ -1,0 +1,25 @@
+{
+    "id": "debug2_pickaxe",
+    "displayName": "Debug2 Pickaxe",
+    "ingredient": "minecraft:debug2",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Debug2."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "launch_player",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

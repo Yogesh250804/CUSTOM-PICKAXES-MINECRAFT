@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+        "###",
+        " S ",
+        " S "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:crafter_north_crafting"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "id": "ultimatepickaxes:crafter_north_crafting_pickaxe",
+        "count": 1
+    }
+}

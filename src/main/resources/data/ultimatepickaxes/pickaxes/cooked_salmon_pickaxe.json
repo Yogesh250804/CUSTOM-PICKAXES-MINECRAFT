@@ -1,0 +1,19 @@
+{
+    "id": "cooked_salmon_pickaxe",
+    "displayName": "Cooked Salmon Pickaxe",
+    "ingredient": "minecraft:cooked_salmon",
+    "durability": 550,
+    "miningSpeed": 7.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 100,
+    "tooltip": "Tidal Wave! Sweeps enemies away in a water torrent.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "tidal_wave",
+                "params": {}
+            }
+        ]
+    }
+}

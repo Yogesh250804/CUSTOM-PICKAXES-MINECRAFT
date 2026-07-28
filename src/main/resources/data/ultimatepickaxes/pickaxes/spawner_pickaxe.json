@@ -1,0 +1,24 @@
+{
+    "id": "spawner_pickaxe",
+    "displayName": "Spawner Pickaxe",
+    "ingredient": "minecraft:spawner",
+    "durability": 1500,
+    "miningSpeed": 9.0,
+    "attackDamage": 6.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Summons a loyal army of undead warriors to protect you.",
+    "lore": [
+        "Crafted from Spawner."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "mob_swarm",
+                "params": {
+                    "count": 4
+                }
+            }
+        ]
+    }
+}

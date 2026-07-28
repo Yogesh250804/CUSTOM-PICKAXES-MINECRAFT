@@ -1,0 +1,24 @@
+{
+    "id": "redstone_lamp_pickaxe",
+    "displayName": "Redstone Lamp Pickaxe",
+    "ingredient": "minecraft:redstone_lamp",
+    "durability": 900,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Emits a pulse of dark redstone energy.",
+    "lore": [
+        "Crafted from Redstone Lamp."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "dark_pulse",
+                "params": {
+                    "radius": 4
+                }
+            }
+        ]
+    }
+}

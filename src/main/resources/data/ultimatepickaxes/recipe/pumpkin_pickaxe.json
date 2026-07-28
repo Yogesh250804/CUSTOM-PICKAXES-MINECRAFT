@@ -1,21 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "pattern": [
-    "###",
-    " S ",
-    " S "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:carved_pumpkin"
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+        "###",
+        " S ",
+        " S "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:pumpkin"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
     },
-    "S": {
-      "item": "minecraft:stick"
+    "result": {
+        "id": "ultimatepickaxes:pumpkin_pickaxe",
+        "count": 1
     }
-  },
-  "result": {
-    "id": "ultimatepickaxes:pumpkin_pickaxe",
-    "count": 1
-  }
 }

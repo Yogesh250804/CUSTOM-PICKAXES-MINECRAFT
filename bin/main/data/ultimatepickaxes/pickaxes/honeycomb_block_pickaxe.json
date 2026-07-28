@@ -1,0 +1,25 @@
+{
+    "id": "honeycomb_block_pickaxe",
+    "displayName": "Honeycomb Block Pickaxe",
+    "ingredient": "minecraft:honeycomb_block",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Drops heavy boulders from above.",
+    "lore": [
+        "Crafted from Honeycomb Block."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "rockfall",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

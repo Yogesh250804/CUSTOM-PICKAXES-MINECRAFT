@@ -1,0 +1,24 @@
+{
+    "id": "sugar_cane_pickaxe",
+    "displayName": "Sugar Cane Pickaxe",
+    "ingredient": "minecraft:sugar_cane",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants extreme speed and haste.",
+    "lore": [
+        "Crafted from Sugar Cane."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "sugar_rush",
+                "params": {
+                    "duration": 200
+                }
+            }
+        ]
+    }
+}

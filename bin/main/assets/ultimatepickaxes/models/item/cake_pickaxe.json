@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "ultimatepickaxes:item/cake_pickaxe"
+    "layer0": "ultimatepickaxes:item/generated_food/cake_pickaxe"
   }
 }

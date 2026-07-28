@@ -1,22 +1,21 @@
-﻿{
-    "id":  "dripstone_pickaxe",
-    "displayName":  "Dripstone Pickaxe",
-    "ingredient":  "minecraft:pointed_dripstone",
-    "durability":  400,
-    "miningSpeed":  6,
-    "attackDamage":  4.5,
-    "rarity":  "COMMON",
-    "cooldown":  30,
-    "tooltip":  "âš¡ Stalactite Rain - Rains pointed dripstone spears!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "count":  15,
-                                                             "damage":  8
-                                                         },
-                                              "ability":  "stalactite_rain"
-                                          }
-                                      ]
-                 }
+{
+    "id": "dripstone_pickaxe",
+    "displayName": "Dripstone Pickaxe",
+    "ingredient": "minecraft:pointed_dripstone",
+    "durability": 800,
+    "miningSpeed": 7.5,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Rains sharp dripstone stalactites from above.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "stalactite_rain",
+                "params": {
+                    "count": 4
+                }
+            }
+        ]
+    }
 }

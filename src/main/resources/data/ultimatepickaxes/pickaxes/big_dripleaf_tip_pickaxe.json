@@ -1,0 +1,24 @@
+{
+    "id": "big_dripleaf_tip_pickaxe",
+    "displayName": "Big Dripleaf Tip Pickaxe",
+    "ingredient": "minecraft:big_dripleaf_tip",
+    "durability": 400,
+    "miningSpeed": 5.5,
+    "attackDamage": 3.5,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Unleashes a razor-leaf forest storm.",
+    "lore": [
+        "Crafted from Big Dripleaf Tip."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "forest_wrath",
+                "params": {
+                    "radius": 3
+                }
+            }
+        ]
+    }
+}

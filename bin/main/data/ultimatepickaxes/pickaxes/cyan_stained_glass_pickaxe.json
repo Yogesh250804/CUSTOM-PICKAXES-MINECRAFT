@@ -1,0 +1,24 @@
+{
+    "id": "cyan_stained_glass_pickaxe",
+    "displayName": "Cyan Stained Glass Pickaxe",
+    "ingredient": "minecraft:cyan_stained_glass",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a focused beam of light.",
+    "lore": [
+        "Crafted from Cyan Stained Glass."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "prism_beam",
+                "params": {
+                    "length": 6
+                }
+            }
+        ]
+    }
+}

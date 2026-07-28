@@ -1,0 +1,25 @@
+{
+    "id": "crimson_fungus_pickaxe",
+    "displayName": "Crimson Fungus Pickaxe",
+    "ingredient": "minecraft:crimson_fungus",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Crimson Fungus."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "push_entities",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

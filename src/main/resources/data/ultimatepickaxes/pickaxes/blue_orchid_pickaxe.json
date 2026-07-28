@@ -1,0 +1,25 @@
+{
+    "id": "blue_orchid_pickaxe",
+    "displayName": "Blue Orchid Pickaxe",
+    "ingredient": "minecraft:blue_orchid",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Drops heavy boulders from above.",
+    "lore": [
+        "Crafted from Blue Orchid."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "rockfall",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

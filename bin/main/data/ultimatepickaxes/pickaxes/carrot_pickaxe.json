@@ -1,0 +1,21 @@
+{
+    "id": "carrot_pickaxe",
+    "displayName": "Carrot Pickaxe",
+    "ingredient": "minecraft:carrot",
+    "durability": 350,
+    "miningSpeed": 6.0,
+    "attackDamage": 3.5,
+    "rarity": "COMMON",
+    "cooldown": 60,
+    "tooltip": "Golden Laser Beam! Fires piercing laser beam through blocks and mobs.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "golden_laser",
+                "params": {
+                    "range": 25.0
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "id": "barrel_top_pickaxe",
+    "displayName": "Barrel Top Pickaxe",
+    "ingredient": "minecraft:barrel_top",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Drills deep into bedrock and stone.",
+    "lore": [
+        "Crafted from Barrel Top."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "deep_drill",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

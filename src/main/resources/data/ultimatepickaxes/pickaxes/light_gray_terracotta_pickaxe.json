@@ -1,0 +1,24 @@
+{
+    "id": "light_gray_terracotta_pickaxe",
+    "displayName": "Light Gray Terracotta Pickaxe",
+    "ingredient": "minecraft:light_gray_terracotta",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a focused beam of light.",
+    "lore": [
+        "Crafted from Light Gray Terracotta."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "prism_beam",
+                "params": {
+                    "length": 6
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "id": "large_amethyst_bud_pickaxe",
+    "displayName": "Large Amethyst Bud Pickaxe",
+    "ingredient": "minecraft:large_amethyst_bud",
+    "durability": 1000,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a powerful Warden sonic pulse.",
+    "lore": [
+        "Crafted from Large Amethyst Bud."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "sonic_boom",
+                "params": {
+                    "range": 6
+                }
+            }
+        ]
+    }
+}

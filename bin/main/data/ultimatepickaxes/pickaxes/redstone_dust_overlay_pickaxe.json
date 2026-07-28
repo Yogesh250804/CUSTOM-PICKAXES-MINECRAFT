@@ -1,0 +1,24 @@
+{
+    "id": "redstone_dust_overlay_pickaxe",
+    "displayName": "Redstone Dust Overlay Pickaxe",
+    "ingredient": "minecraft:redstone_dust_overlay",
+    "durability": 900,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Emits a pulse of dark redstone energy.",
+    "lore": [
+        "Crafted from Redstone Dust Overlay."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "dark_pulse",
+                "params": {
+                    "radius": 4
+                }
+            }
+        ]
+    }
+}

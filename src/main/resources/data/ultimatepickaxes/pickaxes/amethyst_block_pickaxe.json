@@ -1,0 +1,24 @@
+{
+    "id": "amethyst_block_pickaxe",
+    "displayName": "Amethyst Pickaxe",
+    "ingredient": "minecraft:amethyst_block",
+    "durability": 1000,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a powerful Warden sonic pulse.",
+    "lore": [
+        "Crafted from Amethyst Block."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "sonic_boom",
+                "params": {
+                    "range": 6
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "id": "destroy_stage_8_pickaxe",
+    "displayName": "Destroy Stage 8 Pickaxe",
+    "ingredient": "minecraft:destroy_stage_8",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Destroy Stage 8."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "push_entities",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

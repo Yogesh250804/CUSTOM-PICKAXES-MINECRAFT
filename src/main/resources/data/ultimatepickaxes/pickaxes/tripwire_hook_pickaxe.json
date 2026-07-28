@@ -1,0 +1,25 @@
+{
+    "id": "tripwire_hook_pickaxe",
+    "displayName": "Tripwire Hook Pickaxe",
+    "ingredient": "minecraft:tripwire_hook",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Tripwire Hook."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "push_entities",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

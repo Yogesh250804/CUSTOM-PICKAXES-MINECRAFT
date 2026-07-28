@@ -1,0 +1,24 @@
+{
+    "id": "orange_wool_pickaxe",
+    "displayName": "Orange Wool Pickaxe",
+    "ingredient": "minecraft:orange_wool",
+    "durability": 450,
+    "miningSpeed": 5.5,
+    "attackDamage": 3.5,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants levitation and cloud walking.",
+    "lore": [
+        "Crafted from Orange Wool."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "cloud_walk",
+                "params": {
+                    "duration": 100
+                }
+            }
+        ]
+    }
+}

@@ -1,25 +1,24 @@
-﻿{
-    "id":  "redstone_pickaxe",
-    "displayName":  "Redstone Pickaxe",
-    "ingredient":  "minecraft:redstone_block",
-    "durability":  800,
-    "miningSpeed":  16.0,
-    "attackDamage":  4.0,
-    "rarity":  "UNCOMMON",
-    "cooldown":  50,
-    "tooltip":  "âš¡ Stun EMP - Stuns all nearby mob AI completely!",
-    "lore":  [
-                 "Â§cHigh-voltage energetic core."
-             ],
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "duration":  80,
-                                                             "radius":  8
-                                                         },
-                                              "ability":  "stun"
-                                          }
-                                      ]
-                 }
+{
+    "id": "redstone_pickaxe",
+    "displayName": "Redstone Pickaxe",
+    "ingredient": "minecraft:redstone_block",
+    "durability": 900,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Emits a pulse of dark redstone energy.",
+    "lore": [
+        "\u00c2\u00a7cHigh-voltage energetic core."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "dark_pulse",
+                "params": {
+                    "radius": 4
+                }
+            }
+        ]
+    }
 }

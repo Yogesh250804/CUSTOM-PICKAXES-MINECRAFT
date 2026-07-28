@@ -1,0 +1,24 @@
+{
+    "id": "flowering_azalea_leaves_pickaxe",
+    "displayName": "Flowering Azalea Leaves Pickaxe",
+    "ingredient": "minecraft:flowering_azalea_leaves",
+    "durability": 400,
+    "miningSpeed": 5.5,
+    "attackDamage": 3.5,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Unleashes a razor-leaf forest storm.",
+    "lore": [
+        "Crafted from Flowering Azalea Leaves."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "forest_wrath",
+                "params": {
+                    "radius": 3
+                }
+            }
+        ]
+    }
+}

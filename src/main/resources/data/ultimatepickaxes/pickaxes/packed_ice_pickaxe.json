@@ -1,21 +1,24 @@
-﻿{
-    "id":  "packed_ice_pickaxe",
-    "displayName":  "Packed Ice Pickaxe",
-    "ingredient":  "minecraft:packed_ice",
-    "durability":  500,
-    "miningSpeed":  6.5,
-    "attackDamage":  3.5,
-    "rarity":  "UNCOMMON",
-    "cooldown":  35,
-    "tooltip":  "âš¡ Glacier Ram - Launches sliding ice block ram!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "damage":  12
-                                                         },
-                                              "ability":  "glacier_ram"
-                                          }
-                                      ]
-                 }
+{
+    "id": "packed_ice_pickaxe",
+    "displayName": "Packed Ice Pickaxe",
+    "ingredient": "minecraft:packed_ice",
+    "durability": 800,
+    "miningSpeed": 7.0,
+    "attackDamage": 4.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Flash-freezes a 20-block zone and encases enemies in ice.",
+    "lore": [
+        "Crafted from Packed Ice."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "ice_age",
+                "params": {
+                    "radius": 6
+                }
+            }
+        ]
+    }
 }

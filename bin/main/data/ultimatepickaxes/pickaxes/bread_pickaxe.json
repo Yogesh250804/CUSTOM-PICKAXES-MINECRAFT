@@ -1,0 +1,34 @@
+{
+    "id": "bread_pickaxe",
+    "displayName": "Bread Pickaxe",
+    "ingredient": "minecraft:bread",
+    "durability": 400,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 80,
+    "tooltip": "Harvest Wave! Cleanses area and gives swift haste burst.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "food_feast",
+                "params": {
+                    "hunger": 20,
+                    "saturation": 1.0,
+                    "effects": [
+                        {
+                            "id": "minecraft:haste",
+                            "duration": 400,
+                            "amplifier": 3
+                        },
+                        {
+                            "id": "minecraft:speed",
+                            "duration": 400,
+                            "amplifier": 2
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

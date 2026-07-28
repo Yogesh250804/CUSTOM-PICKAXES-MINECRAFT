@@ -1,21 +1,24 @@
-﻿{
-    "id":  "beacon_pickaxe",
-    "displayName":  "Beacon Pickaxe",
-    "ingredient":  "minecraft:beacon",
-    "durability":  5000,
-    "miningSpeed":  25.0,
-    "attackDamage":  10.0,
-    "rarity":  "DIVINE",
-    "cooldown":  120,
-    "tooltip":  "âš¡ Orbital Laser - Beam of light from the sky!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "damage":  25
-                                                         },
-                                              "ability":  "orbital_laser"
-                                          }
-                                      ]
-                 }
+{
+    "id": "beacon_pickaxe",
+    "displayName": "Beacon Pickaxe",
+    "ingredient": "minecraft:beacon",
+    "durability": 7000,
+    "miningSpeed": 22.0,
+    "attackDamage": 16.0,
+    "rarity": "MYTHIC",
+    "cooldown": 0,
+    "tooltip": "Fires a searing orbital beam from above.",
+    "lore": [
+        "Crafted from Beacon."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "orbital_laser",
+                "params": {
+                    "damage": 30.0
+                }
+            }
+        ]
+    }
 }

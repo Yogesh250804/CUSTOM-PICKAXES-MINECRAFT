@@ -1,0 +1,25 @@
+{
+    "id": "ochre_froglight_pickaxe",
+    "displayName": "Ochre Froglight Pickaxe",
+    "ingredient": "minecraft:ochre_froglight",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Mines connected veins of blocks.",
+    "lore": [
+        "Crafted from Ochre Froglight."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "vein_mine",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

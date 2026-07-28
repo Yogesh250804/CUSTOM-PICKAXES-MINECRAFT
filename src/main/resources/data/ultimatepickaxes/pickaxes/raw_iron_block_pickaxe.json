@@ -1,0 +1,24 @@
+{
+    "id": "raw_iron_block_pickaxe",
+    "displayName": "Raw Iron Block Pickaxe",
+    "ingredient": "minecraft:raw_iron_block",
+    "durability": 1000,
+    "miningSpeed": 9.0,
+    "attackDamage": 6.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Zaps nearby mobs with chain lightning.",
+    "lore": [
+        "Crafted from Raw Iron Block."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "chain_lightning",
+                "params": {
+                    "count": 3
+                }
+            }
+        ]
+    }
+}

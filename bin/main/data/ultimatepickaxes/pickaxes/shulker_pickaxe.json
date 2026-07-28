@@ -1,25 +1,24 @@
-﻿{
-    "id":  "shulker_pickaxe",
-    "displayName":  "Shulker Box Pickaxe",
-    "ingredient":  "minecraft:shulker_box",
-    "durability":  2200,
-    "miningSpeed":  12.5,
-    "attackDamage":  6.5,
-    "rarity":  "EPIC",
-    "cooldown":  60,
-    "tooltip":  "âš¡ Gravity Well - Black hole sucking entities inward!",
-    "lore":  [
-                 "Â§5Crafted from sturdy purple shulker shells."
-             ],
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "damage":  12,
-                                                             "radius":  10
-                                                         },
-                                              "ability":  "gravity_well"
-                                          }
-                                      ]
-                 }
+{
+    "id": "shulker_pickaxe",
+    "displayName": "Shulker Pickaxe",
+    "ingredient": "minecraft:shulker_box",
+    "durability": 2000,
+    "miningSpeed": 10.0,
+    "attackDamage": 7.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Pulls surrounding mobs into a central gravity well.",
+    "lore": [
+        "\u00c2\u00a75Crafted from sturdy purple shulker shells."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "gravity_well",
+                "params": {
+                    "radius": 6
+                }
+            }
+        ]
+    }
 }

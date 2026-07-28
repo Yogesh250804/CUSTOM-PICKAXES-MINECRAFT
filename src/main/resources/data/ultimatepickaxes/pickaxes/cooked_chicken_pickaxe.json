@@ -1,0 +1,19 @@
+{
+    "id": "cooked_chicken_pickaxe",
+    "displayName": "Cooked Chicken Pickaxe",
+    "ingredient": "minecraft:cooked_chicken",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.5,
+    "rarity": "UNCOMMON",
+    "cooldown": 100,
+    "tooltip": "Carnivore Rage! Primal roar with speed and flight burst.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "carnivore_rage",
+                "params": {}
+            }
+        ]
+    }
+}

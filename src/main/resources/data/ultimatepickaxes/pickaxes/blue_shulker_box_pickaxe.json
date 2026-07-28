@@ -1,0 +1,24 @@
+{
+    "id": "blue_shulker_box_pickaxe",
+    "displayName": "Blue Shulker Box Pickaxe",
+    "ingredient": "minecraft:blue_shulker_box",
+    "durability": 2000,
+    "miningSpeed": 10.0,
+    "attackDamage": 7.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Pulls surrounding mobs into a central gravity well.",
+    "lore": [
+        "Crafted from Blue Shulker Box."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "gravity_well",
+                "params": {
+                    "radius": 6
+                }
+            }
+        ]
+    }
+}

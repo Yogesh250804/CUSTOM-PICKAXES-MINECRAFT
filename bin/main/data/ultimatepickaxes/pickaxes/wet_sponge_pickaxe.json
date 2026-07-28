@@ -1,0 +1,24 @@
+{
+    "id": "wet_sponge_pickaxe",
+    "displayName": "Wet Sponge Pickaxe",
+    "ingredient": "minecraft:wet_sponge",
+    "durability": 800,
+    "miningSpeed": 7.0,
+    "attackDamage": 4.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Instantly siphons all water in a 5-block radius.",
+    "lore": [
+        "Crafted from Wet Sponge."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "sponge_absorb",
+                "params": {
+                    "radius": 5
+                }
+            }
+        ]
+    }
+}

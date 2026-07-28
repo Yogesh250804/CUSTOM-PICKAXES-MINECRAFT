@@ -1,0 +1,25 @@
+{
+    "id": "soul_lantern_pickaxe",
+    "displayName": "Soul Lantern Pickaxe",
+    "ingredient": "minecraft:soul_lantern",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Drills deep into bedrock and stone.",
+    "lore": [
+        "Crafted from Soul Lantern."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "deep_drill",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

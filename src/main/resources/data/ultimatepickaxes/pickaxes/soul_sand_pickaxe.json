@@ -1,23 +1,26 @@
-﻿{
-    "id":  "soul_sand_pickaxe",
-    "displayName":  "Soul Sand Pickaxe",
-    "ingredient":  "minecraft:soul_sand",
-    "durability":  700,
-    "miningSpeed":  6.5,
-    "attackDamage":  3.0,
-    "rarity":  "UNCOMMON",
-    "cooldown":  40,
-    "tooltip":  "âš¡ Soul Drain - Drains life force from mobs to heal you!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "radius":  6,
-                                                             "heal":  4,
-                                                             "damage":  8
-                                                         },
-                                              "ability":  "soul_drain"
-                                          }
-                                      ]
-                 }
+{
+    "id": "soul_sand_pickaxe",
+    "displayName": "Soul Sand Pickaxe",
+    "ingredient": "minecraft:soul_sand",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Drains health from nearby enemies to heal you.",
+    "lore": [
+        "Crafted from Soul Sand."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "soul_drain",
+                "params": {
+                    "radius": 6,
+                    "damage": 8.0,
+                    "heal": 4.0
+                }
+            }
+        ]
+    }
 }

@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "ultimatepickaxes:item/crafter_north_crafting_pickaxe"
+    }
+}

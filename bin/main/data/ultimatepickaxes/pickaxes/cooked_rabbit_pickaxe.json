@@ -1,0 +1,19 @@
+{
+    "id": "cooked_rabbit_pickaxe",
+    "displayName": "Cooked Rabbit Pickaxe",
+    "ingredient": "minecraft:cooked_rabbit",
+    "durability": 500,
+    "miningSpeed": 7.0,
+    "attackDamage": 4.5,
+    "rarity": "UNCOMMON",
+    "cooldown": 100,
+    "tooltip": "Carnivore Rage! Agile predator shockwave.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "carnivore_rage",
+                "params": {}
+            }
+        ]
+    }
+}

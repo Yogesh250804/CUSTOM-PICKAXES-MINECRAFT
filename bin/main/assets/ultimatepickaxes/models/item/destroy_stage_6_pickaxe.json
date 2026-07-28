@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "ultimatepickaxes:item/destroy_stage_6_pickaxe"
+    }
+}

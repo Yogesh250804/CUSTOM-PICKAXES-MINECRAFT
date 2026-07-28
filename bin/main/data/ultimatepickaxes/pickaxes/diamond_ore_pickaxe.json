@@ -1,0 +1,24 @@
+{
+    "id": "diamond_ore_pickaxe",
+    "displayName": "Diamond Ore Pickaxe",
+    "ingredient": "minecraft:diamond_ore",
+    "durability": 2500,
+    "miningSpeed": 14.0,
+    "attackDamage": 9.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Encases nearby enemies in solid diamond crystals.",
+    "lore": [
+        "Crafted from Diamond Ore."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "crystal_prison",
+                "params": {
+                    "duration": 100
+                }
+            }
+        ]
+    }
+}

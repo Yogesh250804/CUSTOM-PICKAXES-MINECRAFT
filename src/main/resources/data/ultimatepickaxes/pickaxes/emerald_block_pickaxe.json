@@ -1,0 +1,24 @@
+{
+    "id": "emerald_block_pickaxe",
+    "displayName": "Emerald Block Pickaxe",
+    "ingredient": "minecraft:emerald_block",
+    "durability": 2000,
+    "miningSpeed": 12.0,
+    "attackDamage": 8.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Erupts emeralds and wealth explosions.",
+    "lore": [
+        "Crafted from Emerald Block."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "wealth_explosion",
+                "params": {
+                    "radius": 5
+                }
+            }
+        ]
+    }
+}

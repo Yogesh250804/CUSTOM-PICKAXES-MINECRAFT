@@ -1,0 +1,24 @@
+{
+    "id": "vault_front_pickaxe",
+    "displayName": "Vault Front Pickaxe",
+    "ingredient": "minecraft:vault_front",
+    "durability": 6000,
+    "miningSpeed": 20.0,
+    "attackDamage": 15.0,
+    "rarity": "MYTHIC",
+    "cooldown": 0,
+    "tooltip": "Grants temporary God Mode buffs.",
+    "lore": [
+        "Crafted from Vault Front."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "god_mode_overdrive",
+                "params": {
+                    "duration": 200
+                }
+            }
+        ]
+    }
+}

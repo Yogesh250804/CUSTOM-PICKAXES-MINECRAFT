@@ -1,26 +1,21 @@
 {
-  "id": "iron_pickaxe",
-  "displayName": "Iron Pickaxe",
-  "ingredient": "minecraft:iron_block",
-  "durability": 1200,
-  "miningSpeed": 9.0,
-  "attackDamage": 4.5,
-  "rarity": "UNCOMMON",
-  "cooldown": 60,
-  "tooltip": "Generates a magnetic storm dragging metallic items and mobs.",
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "item_magnet",
-        "effects": {
-          "sound": "item.armor.equip_iron",
-          "hudMessage": "§7⚡ Magnet Storm!"
-        },
-        "params": {
-          "radius": 12,
-          "pullForce": 1.2
-        }
-      }
-    ]
-  }
+    "id": "iron_pickaxe",
+    "displayName": "Iron Pickaxe",
+    "ingredient": "minecraft:iron_block",
+    "durability": 1000,
+    "miningSpeed": 9.0,
+    "attackDamage": 6.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Zaps nearby mobs with chain lightning.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "chain_lightning",
+                "params": {
+                    "count": 3
+                }
+            }
+        ]
+    }
 }

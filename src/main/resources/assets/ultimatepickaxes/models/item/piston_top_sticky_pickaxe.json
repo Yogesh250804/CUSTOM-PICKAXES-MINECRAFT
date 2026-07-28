@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "ultimatepickaxes:item/piston_top_sticky_pickaxe"
+    }
+}

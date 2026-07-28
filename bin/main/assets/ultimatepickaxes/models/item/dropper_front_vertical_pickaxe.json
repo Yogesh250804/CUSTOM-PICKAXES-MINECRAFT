@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "ultimatepickaxes:item/dropper_front_vertical_pickaxe"
+    }
+}

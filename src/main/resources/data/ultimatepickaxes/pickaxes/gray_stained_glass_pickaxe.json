@@ -1,0 +1,24 @@
+{
+    "id": "gray_stained_glass_pickaxe",
+    "displayName": "Gray Stained Glass Pickaxe",
+    "ingredient": "minecraft:gray_stained_glass",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a focused beam of light.",
+    "lore": [
+        "Crafted from Gray Stained Glass."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "prism_beam",
+                "params": {
+                    "length": 6
+                }
+            }
+        ]
+    }
+}

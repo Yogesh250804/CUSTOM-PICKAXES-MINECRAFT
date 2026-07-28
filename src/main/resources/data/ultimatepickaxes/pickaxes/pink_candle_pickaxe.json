@@ -1,0 +1,25 @@
+{
+    "id": "pink_candle_pickaxe",
+    "displayName": "Pink Candle Pickaxe",
+    "ingredient": "minecraft:pink_candle",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Mines a 3x3 area of blocks.",
+    "lore": [
+        "Crafted from Pink Candle."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "area_mine",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

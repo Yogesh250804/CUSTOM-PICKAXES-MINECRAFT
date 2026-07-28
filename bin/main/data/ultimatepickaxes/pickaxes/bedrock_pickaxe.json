@@ -1,22 +1,24 @@
-﻿{
-    "id":  "bedrock_pickaxe",
-    "displayName":  "Bedrock Pickaxe",
-    "ingredient":  "minecraft:bedrock",
-    "durability":  9999,
-    "miningSpeed":  30.0,
-    "attackDamage":  15.0,
-    "rarity":  "DIVINE",
-    "cooldown":  100,
-    "tooltip":  "âš¡ Seismic Slam - Creates crater \u0026 launches mobs!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "damage":  20,
-                                                             "radius":  8
-                                                         },
-                                              "ability":  "seismic_slam"
-                                          }
-                                      ]
-                 }
+{
+    "id": "bedrock_pickaxe",
+    "displayName": "Bedrock Pickaxe",
+    "ingredient": "minecraft:bedrock",
+    "durability": 10000,
+    "miningSpeed": 30.0,
+    "attackDamage": 20.0,
+    "rarity": "MYTHIC",
+    "cooldown": 0,
+    "tooltip": "Triggers an 8.0 magnitude earthquake that cracks terrain.",
+    "lore": [
+        "Crafted from Bedrock."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "earthquake",
+                "params": {
+                    "radius": 15
+                }
+            }
+        ]
+    }
 }

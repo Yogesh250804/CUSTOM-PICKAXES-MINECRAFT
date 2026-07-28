@@ -1,24 +1,24 @@
-﻿{
-    "id":  "sponge_pickaxe",
-    "displayName":  "Sponge Pickaxe",
-    "ingredient":  "minecraft:sponge",
-    "durability":  450,
-    "miningSpeed":  7.0,
-    "attackDamage":  2.0,
-    "rarity":  "RARE",
-    "cooldown":  60,
-    "tooltip":  "âš¡ Water Siphon - Absorbs water \u0026 lava instantly!",
-    "lore":  [
-                 "Â§7Dries out ocean monuments with ease."
-             ],
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "radius":  8
-                                                         },
-                                              "ability":  "sponge_absorb"
-                                          }
-                                      ]
-                 }
+{
+    "id": "sponge_pickaxe",
+    "displayName": "Sponge Pickaxe",
+    "ingredient": "minecraft:sponge",
+    "durability": 800,
+    "miningSpeed": 7.0,
+    "attackDamage": 4.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Instantly siphons all water in a 5-block radius.",
+    "lore": [
+        "Crafted from Sponge."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "sponge_absorb",
+                "params": {
+                    "radius": 5
+                }
+            }
+        ]
+    }
 }

@@ -1,0 +1,25 @@
+{
+    "id": "oxeye_daisy_pickaxe",
+    "displayName": "Oxeye Daisy Pickaxe",
+    "ingredient": "minecraft:oxeye_daisy",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Bores a 3x3 tunnel in your aim direction.",
+    "lore": [
+        "Crafted from Oxeye Daisy."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "tunnel_bore",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

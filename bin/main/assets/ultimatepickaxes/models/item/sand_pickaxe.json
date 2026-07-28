@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "ultimatepickaxes:item/sand_pickaxe"
-  }
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "ultimatepickaxes:item/sand_pickaxe"
+    }
 }

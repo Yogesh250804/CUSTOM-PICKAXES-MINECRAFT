@@ -1,0 +1,24 @@
+{
+    "id": "chiseled_sandstone_pickaxe",
+    "displayName": "Chiseled Sandstone Pickaxe",
+    "ingredient": "minecraft:chiseled_sandstone",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Chiseled Sandstone."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "quicksand",
+                "params": {
+                    "duration": 60
+                }
+            }
+        ]
+    }
+}

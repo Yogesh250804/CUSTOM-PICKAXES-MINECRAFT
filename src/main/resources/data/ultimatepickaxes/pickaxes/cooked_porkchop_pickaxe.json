@@ -1,0 +1,19 @@
+{
+    "id": "cooked_porkchop_pickaxe",
+    "displayName": "Cooked Porkchop Pickaxe",
+    "ingredient": "minecraft:cooked_porkchop",
+    "durability": 600,
+    "miningSpeed": 7.0,
+    "attackDamage": 5.5,
+    "rarity": "RARE",
+    "cooldown": 120,
+    "tooltip": "Carnivore Rage! Unleashes a flaming shockwave roar.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "carnivore_rage",
+                "params": {}
+            }
+        ]
+    }
+}

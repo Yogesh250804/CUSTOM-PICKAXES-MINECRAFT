@@ -1,0 +1,24 @@
+{
+    "id": "tuff_bricks_pickaxe",
+    "displayName": "Tuff Bricks Pickaxe",
+    "ingredient": "minecraft:tuff_bricks",
+    "durability": 800,
+    "miningSpeed": 7.5,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Erupts sharp stone spikes from the ground.",
+    "lore": [
+        "Crafted from Tuff Bricks."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "stone_spike",
+                "params": {
+                    "count": 4
+                }
+            }
+        ]
+    }
+}

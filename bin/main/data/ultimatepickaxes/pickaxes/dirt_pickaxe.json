@@ -1,25 +1,24 @@
 {
-  "id": "dirt_pickaxe",
-  "displayName": "Dirt Pickaxe",
-  "ingredient": "minecraft:dirt",
-  "durability": 150,
-  "miningSpeed": 4.0,
-  "attackDamage": 1.5,
-  "rarity": "COMMON",
-  "cooldown": 0,
-  "tooltip": "Launches a rolling wave of earth blocks that flings mobs.",
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "earth_wave",
-        "effects": {
-          "sound": "block.grass.place",
-          "hudMessage": "§2⚡ Earth Wave Launched!"
-        },
-        "params": {
-          "distance": 10
-        }
-      }
-    ]
-  }
+    "id": "dirt_pickaxe",
+    "displayName": "Dirt Pickaxe",
+    "ingredient": "minecraft:dirt",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Places dirt blocks directly where you aim and right-click.",
+    "lore": [
+        "Crafted from Dirt."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "earth_wave",
+                "params": {
+                    "distance": 6
+                }
+            }
+        ]
+    }
 }

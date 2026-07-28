@@ -1,0 +1,19 @@
+{
+    "id": "cooked_cod_pickaxe",
+    "displayName": "Cooked Cod Pickaxe",
+    "ingredient": "minecraft:cooked_cod",
+    "durability": 550,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.5,
+    "rarity": "UNCOMMON",
+    "cooldown": 100,
+    "tooltip": "Tidal Wave! Summons a crashing aquatic wave.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "tidal_wave",
+                "params": {}
+            }
+        ]
+    }
+}

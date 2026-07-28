@@ -1,0 +1,24 @@
+{
+    "id": "lightning_rod_pickaxe",
+    "displayName": "Lightning Rod Pickaxe",
+    "ingredient": "minecraft:lightning_rod",
+    "durability": 1500,
+    "miningSpeed": 10.0,
+    "attackDamage": 6.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Calls down a rapid barrage of lightning strikes.",
+    "lore": [
+        "Crafted from Lightning Rod."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "lightning_strike_volley",
+                "params": {
+                    "count": 6
+                }
+            }
+        ]
+    }
+}

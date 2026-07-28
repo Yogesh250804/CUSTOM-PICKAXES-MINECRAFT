@@ -1,0 +1,19 @@
+{
+    "id": "cooked_mutton_pickaxe",
+    "displayName": "Cooked Mutton Pickaxe",
+    "ingredient": "minecraft:cooked_mutton",
+    "durability": 550,
+    "miningSpeed": 6.5,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 100,
+    "tooltip": "Carnivore Rage! High-impact predator roar.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "carnivore_rage",
+                "params": {}
+            }
+        ]
+    }
+}

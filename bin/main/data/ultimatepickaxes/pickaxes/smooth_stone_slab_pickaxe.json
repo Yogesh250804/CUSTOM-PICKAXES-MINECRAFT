@@ -1,0 +1,25 @@
+{
+    "id": "smooth_stone_slab_pickaxe",
+    "displayName": "Smooth Stone Slab Pickaxe",
+    "ingredient": "minecraft:smooth_stone_slab",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Builds a walkway bridge in front of you.",
+    "lore": [
+        "Crafted from Smooth Stone Slab."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "bridge",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "id": "end_portal_frame_pickaxe",
+    "displayName": "End Portal Frame Pickaxe",
+    "ingredient": "minecraft:end_portal_frame",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Bores a 3x3 tunnel in your aim direction.",
+    "lore": [
+        "Crafted from End Portal Frame."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "tunnel_bore",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

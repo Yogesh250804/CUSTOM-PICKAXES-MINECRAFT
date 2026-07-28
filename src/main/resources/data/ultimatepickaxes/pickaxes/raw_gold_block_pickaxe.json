@@ -1,0 +1,24 @@
+{
+    "id": "raw_gold_block_pickaxe",
+    "displayName": "Raw Gold Block Pickaxe",
+    "ingredient": "minecraft:raw_gold_block",
+    "durability": 800,
+    "miningSpeed": 12.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Transforms nearby entities and blocks into gold.",
+    "lore": [
+        "Crafted from Raw Gold Block."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "midas",
+                "params": {
+                    "range": 6
+                }
+            }
+        ]
+    }
+}

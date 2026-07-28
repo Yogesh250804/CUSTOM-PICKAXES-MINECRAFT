@@ -1,0 +1,25 @@
+{
+    "id": "cartography_table_side2_pickaxe",
+    "displayName": "Cartography Table Side2 Pickaxe",
+    "ingredient": "minecraft:cartography_table_side2",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Drops heavy boulders from above.",
+    "lore": [
+        "Crafted from Cartography Table Side2."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "rockfall",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

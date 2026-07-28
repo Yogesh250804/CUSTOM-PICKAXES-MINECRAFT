@@ -1,22 +1,24 @@
-﻿{
-    "id":  "stone_bricks_pickaxe",
-    "displayName":  "Stone Bricks Pickaxe",
-    "ingredient":  "minecraft:stone_bricks",
-    "durability":  600,
-    "miningSpeed":  6.5,
-    "attackDamage":  3.5,
-    "rarity":  "COMMON",
-    "cooldown":  45,
-    "tooltip":  "âš¡ Fortress Wall - Builds instant defensive wall!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "height":  3,
-                                                             "width":  5
-                                                         },
-                                              "ability":  "fortress_wall"
-                                          }
-                                      ]
-                 }
+{
+    "id": "stone_bricks_pickaxe",
+    "displayName": "Stone Bricks Pickaxe",
+    "ingredient": "minecraft:stone_bricks",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a focused beam of light.",
+    "lore": [
+        "Crafted from Stone Bricks."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "prism_beam",
+                "params": {
+                    "length": 6
+                }
+            }
+        ]
+    }
 }

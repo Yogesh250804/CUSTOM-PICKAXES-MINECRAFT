@@ -1,0 +1,19 @@
+{
+    "id": "pumpkin_pie_pickaxe",
+    "displayName": "Pumpkin Pie Pickaxe",
+    "ingredient": "minecraft:pumpkin_pie",
+    "durability": 600,
+    "miningSpeed": 7.0,
+    "attackDamage": 4.5,
+    "rarity": "RARE",
+    "cooldown": 120,
+    "tooltip": "Pumpkin Curse! Forces glowing Jack-O-Lanterns onto enemy heads with fire.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "pumpkin_curse",
+                "params": {}
+            }
+        ]
+    }
+}

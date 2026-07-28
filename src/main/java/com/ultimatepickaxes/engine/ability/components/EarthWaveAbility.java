@@ -12,6 +12,8 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
@@ -24,37 +26,53 @@ public class EarthWaveAbility implements AbilityComponent {
             return false;
         }
 
-        Vec3d eyePos = context.getPlayer().getEyePos();
-        Vec3d look = context.getPlayer().getRotationVector();
-        double distance = params.has("distance") ? params.get("distance").getAsDouble() : 10.0;
+        HitResult hit = context.getPlayer().raycast(20.0, 0.0f, false);
+        BlockPos targetPos;
 
-        world.playSound(null, context.getPlayer().getBlockPos(), SoundEvents.BLOCK_GRAVEL_BREAK, SoundCategory.PLAYERS, 1.5f, 0.8f);
+        if (hit.getType() == HitResult.Type.BLOCK) {
+            BlockHitResult blockHit = (BlockHitResult) hit;
+            targetPos = blockHit.getBlockPos().offset(blockHit.getSide());
+        } else {
+            Vec3d eyePos = context.getPlayer().getEyePos();
+            Vec3d look = context.getPlayer().getRotationVector();
+            targetPos = BlockPos.ofFloored(eyePos.add(look.multiply(5.0)));
+        }
+
+        world.playSound(null, targetPos, SoundEvents.BLOCK_GRAVEL_BREAK, SoundCategory.PLAYERS, 1.8f, 0.8f);
 
         BlockStateParticleEffect dirtParticle = new BlockStateParticleEffect(ParticleTypes.BLOCK, Blocks.DIRT.getDefaultState());
+        world.spawnParticles(dirtParticle, targetPos.getX() + 0.5, targetPos.getY() + 0.5, targetPos.getZ() + 0.5, 40, 0.5, 0.5, 0.5, 0.15);
 
-        for (int i = 1; i <= (int) distance; i++) {
-            Vec3d point = eyePos.add(look.multiply(i));
-            BlockPos pos = BlockPos.ofFloored(point);
+        // Place dirt block at target position
+        if (world.getBlockState(targetPos).isAir()) {
+            world.setBlockState(targetPos, Blocks.DIRT.getDefaultState());
+        }
 
-            world.spawnParticles(dirtParticle, point.x, point.y - 0.5, point.z, 20, 0.4, 0.4, 0.4, 0.1);
-
-            // Replace air directly in front with dirt block or raise ground
-            if (world.getBlockState(pos).isAir() && !world.getBlockState(pos.down()).isAir()) {
-                world.setBlockState(pos, Blocks.DIRT.getDefaultState());
-            }
-
-            Box box = new Box(point.add(-1.5, -1.5, -1.5), point.add(1.5, 1.5, 1.5));
-            for (LivingEntity entity : world.getEntitiesByClass(LivingEntity.class, box, e -> e != context.getPlayer())) {
-                entity.damage(world.getDamageSources().playerAttack(context.getPlayer()), 8.0f);
-                Vec3d launch = look.multiply(1.5).add(0, 1.2, 0);
-                entity.setVelocity(launch);
-                entity.velocityModified = true;
-
-                if (entity instanceof ServerPlayerEntity serverPlayer) {
-                    serverPlayer.networkHandler.sendPacket(new EntityVelocityUpdateS2CPacket(serverPlayer));
+        // Place dirt blocks around target
+        for (int dx = -1; dx <= 1; dx++) {
+            for (int dz = -1; dz <= 1; dz++) {
+                BlockPos extra = targetPos.add(dx, 0, dz);
+                if (world.getBlockState(extra).isAir()) {
+                    world.setBlockState(extra, Blocks.DIRT.getDefaultState());
                 }
             }
         }
+
+        // Damage and knockback nearby mobs around target position
+        Box box = new Box(targetPos).expand(3.0);
+        Vec3d look = context.getPlayer().getRotationVector();
+        for (LivingEntity entity : world.getEntitiesByClass(LivingEntity.class, box, e -> e != context.getPlayer())) {
+            entity.damage(world.getDamageSources().playerAttack(context.getPlayer()), 8.0f);
+            Vec3d launch = look.multiply(1.2).add(0, 0.8, 0);
+            entity.setVelocity(launch);
+            entity.velocityModified = true;
+
+            if (entity instanceof ServerPlayerEntity serverPlayer) {
+                serverPlayer.networkHandler.sendPacket(new EntityVelocityUpdateS2CPacket(serverPlayer));
+            }
+        }
+
         return true;
     }
 }
+

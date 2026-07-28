@@ -1,26 +1,25 @@
-﻿{
-    "id":  "dragon_egg_pickaxe",
-    "displayName":  "Dragon Egg Pickaxe",
-    "ingredient":  "minecraft:dragon_egg",
-    "durability":  5000,
-    "miningSpeed":  25.0,
-    "attackDamage":  12.0,
-    "rarity":  "DIVINE",
-    "cooldown":  40,
-    "tooltip":  "âš¡ Dragon Breath - Dragon breath cone + slow falling!",
-    "lore":  [
-                 "Â§dContains the primal essence of the Ender Dragon.",
-                 "Â§5Bends dimensions with every swing."
-             ],
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "range":  12,
-                                                             "damage":  16
-                                                         },
-                                              "ability":  "dragon_breath"
-                                          }
-                                      ]
-                 }
+{
+    "id": "dragon_egg_pickaxe",
+    "displayName": "Dragon Egg Pickaxe",
+    "ingredient": "minecraft:dragon_egg",
+    "durability": 6000,
+    "miningSpeed": 20.0,
+    "attackDamage": 15.0,
+    "rarity": "MYTHIC",
+    "cooldown": 0,
+    "tooltip": "Spews destructive Ender Dragon fire.",
+    "lore": [
+        "Crafted from Dragon Egg."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "dragon_breath",
+                "params": {
+                    "damage": 20.0,
+                    "range": 15
+                }
+            }
+        ]
+    }
 }

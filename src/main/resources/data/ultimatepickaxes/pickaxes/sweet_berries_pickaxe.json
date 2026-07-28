@@ -1,0 +1,19 @@
+{
+    "id": "sweet_berries_pickaxe",
+    "displayName": "Sweet Berries Pickaxe",
+    "ingredient": "minecraft:sweet_berries",
+    "durability": 350,
+    "miningSpeed": 6.0,
+    "attackDamage": 3.5,
+    "rarity": "COMMON",
+    "cooldown": 80,
+    "tooltip": "Thorny Snare! Traps surrounding enemies in prickly thorn roots.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "root_snare",
+                "params": {}
+            }
+        ]
+    }
+}

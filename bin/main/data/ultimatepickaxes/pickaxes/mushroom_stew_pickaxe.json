@@ -1,0 +1,19 @@
+{
+    "id": "mushroom_stew_pickaxe",
+    "displayName": "Mushroom Stew Pickaxe",
+    "ingredient": "minecraft:mushroom_stew",
+    "durability": 550,
+    "miningSpeed": 7.0,
+    "attackDamage": 4.5,
+    "rarity": "RARE",
+    "cooldown": 100,
+    "tooltip": "Fungal Bloom! Spawns explosive spore clouds that heal allies and poison enemies.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "fungal_bloom",
+                "params": {}
+            }
+        ]
+    }
+}

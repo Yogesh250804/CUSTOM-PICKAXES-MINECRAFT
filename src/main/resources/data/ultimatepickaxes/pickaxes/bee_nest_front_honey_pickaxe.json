@@ -1,0 +1,25 @@
+{
+    "id": "bee_nest_front_honey_pickaxe",
+    "displayName": "Bee Nest Front Honey Pickaxe",
+    "ingredient": "minecraft:bee_nest_front_honey",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Bee Nest Front Honey."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "item_magnet",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

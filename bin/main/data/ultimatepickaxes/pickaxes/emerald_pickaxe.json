@@ -1,24 +1,24 @@
-﻿{
-    "id":  "emerald_pickaxe",
-    "displayName":  "Emerald Wealth Pickaxe",
-    "ingredient":  "minecraft:emerald_block",
-    "durability":  2000,
-    "miningSpeed":  13.0,
-    "attackDamage":  6.0,
-    "rarity":  "LEGENDARY",
-    "cooldown":  100,
-    "tooltip":  "âš¡ Wealth Explosion - Drops emeralds/gold + Hero of Village!",
-    "lore":  [
-                 "Â§aDeep emerald shine loved by villager merchants."
-             ],
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-
-                                                         },
-                                              "ability":  "wealth_explosion"
-                                          }
-                                      ]
-                 }
+{
+    "id": "emerald_pickaxe",
+    "displayName": "Emerald Pickaxe",
+    "ingredient": "minecraft:emerald_block",
+    "durability": 2000,
+    "miningSpeed": 12.0,
+    "attackDamage": 8.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Erupts emeralds and wealth explosions.",
+    "lore": [
+        "\u00c2\u00a7aDeep emerald shine loved by villager merchants."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "wealth_explosion",
+                "params": {
+                    "radius": 5
+                }
+            }
+        ]
+    }
 }

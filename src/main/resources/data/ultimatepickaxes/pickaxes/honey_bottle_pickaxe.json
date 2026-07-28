@@ -1,0 +1,19 @@
+{
+    "id": "honey_bottle_pickaxe",
+    "displayName": "Honey Bottle Pickaxe",
+    "ingredient": "minecraft:honey_bottle",
+    "durability": 900,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "RARE",
+    "cooldown": 120,
+    "tooltip": "Sticky Honey Trap! Creates a honey pool that immobilizes enemies and drains health.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "sticky_honey_trap",
+                "params": {}
+            }
+        ]
+    }
+}

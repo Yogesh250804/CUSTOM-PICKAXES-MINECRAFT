@@ -1,0 +1,24 @@
+{
+    "id": "blue_concrete_powder_pickaxe",
+    "displayName": "Blue Concrete Powder Pickaxe",
+    "ingredient": "minecraft:blue_concrete_powder",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a focused beam of light.",
+    "lore": [
+        "Crafted from Blue Concrete Powder."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "prism_beam",
+                "params": {
+                    "length": 6
+                }
+            }
+        ]
+    }
+}

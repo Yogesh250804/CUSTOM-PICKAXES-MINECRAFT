@@ -1,0 +1,19 @@
+{
+    "id": "cookie_pickaxe",
+    "displayName": "Cookie Pickaxe",
+    "ingredient": "minecraft:cookie",
+    "durability": 350,
+    "miningSpeed": 6.0,
+    "attackDamage": 3.5,
+    "rarity": "COMMON",
+    "cooldown": 60,
+    "tooltip": "Cookie Frenzy! Rapid gatling barrage of exploding cookie shrapnel.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "cookie_frenzy",
+                "params": {}
+            }
+        ]
+    }
+}

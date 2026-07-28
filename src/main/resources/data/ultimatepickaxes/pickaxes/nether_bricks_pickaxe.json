@@ -1,21 +1,24 @@
-﻿{
-    "id":  "nether_bricks_pickaxe",
-    "displayName":  "Nether Bricks Pickaxe",
-    "ingredient":  "minecraft:nether_bricks",
-    "durability":  650,
-    "miningSpeed":  7,
-    "attackDamage":  4,
-    "rarity":  "UNCOMMON",
-    "cooldown":  35,
-    "tooltip":  "âš¡ Blaze Volley - Shoots 5 blaze fireballs!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "count":  5
-                                                         },
-                                              "ability":  "blaze_volley"
-                                          }
-                                      ]
-                 }
+{
+    "id": "nether_bricks_pickaxe",
+    "displayName": "Nether Bricks Pickaxe",
+    "ingredient": "minecraft:nether_bricks",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a focused beam of light.",
+    "lore": [
+        "Crafted from Nether Bricks."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "prism_beam",
+                "params": {
+                    "length": 6
+                }
+            }
+        ]
+    }
 }

@@ -1,0 +1,25 @@
+{
+    "id": "torch_pickaxe",
+    "displayName": "Torch Pickaxe",
+    "ingredient": "minecraft:torch",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Mines connected veins of blocks.",
+    "lore": [
+        "Crafted from Torch."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "vein_mine",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

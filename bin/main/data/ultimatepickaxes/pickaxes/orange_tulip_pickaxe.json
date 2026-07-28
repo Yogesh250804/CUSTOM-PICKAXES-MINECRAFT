@@ -1,0 +1,24 @@
+{
+    "id": "orange_tulip_pickaxe",
+    "displayName": "Orange Tulip Pickaxe",
+    "ingredient": "minecraft:orange_tulip",
+    "durability": 350,
+    "miningSpeed": 5.0,
+    "attackDamage": 3.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Instantly grows crops and plants around you.",
+    "lore": [
+        "Crafted from Orange Tulip."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "plant_growth",
+                "params": {
+                    "radius": 3
+                }
+            }
+        ]
+    }
+}

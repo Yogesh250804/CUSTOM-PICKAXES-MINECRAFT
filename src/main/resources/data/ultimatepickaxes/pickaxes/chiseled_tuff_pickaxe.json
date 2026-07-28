@@ -1,0 +1,24 @@
+{
+    "id": "chiseled_tuff_pickaxe",
+    "displayName": "Chiseled Tuff Pickaxe",
+    "ingredient": "minecraft:chiseled_tuff",
+    "durability": 800,
+    "miningSpeed": 7.5,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Erupts sharp stone spikes from the ground.",
+    "lore": [
+        "Crafted from Chiseled Tuff."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "stone_spike",
+                "params": {
+                    "count": 4
+                }
+            }
+        ]
+    }
+}

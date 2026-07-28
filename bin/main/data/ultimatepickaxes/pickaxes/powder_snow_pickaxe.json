@@ -1,0 +1,24 @@
+{
+    "id": "powder_snow_pickaxe",
+    "displayName": "Powder Snow Pickaxe",
+    "ingredient": "minecraft:powder_snow",
+    "durability": 800,
+    "miningSpeed": 7.0,
+    "attackDamage": 4.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Flash-freezes a 20-block zone and encases enemies in ice.",
+    "lore": [
+        "Crafted from Powder Snow."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "ice_age",
+                "params": {
+                    "radius": 6
+                }
+            }
+        ]
+    }
+}

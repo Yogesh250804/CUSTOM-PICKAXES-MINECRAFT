@@ -1,25 +1,24 @@
-﻿{
-    "id":  "pumpkin_pickaxe",
-    "displayName":  "Pumpkin Pickaxe",
-    "ingredient":  "minecraft:carved_pumpkin",
-    "durability":  450,
-    "miningSpeed":  6.0,
-    "attackDamage":  3.0,
-    "rarity":  "UNCOMMON",
-    "cooldown":  50,
-    "tooltip":  "âš¡ Headless Horseman - Phantom rider charge attack!",
-    "lore":  [
-                 "Â§6Happy Halloween! Glowing jack-o\u0027-lantern power."
-             ],
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "distance":  20,
-                                                             "damage":  15
-                                                         },
-                                              "ability":  "headless_horseman"
-                                          }
-                                      ]
-                 }
+{
+    "id": "pumpkin_pickaxe",
+    "displayName": "Pumpkin Pickaxe",
+    "ingredient": "minecraft:pumpkin",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants extreme speed and haste.",
+    "lore": [
+        "Crafted from Pumpkin."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "sugar_rush",
+                "params": {
+                    "duration": 200
+                }
+            }
+        ]
+    }
 }

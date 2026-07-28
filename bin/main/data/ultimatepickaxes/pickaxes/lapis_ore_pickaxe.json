@@ -1,0 +1,22 @@
+{
+    "id": "lapis_ore_pickaxe",
+    "displayName": "Lapis Ore Pickaxe",
+    "ingredient": "minecraft:lapis_ore",
+    "durability": 900,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Steals XP and magic from mobs.",
+    "lore": [
+        "Crafted from Lapis Ore."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "arcane_steal",
+                "params": {}
+            }
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "id": "polished_deepslate_pickaxe",
+    "displayName": "Polished Deepslate Pickaxe",
+    "ingredient": "minecraft:polished_deepslate",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Mines connected veins of blocks.",
+    "lore": [
+        "Crafted from Polished Deepslate."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "vein_mine",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

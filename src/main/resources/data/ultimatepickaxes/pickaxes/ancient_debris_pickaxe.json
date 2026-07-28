@@ -1,0 +1,24 @@
+{
+    "id": "ancient_debris_pickaxe",
+    "displayName": "Ancient Debris Pickaxe",
+    "ingredient": "minecraft:ancient_debris",
+    "durability": 5000,
+    "miningSpeed": 18.0,
+    "attackDamage": 14.0,
+    "rarity": "MYTHIC",
+    "cooldown": 0,
+    "tooltip": "Rains a devastating barrage of meteors from the sky.",
+    "lore": [
+        "Crafted from Ancient Debris."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "meteor_shower",
+                "params": {
+                    "count": 15
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "id": "sculk_sensor_tendril_pickaxe",
+    "displayName": "Sculk Sensor Tendril Pickaxe",
+    "ingredient": "minecraft:sculk_sensor_tendril",
+    "durability": 2000,
+    "miningSpeed": 11.0,
+    "attackDamage": 8.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Fires a powerful Warden sonic pulse.",
+    "lore": [
+        "Crafted from Sculk Sensor Tendril."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "sonic_boom",
+                "params": {
+                    "range": 10
+                }
+            }
+        ]
+    }
+}

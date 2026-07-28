@@ -1,0 +1,19 @@
+{
+    "id": "glow_berries_pickaxe",
+    "displayName": "Glow Berries Pickaxe",
+    "ingredient": "minecraft:glow_berries",
+    "durability": 450,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 100,
+    "tooltip": "Supernova Illumination! Mini glowing sun that smites undead and grants X-Ray vision.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "supernova_illumination",
+                "params": {}
+            }
+        ]
+    }
+}

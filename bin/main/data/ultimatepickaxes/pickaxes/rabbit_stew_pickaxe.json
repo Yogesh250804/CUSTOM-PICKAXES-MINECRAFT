@@ -1,0 +1,19 @@
+{
+    "id": "rabbit_stew_pickaxe",
+    "displayName": "Rabbit Stew Pickaxe",
+    "ingredient": "minecraft:rabbit_stew",
+    "durability": 800,
+    "miningSpeed": 8.5,
+    "attackDamage": 5.5,
+    "rarity": "RARE",
+    "cooldown": 100,
+    "tooltip": "All Buffs Overflow! Grants supreme stats, speed, jump, and luck.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "all_buffs",
+                "params": {}
+            }
+        ]
+    }
+}

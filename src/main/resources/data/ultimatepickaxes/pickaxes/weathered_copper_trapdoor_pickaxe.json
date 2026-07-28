@@ -1,0 +1,24 @@
+{
+    "id": "weathered_copper_trapdoor_pickaxe",
+    "displayName": "Weathered Copper Trapdoor Pickaxe",
+    "ingredient": "minecraft:weathered_copper_trapdoor",
+    "durability": 900,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Calls down a rapid barrage of lightning strikes.",
+    "lore": [
+        "Crafted from Weathered Copper Trapdoor."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "lightning_strike_volley",
+                "params": {
+                    "count": 3
+                }
+            }
+        ]
+    }
+}

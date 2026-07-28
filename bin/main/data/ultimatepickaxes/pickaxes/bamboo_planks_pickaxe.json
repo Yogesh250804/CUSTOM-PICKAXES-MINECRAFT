@@ -1,0 +1,24 @@
+{
+    "id": "bamboo_planks_pickaxe",
+    "displayName": "Bamboo Planks Pickaxe",
+    "ingredient": "minecraft:bamboo_planks",
+    "durability": 450,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Instantly chops down entire connected trees.",
+    "lore": [
+        "Crafted from Bamboo Planks."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "timber",
+                "params": {
+                    "maxBlocks": 32
+                }
+            }
+        ]
+    }
+}

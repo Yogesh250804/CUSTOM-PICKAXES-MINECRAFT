@@ -1,21 +1,24 @@
-﻿{
-    "id":  "terracotta_pickaxe",
-    "displayName":  "Terracotta Pickaxe",
-    "ingredient":  "minecraft:terracotta",
-    "durability":  900,
-    "miningSpeed":  8.0,
-    "attackDamage":  4.0,
-    "rarity":  "UNCOMMON",
-    "cooldown":  40,
-    "tooltip":  "âš¡ Clay Golem - Summons an Iron Golem defender!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-
-                                                         },
-                                              "ability":  "golem_summon"
-                                          }
-                                      ]
-                 }
+{
+    "id": "terracotta_pickaxe",
+    "displayName": "Terracotta Pickaxe",
+    "ingredient": "minecraft:terracotta",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a focused beam of light.",
+    "lore": [
+        "Crafted from Terracotta."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "prism_beam",
+                "params": {
+                    "length": 6
+                }
+            }
+        ]
+    }
 }

@@ -1,0 +1,24 @@
+{
+    "id": "calibrated_sculk_sensor_amethyst_pickaxe",
+    "displayName": "Calibrated Sculk Sensor Amethyst Pickaxe",
+    "ingredient": "minecraft:calibrated_sculk_sensor_amethyst",
+    "durability": 2000,
+    "miningSpeed": 11.0,
+    "attackDamage": 8.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Fires a powerful Warden sonic pulse.",
+    "lore": [
+        "Crafted from Calibrated Sculk Sensor Amethyst."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "sonic_boom",
+                "params": {
+                    "range": 10
+                }
+            }
+        ]
+    }
+}

@@ -1,24 +1,25 @@
-﻿{
-    "id":  "slime_pickaxe",
-    "displayName":  "Slime Pickaxe",
-    "ingredient":  "minecraft:slime_block",
-    "durability":  600,
-    "miningSpeed":  7.0,
-    "attackDamage":  3.0,
-    "rarity":  "UNCOMMON",
-    "cooldown":  40,
-    "tooltip":  "âš¡ Super Slime Bounce - Creates slime trampoline!",
-    "lore":  [
-                 "Â§7Boing! Super bouncy green gel."
-             ],
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "radius":  2
-                                                         },
-                                              "ability":  "bouncy_fortress"
-                                          }
-                                      ]
-                 }
+{
+    "id": "slime_pickaxe",
+    "displayName": "Slime Pickaxe",
+    "ingredient": "minecraft:slime_block",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Drills deep into bedrock and stone.",
+    "lore": [
+        "\u00c2\u00a77Boing! Super bouncy green gel."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "deep_drill",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
 }

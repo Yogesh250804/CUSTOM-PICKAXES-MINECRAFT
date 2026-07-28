@@ -1,0 +1,24 @@
+{
+    "id": "stripped_acacia_log_pickaxe",
+    "displayName": "Stripped Acacia Log Pickaxe",
+    "ingredient": "minecraft:stripped_acacia_log",
+    "durability": 450,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Instantly chops down entire connected trees.",
+    "lore": [
+        "Crafted from Stripped Acacia Log."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "timber",
+                "params": {
+                    "maxBlocks": 32
+                }
+            }
+        ]
+    }
+}

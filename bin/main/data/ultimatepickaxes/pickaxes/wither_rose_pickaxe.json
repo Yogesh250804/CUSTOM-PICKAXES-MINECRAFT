@@ -1,0 +1,24 @@
+{
+    "id": "wither_rose_pickaxe",
+    "displayName": "Wither Rose Pickaxe",
+    "ingredient": "minecraft:wither_rose",
+    "durability": 350,
+    "miningSpeed": 5.0,
+    "attackDamage": 3.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Instantly grows crops and plants around you.",
+    "lore": [
+        "Crafted from Wither Rose."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "plant_growth",
+                "params": {
+                    "radius": 3
+                }
+            }
+        ]
+    }
+}

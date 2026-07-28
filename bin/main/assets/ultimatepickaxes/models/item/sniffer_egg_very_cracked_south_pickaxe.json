@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "ultimatepickaxes:item/sniffer_egg_very_cracked_south_pickaxe"
+    }
+}

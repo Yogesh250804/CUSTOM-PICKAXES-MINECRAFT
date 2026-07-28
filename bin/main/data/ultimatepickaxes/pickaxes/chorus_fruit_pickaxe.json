@@ -1,0 +1,19 @@
+{
+    "id": "chorus_fruit_pickaxe",
+    "displayName": "Chorus Fruit Pickaxe",
+    "ingredient": "minecraft:chorus_fruit",
+    "durability": 1500,
+    "miningSpeed": 10.0,
+    "attackDamage": 6.5,
+    "rarity": "EPIC",
+    "cooldown": 30,
+    "tooltip": "Dimensional Void Warp! Opens a void rift pulling enemies in while teleporting player.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "dimensional_warp",
+                "params": {}
+            }
+        ]
+    }
+}

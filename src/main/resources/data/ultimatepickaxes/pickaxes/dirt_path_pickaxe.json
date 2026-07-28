@@ -1,0 +1,24 @@
+{
+    "id": "dirt_path_pickaxe",
+    "displayName": "Dirt Path Pickaxe",
+    "ingredient": "minecraft:dirt_path",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Places dirt blocks directly where you aim and right-click.",
+    "lore": [
+        "Crafted from Dirt Path."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "earth_wave",
+                "params": {
+                    "distance": 6
+                }
+            }
+        ]
+    }
+}

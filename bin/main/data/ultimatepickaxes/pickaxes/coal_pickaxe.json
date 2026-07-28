@@ -1,42 +1,22 @@
 {
-  "id": "coal_pickaxe",
-  "displayName": "Coal Pickaxe",
-  "ingredient": "minecraft:coal_block",
-  "durability": 400,
-  "miningSpeed": 6.0,
-  "attackDamage": 2.5,
-  "rarity": "COMMON",
-  "cooldown": 30,
-  "tooltip": "Grants subterranean vision and spawns ethereal torches on command!",
-  "lore": [
-    "§7Fossilized carbon glowing with inner warmth."
-  ],
-  "triggers": {
-    "onTick": [
-      {
-        "ability": "status_effect",
-        "conditions": [
-          { "type": "altitude", "max": 50 }
-        ],
-        "params": {
-          "effectId": "minecraft:night_vision",
-          "duration": 220,
-          "amplifier": 0
-        }
-      }
+    "id": "coal_pickaxe",
+    "displayName": "Coal Pickaxe",
+    "ingredient": "minecraft:coal_block",
+    "durability": 800,
+    "miningSpeed": 7.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "\u00a77Fossilized carbon glowing with inner warmth."
     ],
-    "onRightClick": [
-      {
-        "ability": "place_blocks",
-        "effects": {
-          "sound": "block.wood.place",
-          "hudMessage": "§8💡 Torch Placed!"
-        },
-        "params": {
-          "blockId": "minecraft:torch",
-          "radius": 0
-        }
-      }
-    ]
-  }
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "auto_smelt",
+                "params": {}
+            }
+        ]
+    }
 }

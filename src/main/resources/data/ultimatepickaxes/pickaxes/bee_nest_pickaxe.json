@@ -1,0 +1,25 @@
+{
+    "id": "bee_nest_pickaxe",
+    "displayName": "Bee Nest Pickaxe",
+    "ingredient": "minecraft:bee_nest",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Erects a fortified stone barrier wall.",
+    "lore": [
+        "Crafted from Bee Nest."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "fortress_wall",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

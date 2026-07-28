@@ -1,21 +1,21 @@
-﻿{
-    "id":  "wool_pickaxe",
-    "displayName":  "Wool Pickaxe",
-    "ingredient":  "minecraft:white_wool",
-    "durability":  300,
-    "miningSpeed":  4.0,
-    "attackDamage":  1.5,
-    "rarity":  "COMMON",
-    "cooldown":  30,
-    "tooltip":  "âš¡ Cloud Walk - Creates floating wool platforms underfoot!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "radius":  3
-                                                         },
-                                              "ability":  "cloud_walk"
-                                          }
-                                      ]
-                 }
+{
+    "id": "wool_pickaxe",
+    "displayName": "Wool Pickaxe",
+    "ingredient": "minecraft:white_wool",
+    "durability": 450,
+    "miningSpeed": 5.5,
+    "attackDamage": 3.5,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants levitation and cloud walking.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "cloud_walk",
+                "params": {
+                    "duration": 100
+                }
+            }
+        ]
+    }
 }

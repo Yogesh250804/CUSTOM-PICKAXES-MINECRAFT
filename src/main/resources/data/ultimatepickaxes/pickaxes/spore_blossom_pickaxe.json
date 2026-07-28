@@ -1,0 +1,25 @@
+{
+    "id": "spore_blossom_pickaxe",
+    "displayName": "Spore Blossom Pickaxe",
+    "ingredient": "minecraft:spore_blossom",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Mines connected veins of blocks.",
+    "lore": [
+        "Crafted from Spore Blossom."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "vein_mine",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

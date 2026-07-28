@@ -1,24 +1,22 @@
-﻿{
-    "id":  "lapis_pickaxe",
-    "displayName":  "Lapis Lazuli Pickaxe",
-    "ingredient":  "minecraft:lapis_block",
-    "durability":  850,
-    "miningSpeed":  9.5,
-    "attackDamage":  4.0,
-    "rarity":  "RARE",
-    "cooldown":  40,
-    "tooltip":  "âš¡ Arcane Pulse - Grants XP orbs and luck effect!",
-    "lore":  [
-                 "Â§9Deep royal blue crystal of ancient magic."
-             ],
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "xp":  30
-                                                         },
-                                              "ability":  "arcane_steal"
-                                          }
-                                      ]
-                 }
+{
+    "id": "lapis_pickaxe",
+    "displayName": "Lapis Pickaxe",
+    "ingredient": "minecraft:lapis_block",
+    "durability": 900,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Steals XP and magic from mobs.",
+    "lore": [
+        "\u00c2\u00a79Deep royal blue crystal of ancient magic."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "arcane_steal",
+                "params": {}
+            }
+        ]
+    }
 }

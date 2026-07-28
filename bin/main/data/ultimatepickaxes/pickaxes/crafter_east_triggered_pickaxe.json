@@ -1,0 +1,25 @@
+{
+    "id": "crafter_east_triggered_pickaxe",
+    "displayName": "Crafter East Triggered Pickaxe",
+    "ingredient": "minecraft:crafter_east_triggered",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Crafter East Triggered."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "launch_player",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "ultimatepickaxes:item/dragon_egg_pickaxe"
-  }
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "ultimatepickaxes:item/dragon_egg_pickaxe"
+    }
 }

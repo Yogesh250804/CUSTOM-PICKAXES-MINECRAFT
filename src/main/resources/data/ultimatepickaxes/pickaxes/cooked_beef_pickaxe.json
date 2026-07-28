@@ -1,0 +1,19 @@
+{
+    "id": "cooked_beef_pickaxe",
+    "displayName": "Steak Pickaxe",
+    "ingredient": "minecraft:cooked_beef",
+    "durability": 600,
+    "miningSpeed": 7.0,
+    "attackDamage": 5.5,
+    "rarity": "RARE",
+    "cooldown": 120,
+    "tooltip": "Carnivore Rage! Predator roar that ignites, cooks, and launches surrounding enemies.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "carnivore_rage",
+                "params": {}
+            }
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "id": "potato_pickaxe",
+    "displayName": "Potato Pickaxe",
+    "ingredient": "minecraft:potato",
+    "durability": 300,
+    "miningSpeed": 5.5,
+    "attackDamage": 3.5,
+    "rarity": "COMMON",
+    "cooldown": 60,
+    "tooltip": "Gravity Spud Drop! Launches heavy crushing potato strikes.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "gravity_apple_drop",
+                "params": {}
+            }
+        ]
+    }
+}

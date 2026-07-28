@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "ultimatepickaxes:item/pitcher_crop_bottom_stage_3_pickaxe"
+    }
+}

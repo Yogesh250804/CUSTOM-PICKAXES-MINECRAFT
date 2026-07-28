@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "ultimatepickaxes:item/cracked_deepslate_bricks_pickaxe"
+    }
+}

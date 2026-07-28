@@ -1,22 +1,24 @@
-﻿{
-    "id":  "tuff_pickaxe",
-    "displayName":  "Tuff Pickaxe",
-    "ingredient":  "minecraft:tuff",
-    "durability":  500,
-    "miningSpeed":  6.5,
-    "attackDamage":  3.5,
-    "rarity":  "COMMON",
-    "cooldown":  40,
-    "tooltip":  "âš¡ Rockfall - Rains heavy tuff blocks from above!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "count":  12,
-                                                             "damage":  6
-                                                         },
-                                              "ability":  "rockfall"
-                                          }
-                                      ]
-                 }
+{
+    "id": "tuff_pickaxe",
+    "displayName": "Tuff Pickaxe",
+    "ingredient": "minecraft:tuff",
+    "durability": 800,
+    "miningSpeed": 7.5,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Erupts sharp stone spikes from the ground.",
+    "lore": [
+        "Crafted from Tuff."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "stone_spike",
+                "params": {
+                    "count": 4
+                }
+            }
+        ]
+    }
 }

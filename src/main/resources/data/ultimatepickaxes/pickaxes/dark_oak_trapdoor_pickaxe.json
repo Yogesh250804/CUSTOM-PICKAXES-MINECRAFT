@@ -1,0 +1,25 @@
+{
+    "id": "dark_oak_trapdoor_pickaxe",
+    "displayName": "Dark Oak Trapdoor Pickaxe",
+    "ingredient": "minecraft:dark_oak_trapdoor",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Drops heavy boulders from above.",
+    "lore": [
+        "Crafted from Dark Oak Trapdoor."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "rockfall",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

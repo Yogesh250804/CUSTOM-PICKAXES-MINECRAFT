@@ -1,0 +1,21 @@
+{
+    "id": "golden_carrot_pickaxe",
+    "displayName": "Golden Carrot Pickaxe",
+    "ingredient": "minecraft:golden_carrot",
+    "durability": 1400,
+    "miningSpeed": 9.5,
+    "attackDamage": 6.5,
+    "rarity": "EPIC",
+    "cooldown": 120,
+    "tooltip": "Golden Solar Laser! Piercing eye laser beam that reveals X-Ray glowing entities.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "golden_laser",
+                "params": {
+                    "range": 40.0
+                }
+            }
+        ]
+    }
+}

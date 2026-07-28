@@ -1,21 +1,25 @@
-﻿{
-    "id":  "deepslate_pickaxe",
-    "displayName":  "Deepslate Pickaxe",
-    "ingredient":  "minecraft:deepslate",
-    "durability":  750,
-    "miningSpeed":  7,
-    "attackDamage":  4,
-    "rarity":  "UNCOMMON",
-    "cooldown":  50,
-    "tooltip":  "âš¡ Deep Drill - Mines vertical shaft downward with ladders!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "depth":  20
-                                                         },
-                                              "ability":  "deep_drill"
-                                          }
-                                      ]
-                 }
+{
+    "id": "deepslate_pickaxe",
+    "displayName": "Deepslate Pickaxe",
+    "ingredient": "minecraft:deepslate",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Drills deep into bedrock and stone.",
+    "lore": [
+        "Crafted from Deepslate."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "deep_drill",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
 }

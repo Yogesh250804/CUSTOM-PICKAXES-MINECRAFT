@@ -1,0 +1,19 @@
+{
+    "id": "golden_apple_pickaxe",
+    "displayName": "Golden Apple Pickaxe",
+    "ingredient": "minecraft:golden_apple",
+    "durability": 1500,
+    "miningSpeed": 10.0,
+    "attackDamage": 7.0,
+    "rarity": "EPIC",
+    "cooldown": 180,
+    "tooltip": "Divine Golden Overflow! Grants Absorption X shield, drops Golden Apples, and smites enemies with divine lightning!",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "golden_overflow",
+                "params": {}
+            }
+        ]
+    }
+}

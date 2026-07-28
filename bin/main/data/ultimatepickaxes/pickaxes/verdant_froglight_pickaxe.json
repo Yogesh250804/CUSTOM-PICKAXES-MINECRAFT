@@ -1,0 +1,25 @@
+{
+    "id": "verdant_froglight_pickaxe",
+    "displayName": "Verdant Froglight Pickaxe",
+    "ingredient": "minecraft:verdant_froglight",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Verdant Froglight."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "push_entities",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

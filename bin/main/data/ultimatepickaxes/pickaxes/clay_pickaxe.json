@@ -1,22 +1,25 @@
-﻿{
-    "id":  "clay_pickaxe",
-    "displayName":  "Clay Pickaxe",
-    "ingredient":  "minecraft:clay",
-    "durability":  300,
-    "miningSpeed":  5,
-    "attackDamage":  2,
-    "rarity":  "COMMON",
-    "cooldown":  30,
-    "tooltip":  "âš¡ Mud Trap - Sinks and slows enemies in mud!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "duration":  100,
-                                                             "radius":  5
-                                                         },
-                                              "ability":  "mud_trap"
-                                          }
-                                      ]
-                 }
+{
+    "id": "clay_pickaxe",
+    "displayName": "Clay Pickaxe",
+    "ingredient": "minecraft:clay",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Clay."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "push_entities",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
 }

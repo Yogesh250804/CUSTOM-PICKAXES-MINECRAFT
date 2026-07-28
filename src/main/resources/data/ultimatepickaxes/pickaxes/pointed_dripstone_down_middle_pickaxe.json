@@ -1,0 +1,24 @@
+{
+    "id": "pointed_dripstone_down_middle_pickaxe",
+    "displayName": "Pointed Dripstone Down Middle Pickaxe",
+    "ingredient": "minecraft:pointed_dripstone_down_middle",
+    "durability": 800,
+    "miningSpeed": 7.5,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Rains sharp dripstone stalactites from above.",
+    "lore": [
+        "Crafted from Pointed Dripstone Down Middle."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "stalactite_rain",
+                "params": {
+                    "count": 4
+                }
+            }
+        ]
+    }
+}

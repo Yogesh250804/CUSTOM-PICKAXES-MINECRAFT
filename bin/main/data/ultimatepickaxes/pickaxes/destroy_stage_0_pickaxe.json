@@ -1,0 +1,25 @@
+{
+    "id": "destroy_stage_0_pickaxe",
+    "displayName": "Destroy Stage 0 Pickaxe",
+    "ingredient": "minecraft:destroy_stage_0",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Mines a 3x3 area of blocks.",
+    "lore": [
+        "Crafted from Destroy Stage 0."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "area_mine",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

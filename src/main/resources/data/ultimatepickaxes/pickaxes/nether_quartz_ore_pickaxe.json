@@ -1,0 +1,24 @@
+{
+    "id": "nether_quartz_ore_pickaxe",
+    "displayName": "Nether Quartz Ore Pickaxe",
+    "ingredient": "minecraft:nether_quartz_ore",
+    "durability": 1000,
+    "miningSpeed": 9.0,
+    "attackDamage": 6.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Fires an intense solar beam.",
+    "lore": [
+        "Crafted from Nether Quartz Ore."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "solar_beam",
+                "params": {
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

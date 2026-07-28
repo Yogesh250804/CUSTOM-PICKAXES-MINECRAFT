@@ -1,0 +1,25 @@
+{
+    "id": "respawn_anchor_top_pickaxe",
+    "displayName": "Respawn Anchor Top Pickaxe",
+    "ingredient": "minecraft:respawn_anchor_top",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Bores a 3x3 tunnel in your aim direction.",
+    "lore": [
+        "Crafted from Respawn Anchor Top."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "tunnel_bore",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

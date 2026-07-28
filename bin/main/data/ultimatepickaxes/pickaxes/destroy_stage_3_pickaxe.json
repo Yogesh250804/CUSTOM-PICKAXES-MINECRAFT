@@ -1,0 +1,25 @@
+{
+    "id": "destroy_stage_3_pickaxe",
+    "displayName": "Destroy Stage 3 Pickaxe",
+    "ingredient": "minecraft:destroy_stage_3",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Destroy Stage 3."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "launch_player",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

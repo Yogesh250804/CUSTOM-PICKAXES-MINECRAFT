@@ -1,22 +1,24 @@
-﻿{
-    "id":  "bricks_pickaxe",
-    "displayName":  "Bricks Pickaxe",
-    "ingredient":  "minecraft:bricks",
-    "durability":  550,
-    "miningSpeed":  6,
-    "attackDamage":  3,
-    "rarity":  "COMMON",
-    "cooldown":  30,
-    "tooltip":  "âš¡ Brick Barrage - Fires rapid brick projectiles!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "count":  10,
-                                                             "damage":  3
-                                                         },
-                                              "ability":  "brick_barrage"
-                                          }
-                                      ]
-                 }
+{
+    "id": "bricks_pickaxe",
+    "displayName": "Bricks Pickaxe",
+    "ingredient": "minecraft:bricks",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a focused beam of light.",
+    "lore": [
+        "Crafted from Bricks."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "prism_beam",
+                "params": {
+                    "length": 6
+                }
+            }
+        ]
+    }
 }

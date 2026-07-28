@@ -1,0 +1,24 @@
+{
+    "id": "chiseled_quartz_block_pickaxe",
+    "displayName": "Chiseled Quartz Block Pickaxe",
+    "ingredient": "minecraft:chiseled_quartz_block",
+    "durability": 1000,
+    "miningSpeed": 9.0,
+    "attackDamage": 6.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Fires an intense solar beam.",
+    "lore": [
+        "Crafted from Chiseled Quartz Block."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "solar_beam",
+                "params": {
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

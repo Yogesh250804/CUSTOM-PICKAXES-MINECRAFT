@@ -1,45 +1,25 @@
 {
-  "id": "tnt_pickaxe",
-  "displayName": "TNT Pickaxe",
-  "ingredient": "minecraft:tnt",
-  "durability": 850,
-  "miningSpeed": 9.0,
-  "attackDamage": 5.0,
-  "rarity": "EPIC",
-  "cooldown": 80,
-  "tooltip": "Causes explosive area mining and launches TNT projectiles!",
-  "lore": [
-    "§7Crafted from volatile explosive powder.",
-    "§cHandled with explosive care."
-  ],
-  "triggers": {
-    "onMine": [
-      {
-        "ability": "area_mine",
-        "params": { "width": 3, "height": 3, "depth": 1 }
-      },
-      {
-        "ability": "explosion",
-        "params": { "power": 2.5, "breakBlocks": true }
-      }
+    "id": "tnt_pickaxe",
+    "displayName": "TNT Pickaxe",
+    "ingredient": "minecraft:tnt",
+    "durability": 600,
+    "miningSpeed": 8.0,
+    "attackDamage": 6.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Launches a high-explosive TNT blast.",
+    "lore": [
+        "Crafted from Tnt."
     ],
-    "onRightClick": [
-      {
-        "ability": "explosion",
-        "effects": {
-          "sound": "entity.tnt.primed",
-          "particle": "minecraft:explosion",
-          "screenShake": { "intensity": 0.8, "duration": 15 },
-          "hudMessage": "§c💣 TNT Projectile Fired!"
-        },
-        "params": { "launchProjectile": true }
-      }
-    ]
-  },
-  "progression": {
-    "enabled": true,
-    "xpPerBlock": 2,
-    "xpToEvolve": 500,
-    "nextPickaxe": "ultimatepickaxes:obsidian_pickaxe"
-  }
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "explosion",
+                "params": {
+                    "power": 3.0,
+                    "launchProjectile": true
+                }
+            }
+        ]
+    }
 }

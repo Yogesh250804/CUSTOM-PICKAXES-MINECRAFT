@@ -2,57 +2,52 @@ package com.ultimatepickaxes.registry;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import net.fabricmc.loader.api.FabricLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class PickaxeJsonLoader {
     private static final Logger LOGGER = LoggerFactory.getLogger("UltimatePickaxes");
     private static final Gson GSON = new Gson();
 
-    public static final String[] DEFAULT_PICKAXE_FILES = {
-        "tnt_pickaxe.json", "glass_pickaxe.json", "sponge_pickaxe.json", "honey_pickaxe.json",
-        "magma_pickaxe.json", "slime_pickaxe.json", "coal_pickaxe.json", "diamond_pickaxe.json",
-        "dragon_egg_pickaxe.json", "dirt_pickaxe.json", "cobblestone_pickaxe.json", "amethyst_pickaxe.json",
-        "redstone_pickaxe.json", "gold_pickaxe.json", "iron_pickaxe.json", "obsidian_pickaxe.json",
-        "glowstone_pickaxe.json", "netherite_pickaxe.json", "apple_pickaxe.json", "pumpkin_pickaxe.json",
-        "cake_pickaxe.json", "sand_pickaxe.json", "gravel_pickaxe.json", "sculk_pickaxe.json",
-        "wood_pickaxe.json", "lapis_pickaxe.json", "emerald_pickaxe.json", "prismarine_pickaxe.json",
-        "end_stone_pickaxe.json", "shulker_pickaxe.json",
-
-        // 20 NEW Pickaxes
-        "beacon_pickaxe.json", "bookshelf_pickaxe.json", "copper_pickaxe.json", "ender_chest_pickaxe.json",
-        "bedrock_pickaxe.json", "crying_obsidian_pickaxe.json", "hay_bale_pickaxe.json", "ice_pickaxe.json",
-        "moss_pickaxe.json", "nylium_pickaxe.json", "prismarine_bricks_pickaxe.json", "purpur_pickaxe.json",
-        "quartz_pickaxe.json", "soul_sand_pickaxe.json", "target_pickaxe.json", "terracotta_pickaxe.json",
-        "warped_pickaxe.json", "wool_pickaxe.json", "bone_pickaxe.json", "enchanting_table_pickaxe.json"
-    };
-
     public static List<PickaxeDefinition> loadAll() {
         List<PickaxeDefinition> definitions = new ArrayList<>();
-        ClassLoader classLoader = PickaxeJsonLoader.class.getClassLoader();
 
-        for (String file : DEFAULT_PICKAXE_FILES) {
-            String path = "data/ultimatepickaxes/pickaxes/" + file;
-            try (InputStream stream = classLoader.getResourceAsStream(path)) {
-                if (stream != null) {
-                    InputStreamReader reader = new InputStreamReader(stream, StandardCharsets.UTF_8);
-                    JsonObject json = GSON.fromJson(reader, JsonObject.class);
-                    PickaxeDefinition def = PickaxeDefinition.fromJson(json);
-                    definitions.add(def);
-                    LOGGER.info("Loaded Pickaxe JSON definition: {}", def.getId());
-                } else {
-                    LOGGER.warn("Could not find Pickaxe JSON file resource: {}", path);
+        try {
+            FabricLoader.getInstance().getModContainer("ultimatepickaxes").ifPresent(mod -> {
+                Path dataPath = mod.findPath("data/ultimatepickaxes/pickaxes").orElse(null);
+                if (dataPath != null && Files.exists(dataPath)) {
+                    try (Stream<Path> stream = Files.walk(dataPath)) {
+                        stream.filter(p -> p.toString().endsWith(".json")).forEach(p -> {
+                            try (InputStream is = Files.newInputStream(p)) {
+                                InputStreamReader reader = new InputStreamReader(is, StandardCharsets.UTF_8);
+                                JsonObject json = GSON.fromJson(reader, JsonObject.class);
+                                PickaxeDefinition def = PickaxeDefinition.fromJson(json);
+                                definitions.add(def);
+                                LOGGER.info("Loaded Pickaxe JSON definition: {}", def.getId());
+                            } catch (Exception e) {
+                                LOGGER.error("Failed to parse Pickaxe JSON: {}", p, e);
+                            }
+                        });
+                    } catch (Exception e) {
+                        LOGGER.error("Error walking pickaxes directory", e);
+                    }
                 }
-            } catch (Exception e) {
-                LOGGER.error("Failed to parse Pickaxe JSON: {}", path, e);
-            }
+            });
+        } catch (Exception e) {
+            LOGGER.error("Failed to load pickaxe definitions dynamically", e);
         }
+
         return definitions;
     }
 }
+

@@ -1,0 +1,25 @@
+{
+    "id": "end_rod_pickaxe",
+    "displayName": "End Rod Pickaxe",
+    "ingredient": "minecraft:end_rod",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Drops heavy boulders from above.",
+    "lore": [
+        "Crafted from End Rod."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "rockfall",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

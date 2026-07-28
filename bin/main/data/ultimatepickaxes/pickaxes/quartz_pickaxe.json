@@ -1,22 +1,21 @@
-﻿{
-    "id":  "quartz_pickaxe",
-    "displayName":  "Quartz Pickaxe",
-    "ingredient":  "minecraft:quartz_block",
-    "durability":  1000,
-    "miningSpeed":  11.0,
-    "attackDamage":  5.0,
-    "rarity":  "UNCOMMON",
-    "cooldown":  40,
-    "tooltip":  "âš¡ Solar Beam - Fires intense beam burning blocks and mobs!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "range":  20,
-                                                             "damage":  12
-                                                         },
-                                              "ability":  "solar_beam"
-                                          }
-                                      ]
-                 }
+{
+    "id": "quartz_pickaxe",
+    "displayName": "Quartz Pickaxe",
+    "ingredient": "minecraft:quartz_block",
+    "durability": 1000,
+    "miningSpeed": 9.0,
+    "attackDamage": 6.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Fires an intense solar beam.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "solar_beam",
+                "params": {
+                    "length": 8
+                }
+            }
+        ]
+    }
 }

@@ -1,0 +1,24 @@
+{
+    "id": "frosted_ice_3_pickaxe",
+    "displayName": "Frosted Ice 3 Pickaxe",
+    "ingredient": "minecraft:frosted_ice_3",
+    "durability": 800,
+    "miningSpeed": 7.0,
+    "attackDamage": 4.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Flash-freezes a 20-block zone and encases enemies in ice.",
+    "lore": [
+        "Crafted from Frosted Ice 3."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "ice_age",
+                "params": {
+                    "radius": 6
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "id": "raw_copper_block_pickaxe",
+    "displayName": "Raw Copper Block Pickaxe",
+    "ingredient": "minecraft:raw_copper_block",
+    "durability": 900,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Calls down a rapid barrage of lightning strikes.",
+    "lore": [
+        "Crafted from Raw Copper Block."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "lightning_strike_volley",
+                "params": {
+                    "count": 3
+                }
+            }
+        ]
+    }
+}

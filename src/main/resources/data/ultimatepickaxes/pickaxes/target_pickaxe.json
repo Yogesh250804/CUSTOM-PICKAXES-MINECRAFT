@@ -1,21 +1,25 @@
-﻿{
-    "id":  "target_pickaxe",
-    "displayName":  "Target Pickaxe",
-    "ingredient":  "minecraft:target",
-    "durability":  600,
-    "miningSpeed":  7.0,
-    "attackDamage":  4.0,
-    "rarity":  "UNCOMMON",
-    "cooldown":  30,
-    "tooltip":  "âš¡ Homing Arrow Storm - Volley of 12 arrows!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "count":  12
-                                                         },
-                                              "ability":  "homing_arrow"
-                                          }
-                                      ]
-                 }
+{
+    "id": "target_pickaxe",
+    "displayName": "Target Pickaxe",
+    "ingredient": "minecraft:target",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Builds a walkway bridge in front of you.",
+    "lore": [
+        "Crafted from Target."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "bridge",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
 }

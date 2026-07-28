@@ -1,0 +1,25 @@
+{
+    "id": "mushroom_block_inside_pickaxe",
+    "displayName": "Mushroom Block Inside Pickaxe",
+    "ingredient": "minecraft:mushroom_block_inside",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Mushroom Block Inside."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "push_entities",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "id": "suspicious_sand_0_pickaxe",
+    "displayName": "Suspicious Sand 0 Pickaxe",
+    "ingredient": "minecraft:suspicious_sand_0",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Suspicious Sand 0."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "quicksand",
+                "params": {
+                    "duration": 60
+                }
+            }
+        ]
+    }
+}

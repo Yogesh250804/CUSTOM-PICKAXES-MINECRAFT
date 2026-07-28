@@ -39,6 +39,7 @@ public class PickaxeRegistry {
         Registry.register(Registries.ITEM_GROUP, ITEM_GROUP_KEY, ITEM_GROUP);
 
         List<PickaxeDefinition> definitions = PickaxeJsonLoader.loadAll();
+        VerifyAllPickaxes.verifyAll(definitions);
         for (PickaxeDefinition def : definitions) {
             Item ingredientItem = Registries.ITEM.get(Identifier.of(def.getIngredient()));
             Ingredient repairIngredient = ingredientItem != null ? Ingredient.ofItems(ingredientItem) : Ingredient.EMPTY;

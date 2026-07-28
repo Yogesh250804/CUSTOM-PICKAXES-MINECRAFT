@@ -17,7 +17,7 @@ public class AbilityConfig {
     }
 
     public static AbilityConfig fromJson(JsonObject json) {
-        String id = json.has("ability") ? json.get("ability").getAsString() : "";
+        String id = json.has("type") ? json.get("type").getAsString() : (json.has("ability") ? json.get("ability").getAsString() : "");
         JsonArray conditions = json.has("conditions") ? json.getAsJsonArray("conditions") : null;
         JsonObject effects = json.has("effects") ? json.getAsJsonObject("effects") : null;
         JsonObject params = json.has("params") ? json.getAsJsonObject("params") : null;

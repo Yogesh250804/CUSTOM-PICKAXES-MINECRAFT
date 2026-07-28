@@ -1,0 +1,24 @@
+{
+    "id": "red_stained_glass_pane_pickaxe",
+    "displayName": "Red Stained Glass Pane Pickaxe",
+    "ingredient": "minecraft:red_stained_glass_pane",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a focused beam of light.",
+    "lore": [
+        "Crafted from Red Stained Glass Pane."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "prism_beam",
+                "params": {
+                    "length": 6
+                }
+            }
+        ]
+    }
+}

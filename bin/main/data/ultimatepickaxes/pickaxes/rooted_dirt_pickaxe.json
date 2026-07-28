@@ -1,0 +1,24 @@
+{
+    "id": "rooted_dirt_pickaxe",
+    "displayName": "Rooted Dirt Pickaxe",
+    "ingredient": "minecraft:rooted_dirt",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Places dirt blocks directly where you aim and right-click.",
+    "lore": [
+        "Crafted from Rooted Dirt."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "earth_wave",
+                "params": {
+                    "distance": 6
+                }
+            }
+        ]
+    }
+}

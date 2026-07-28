@@ -1,0 +1,25 @@
+{
+    "id": "cherry_trapdoor_pickaxe",
+    "displayName": "Cherry Trapdoor Pickaxe",
+    "ingredient": "minecraft:cherry_trapdoor",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Builds a walkway bridge in front of you.",
+    "lore": [
+        "Crafted from Cherry Trapdoor."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "bridge",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "id": "suspicious_gravel_0_pickaxe",
+    "displayName": "Suspicious Gravel 0 Pickaxe",
+    "ingredient": "minecraft:suspicious_gravel_0",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Suspicious Gravel 0."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "quicksand",
+                "params": {
+                    "duration": 60
+                }
+            }
+        ]
+    }
+}

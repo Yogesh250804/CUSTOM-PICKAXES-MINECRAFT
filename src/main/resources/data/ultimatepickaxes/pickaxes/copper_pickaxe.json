@@ -1,22 +1,21 @@
-﻿{
-    "id":  "copper_pickaxe",
-    "displayName":  "Copper Pickaxe",
-    "ingredient":  "minecraft:copper_block",
-    "durability":  800,
-    "miningSpeed":  7.5,
-    "attackDamage":  3.5,
-    "rarity":  "UNCOMMON",
-    "cooldown":  40,
-    "tooltip":  "âš¡ Chain Lightning - Bouncing lightning strike!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "chains":  5,
-                                                             "damage":  10
-                                                         },
-                                              "ability":  "chain_lightning"
-                                          }
-                                      ]
-                 }
+{
+    "id": "copper_pickaxe",
+    "displayName": "Copper Pickaxe",
+    "ingredient": "minecraft:copper_block",
+    "durability": 900,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Calls down a rapid barrage of lightning strikes.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "lightning_strike_volley",
+                "params": {
+                    "count": 3
+                }
+            }
+        ]
+    }
 }

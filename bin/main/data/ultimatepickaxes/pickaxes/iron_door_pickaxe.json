@@ -1,0 +1,24 @@
+{
+    "id": "iron_door_pickaxe",
+    "displayName": "Iron Door Pickaxe",
+    "ingredient": "minecraft:iron_door",
+    "durability": 1000,
+    "miningSpeed": 9.0,
+    "attackDamage": 6.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Zaps nearby mobs with chain lightning.",
+    "lore": [
+        "Crafted from Iron Door."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "chain_lightning",
+                "params": {
+                    "count": 3
+                }
+            }
+        ]
+    }
+}

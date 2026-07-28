@@ -1,24 +1,19 @@
-﻿{
-    "id":  "cake_pickaxe",
-    "displayName":  "Cake Pickaxe",
-    "ingredient":  "minecraft:cake",
-    "durability":  350,
-    "miningSpeed":  5.5,
-    "attackDamage":  2.0,
-    "rarity":  "UNCOMMON",
-    "cooldown":  40,
-    "tooltip":  "âš¡ Sugar Rush - Speed V, Haste IV, Jump Boost III!",
-    "lore":  [
-                 "Â§dThe cake is NOT a lie!"
-             ],
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "duration":  160
-                                                         },
-                                              "ability":  "sugar_rush"
-                                          }
-                                      ]
-                 }
+{
+    "id": "cake_pickaxe",
+    "displayName": "Cake Pickaxe",
+    "ingredient": "minecraft:cake",
+    "durability": 800,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "RARE",
+    "cooldown": 100,
+    "tooltip": "Cake Explosion! Fires fireworks and encases mobs in sticky cake frosting.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "cake_explosion",
+                "params": {}
+            }
+        ]
+    }
 }

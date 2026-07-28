@@ -1,0 +1,24 @@
+{
+    "id": "trial_spawner_top_ejecting_reward_pickaxe",
+    "displayName": "Trial Spawner Top Ejecting Reward Pickaxe",
+    "ingredient": "minecraft:trial_spawner_top_ejecting_reward",
+    "durability": 1500,
+    "miningSpeed": 9.0,
+    "attackDamage": 6.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Summons a loyal army of undead warriors to protect you.",
+    "lore": [
+        "Crafted from Trial Spawner Top Ejecting Reward."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "mob_swarm",
+                "params": {
+                    "count": 4
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "id": "gray_glazed_terracotta_pickaxe",
+    "displayName": "Gray Glazed Terracotta Pickaxe",
+    "ingredient": "minecraft:gray_glazed_terracotta",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a focused beam of light.",
+    "lore": [
+        "Crafted from Gray Glazed Terracotta."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "prism_beam",
+                "params": {
+                    "length": 6
+                }
+            }
+        ]
+    }
+}

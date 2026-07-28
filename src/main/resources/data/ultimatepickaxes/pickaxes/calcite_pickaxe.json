@@ -1,22 +1,24 @@
-﻿{
-    "id":  "calcite_pickaxe",
-    "displayName":  "Calcite Pickaxe",
-    "ingredient":  "minecraft:calcite",
-    "durability":  500,
-    "miningSpeed":  6.5,
-    "attackDamage":  3.5,
-    "rarity":  "COMMON",
-    "cooldown":  40,
-    "tooltip":  "âš¡ Shield Dome - Constructs protective crystal dome!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "material":  "minecraft:calcite",
-                                                             "radius":  4
-                                                         },
-                                              "ability":  "shield_dome"
-                                          }
-                                      ]
-                 }
+{
+    "id": "calcite_pickaxe",
+    "displayName": "Calcite Pickaxe",
+    "ingredient": "minecraft:calcite",
+    "durability": 800,
+    "miningSpeed": 7.5,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Erupts sharp stone spikes from the ground.",
+    "lore": [
+        "Crafted from Calcite."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "stone_spike",
+                "params": {
+                    "count": 4
+                }
+            }
+        ]
+    }
 }

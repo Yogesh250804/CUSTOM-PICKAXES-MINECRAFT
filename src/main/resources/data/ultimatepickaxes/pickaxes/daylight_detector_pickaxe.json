@@ -1,0 +1,25 @@
+{
+    "id": "daylight_detector_pickaxe",
+    "displayName": "Daylight Detector Pickaxe",
+    "ingredient": "minecraft:daylight_detector",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Daylight Detector."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "item_magnet",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "id": "crimson_trapdoor_pickaxe",
+    "displayName": "Crimson Trapdoor Pickaxe",
+    "ingredient": "minecraft:crimson_trapdoor",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Drops heavy boulders from above.",
+    "lore": [
+        "Crafted from Crimson Trapdoor."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "rockfall",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

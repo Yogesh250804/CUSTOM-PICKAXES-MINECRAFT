@@ -1,0 +1,24 @@
+{
+    "id": "copper_bulb_lit_pickaxe",
+    "displayName": "Copper Bulb Lit Pickaxe",
+    "ingredient": "minecraft:copper_bulb_lit",
+    "durability": 1500,
+    "miningSpeed": 10.0,
+    "attackDamage": 6.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Freezes all nearby mobs in time for 8 seconds.",
+    "lore": [
+        "Crafted from Copper Bulb Lit."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "time_freeze",
+                "params": {
+                    "duration": 120
+                }
+            }
+        ]
+    }
+}

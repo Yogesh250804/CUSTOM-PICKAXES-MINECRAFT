@@ -1,0 +1,24 @@
+{
+    "id": "potted_flowering_azalea_bush_plant_pickaxe",
+    "displayName": "Potted Flowering Azalea Bush Plant Pickaxe",
+    "ingredient": "minecraft:potted_flowering_azalea_bush_plant",
+    "durability": 350,
+    "miningSpeed": 5.0,
+    "attackDamage": 3.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Instantly grows crops and plants around you.",
+    "lore": [
+        "Crafted from Potted Flowering Azalea Bush Plant."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "plant_growth",
+                "params": {
+                    "radius": 3
+                }
+            }
+        ]
+    }
+}

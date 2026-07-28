@@ -1,25 +1,24 @@
-﻿{
-    "id":  "glass_pickaxe",
-    "displayName":  "Glass Pickaxe",
-    "ingredient":  "minecraft:glass",
-    "durability":  300,
-    "miningSpeed":  12.0,
-    "attackDamage":  3.0,
-    "rarity":  "UNCOMMON",
-    "cooldown":  40,
-    "tooltip":  "âš¡ Prism Beam - Splitting laser beam attack!",
-    "lore":  [
-                 "Â§7Transparent, razor-sharp, and weightless."
-             ],
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "range":  16,
-                                                             "damage":  8
-                                                         },
-                                              "ability":  "prism_beam"
-                                          }
-                                      ]
-                 }
+{
+    "id": "glass_pickaxe",
+    "displayName": "Glass Pickaxe",
+    "ingredient": "minecraft:glass",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a focused beam of light.",
+    "lore": [
+        "Crafted from Glass."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "prism_beam",
+                "params": {
+                    "length": 6
+                }
+            }
+        ]
+    }
 }

@@ -1,0 +1,25 @@
+{
+    "id": "repeating_command_block_pickaxe",
+    "displayName": "Repeating Command Block Pickaxe",
+    "ingredient": "minecraft:repeating_command_block",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Repeating Command Block."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "push_entities",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

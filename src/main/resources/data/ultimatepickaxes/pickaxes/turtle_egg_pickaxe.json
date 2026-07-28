@@ -1,0 +1,25 @@
+{
+    "id": "turtle_egg_pickaxe",
+    "displayName": "Turtle Egg Pickaxe",
+    "ingredient": "minecraft:turtle_egg",
+    "durability": 6000,
+    "miningSpeed": 20.0,
+    "attackDamage": 15.0,
+    "rarity": "MYTHIC",
+    "cooldown": 0,
+    "tooltip": "Spews destructive Ender Dragon fire.",
+    "lore": [
+        "Crafted from Turtle Egg."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "dragon_breath",
+                "params": {
+                    "damage": 20.0,
+                    "range": 15
+                }
+            }
+        ]
+    }
+}

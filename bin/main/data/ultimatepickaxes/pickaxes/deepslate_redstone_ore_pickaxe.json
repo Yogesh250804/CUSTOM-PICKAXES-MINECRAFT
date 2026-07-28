@@ -1,0 +1,24 @@
+{
+    "id": "deepslate_redstone_ore_pickaxe",
+    "displayName": "Deepslate Redstone Ore Pickaxe",
+    "ingredient": "minecraft:deepslate_redstone_ore",
+    "durability": 900,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Emits a pulse of dark redstone energy.",
+    "lore": [
+        "Crafted from Deepslate Redstone Ore."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "dark_pulse",
+                "params": {
+                    "radius": 4
+                }
+            }
+        ]
+    }
+}

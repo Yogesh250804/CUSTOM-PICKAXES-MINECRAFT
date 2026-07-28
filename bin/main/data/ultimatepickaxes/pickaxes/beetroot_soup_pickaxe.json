@@ -1,0 +1,19 @@
+{
+    "id": "beetroot_soup_pickaxe",
+    "displayName": "Beetroot Soup Pickaxe",
+    "ingredient": "minecraft:beetroot_soup",
+    "durability": 550,
+    "miningSpeed": 7.0,
+    "attackDamage": 4.5,
+    "rarity": "RARE",
+    "cooldown": 100,
+    "tooltip": "All Buffs Overflow! Grants every positive status effect at once.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "all_buffs",
+                "params": {}
+            }
+        ]
+    }
+}

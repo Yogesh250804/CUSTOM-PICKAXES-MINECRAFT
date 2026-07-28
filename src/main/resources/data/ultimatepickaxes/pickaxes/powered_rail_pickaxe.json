@@ -1,0 +1,25 @@
+{
+    "id": "powered_rail_pickaxe",
+    "displayName": "Powered Rail Pickaxe",
+    "ingredient": "minecraft:powered_rail",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Powered Rail."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "item_magnet",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

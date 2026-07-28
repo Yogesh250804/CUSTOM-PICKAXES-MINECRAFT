@@ -1,0 +1,24 @@
+{
+    "id": "sculk_vein_pickaxe",
+    "displayName": "Sculk Vein Pickaxe",
+    "ingredient": "minecraft:sculk_vein",
+    "durability": 2000,
+    "miningSpeed": 11.0,
+    "attackDamage": 8.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Fires a powerful Warden sonic pulse.",
+    "lore": [
+        "Crafted from Sculk Vein."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "sonic_boom",
+                "params": {
+                    "range": 10
+                }
+            }
+        ]
+    }
+}

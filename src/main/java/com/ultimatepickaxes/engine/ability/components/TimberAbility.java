@@ -28,15 +28,35 @@ public class TimberAbility implements AbilityComponent {
         }
 
         int maxBlocks = params.has("maxBlocks") ? params.get("maxBlocks").getAsInt() : 128;
-        BlockPos startPos = context.getPos();
+        BlockPos startPos = context.getPos() != null ? context.getPos() : context.getPlayer().getBlockPos();
         BlockState startState = world.getBlockState(startPos);
 
-        // Check if the mined block is a log
+        // If clicked position isn't a log, check adjacent blocks or player facing raycast
         if (!startState.isIn(BlockTags.LOGS)) {
-            return false;
+            BlockPos foundLog = null;
+            for (int dx = -2; dx <= 2; dx++) {
+                for (int dy = -2; dy <= 2; dy++) {
+                    for (int dz = -2; dz <= 2; dz++) {
+                        BlockPos check = startPos.add(dx, dy, dz);
+                        if (world.getBlockState(check).isIn(BlockTags.LOGS)) {
+                            foundLog = check;
+                            break;
+                        }
+                    }
+                    if (foundLog != null) break;
+                }
+                if (foundLog != null) break;
+            }
+            if (foundLog != null) {
+                startPos = foundLog;
+            } else {
+                // Fallback: spawn wood wave particles and grant haste/strength buff if no tree nearby
+                world.playSound(null, startPos, SoundEvents.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR, SoundCategory.PLAYERS, 1.0f, 1.0f);
+                world.spawnParticles(ParticleTypes.EXPLOSION, startPos.getX() + 0.5, startPos.getY() + 1.0, startPos.getZ() + 0.5, 10, 0.5, 0.5, 0.5, 0.1);
+                context.getPlayer().addStatusEffect(new net.minecraft.entity.effect.StatusEffectInstance(net.minecraft.entity.effect.StatusEffects.HASTE, 300, 1));
+                return true;
+            }
         }
-
-        world.playSound(null, startPos, SoundEvents.BLOCK_WOOD_BREAK, SoundCategory.PLAYERS, 1.5f, 0.7f);
 
         // BFS to find all connected logs and leaves
         Set<BlockPos> visited = new HashSet<>();

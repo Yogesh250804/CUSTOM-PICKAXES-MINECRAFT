@@ -1,22 +1,25 @@
-﻿{
-    "id":  "blackstone_pickaxe",
-    "displayName":  "Blackstone Pickaxe",
-    "ingredient":  "minecraft:blackstone",
-    "durability":  700,
-    "miningSpeed":  7.5,
-    "attackDamage":  4.5,
-    "rarity":  "UNCOMMON",
-    "cooldown":  45,
-    "tooltip":  "âš¡ Dark Pulse - Emits dark wave of wither \u0026 darkness!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "duration":  120,
-                                                             "radius":  12
-                                                         },
-                                              "ability":  "dark_pulse"
-                                          }
-                                      ]
-                 }
+{
+    "id": "blackstone_pickaxe",
+    "displayName": "Blackstone Pickaxe",
+    "ingredient": "minecraft:blackstone",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Mines connected veins of blocks.",
+    "lore": [
+        "Crafted from Blackstone."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "vein_mine",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
 }

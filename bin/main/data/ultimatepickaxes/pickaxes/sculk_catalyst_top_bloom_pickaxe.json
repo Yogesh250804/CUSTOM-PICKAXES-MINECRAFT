@@ -1,0 +1,24 @@
+{
+    "id": "sculk_catalyst_top_bloom_pickaxe",
+    "displayName": "Sculk Catalyst Top Bloom Pickaxe",
+    "ingredient": "minecraft:sculk_catalyst_top_bloom",
+    "durability": 5000,
+    "miningSpeed": 18.0,
+    "attackDamage": 14.0,
+    "rarity": "MYTHIC",
+    "cooldown": 0,
+    "tooltip": "Releases a 360-degree Sculk shockwave dealing massive damage.",
+    "lore": [
+        "Crafted from Sculk Catalyst Top Bloom."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "warden_nuke",
+                "params": {
+                    "damage": 40.0
+                }
+            }
+        ]
+    }
+}

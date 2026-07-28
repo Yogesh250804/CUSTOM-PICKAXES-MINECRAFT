@@ -1,21 +1,25 @@
-﻿{
-    "id":  "netherrack_pickaxe",
-    "displayName":  "Netherrack Pickaxe",
-    "ingredient":  "minecraft:netherrack",
-    "durability":  400,
-    "miningSpeed":  8,
-    "attackDamage":  3,
-    "rarity":  "COMMON",
-    "cooldown":  30,
-    "tooltip":  "âš¡ Nether Trail - Leaves fire trail and grants fire res!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "radius":  3
-                                                         },
-                                              "ability":  "fire_trail"
-                                          }
-                                      ]
-                 }
+{
+    "id": "netherrack_pickaxe",
+    "displayName": "Netherrack Pickaxe",
+    "ingredient": "minecraft:netherrack",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Builds a walkway bridge in front of you.",
+    "lore": [
+        "Crafted from Netherrack."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "bridge",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
 }

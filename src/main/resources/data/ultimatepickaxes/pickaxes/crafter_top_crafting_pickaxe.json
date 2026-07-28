@@ -1,0 +1,25 @@
+{
+    "id": "crafter_top_crafting_pickaxe",
+    "displayName": "Crafter Top Crafting Pickaxe",
+    "ingredient": "minecraft:crafter_top_crafting",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Mines connected veins of blocks.",
+    "lore": [
+        "Crafted from Crafter Top Crafting."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "vein_mine",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

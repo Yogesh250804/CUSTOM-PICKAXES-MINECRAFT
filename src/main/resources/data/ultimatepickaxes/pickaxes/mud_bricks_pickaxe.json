@@ -1,0 +1,24 @@
+{
+    "id": "mud_bricks_pickaxe",
+    "displayName": "Mud Bricks Pickaxe",
+    "ingredient": "minecraft:mud_bricks",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Places dirt blocks directly where you aim and right-click.",
+    "lore": [
+        "Crafted from Mud Bricks."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "earth_wave",
+                "params": {
+                    "distance": 6
+                }
+            }
+        ]
+    }
+}

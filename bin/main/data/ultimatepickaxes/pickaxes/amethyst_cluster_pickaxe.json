@@ -1,0 +1,24 @@
+{
+    "id": "amethyst_cluster_pickaxe",
+    "displayName": "Amethyst Cluster Pickaxe",
+    "ingredient": "minecraft:amethyst_cluster",
+    "durability": 1000,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a powerful Warden sonic pulse.",
+    "lore": [
+        "Crafted from Amethyst Cluster."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "sonic_boom",
+                "params": {
+                    "range": 6
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "id": "crimson_nylium_pickaxe",
+    "displayName": "Crimson Nylium Pickaxe",
+    "ingredient": "minecraft:crimson_nylium",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Erects a fortified stone barrier wall.",
+    "lore": [
+        "Crafted from Crimson Nylium."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "fortress_wall",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

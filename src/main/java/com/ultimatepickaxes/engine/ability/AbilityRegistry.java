@@ -76,6 +76,8 @@ public class AbilityRegistry {
         register("time_slow", new TimeSlowAbility());
         register("bouncy_fortress", new BouncyFortressAbility());
         register("golden_feast", new GoldenFeastAbility());
+        register("steak_feast", new SteakFeastAbility());
+        register("food_feast", new FoodFeastAbility());
         register("sugar_rush", new SugarRushAbility());
         register("scarecrow", new ScarecrowAbility());
         register("cloud_walk", new CloudWalkAbility());
@@ -98,5 +100,27 @@ public class AbilityRegistry {
         register("all_buffs", new AllBuffsAbility());
         register("sponge_absorb", new SpongeAbsorbAbility());
         register("thorns", new ThornsAbility());
+
+        // 7 NEW CUSTOM ABILITIES
+        register("tornado_storm", new TornadoAbility());
+        register("black_hole", new BlackHoleAbility());
+        register("anvil_rain", new AnvilRainAbility());
+        register("volcanic_eruption", new VolcanicEruptionAbility());
+        register("time_freeze", new TimeFreezeAbility());
+        register("lightning_strike_volley", new LightningVolleyAbility());
+        register("mob_swarm", new MobSwarmAbility());
+
+        // WILD NON-VANILLA FOOD ABILITIES
+        register("golden_overflow", new GoldenOverflowAbility());
+        register("cake_explosion", new CakeExplosionAbility());
+        register("cookie_frenzy", new CookieFrenzyAbility());
+        register("dimensional_warp", new DimensionalWarpAbility());
+        register("carnivore_rage", new CarnivoreRageAbility());
+        register("golden_laser", new GoldenLaserAbility());
+        register("melon_cannonade", new MelonCannonadeAbility());
+        register("pumpkin_curse", new PumpkinCurseAbility());
+        register("sticky_honey_trap", new StickyHoneyTrapAbility());
+        register("supernova_illumination", new SupernovaIlluminationAbility());
+        register("gravity_apple_drop", new GravityAppleDropAbility());
     }
 }

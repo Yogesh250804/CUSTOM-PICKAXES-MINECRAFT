@@ -1,26 +1,25 @@
-﻿{
-    "id":  "cobblestone_pickaxe",
-    "displayName":  "Cobblestone Pickaxe",
-    "ingredient":  "minecraft:cobblestone",
-    "durability":  350,
-    "miningSpeed":  5.5,
-    "attackDamage":  2.5,
-    "rarity":  "COMMON",
-    "cooldown":  50,
-    "tooltip":  "âš¡ Tunnel Bore - Auto-mines 3x3 tunnel with torches!",
-    "lore":  [
-                 "Â§7Reliable miner\u0027s companion."
-             ],
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "width":  3,
-                                                             "height":  3,
-                                                             "length":  16
-                                                         },
-                                              "ability":  "tunnel_bore"
-                                          }
-                                      ]
-                 }
+{
+    "id": "cobblestone_pickaxe",
+    "displayName": "Cobblestone Pickaxe",
+    "ingredient": "minecraft:cobblestone",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Mines a 3x3 area of blocks.",
+    "lore": [
+        "Crafted from Cobblestone."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "area_mine",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
 }

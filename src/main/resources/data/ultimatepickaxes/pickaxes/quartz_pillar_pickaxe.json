@@ -1,0 +1,24 @@
+{
+    "id": "quartz_pillar_pickaxe",
+    "displayName": "Quartz Pillar Pickaxe",
+    "ingredient": "minecraft:quartz_pillar",
+    "durability": 1000,
+    "miningSpeed": 9.0,
+    "attackDamage": 6.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Fires an intense solar beam.",
+    "lore": [
+        "Crafted from Quartz Pillar."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "solar_beam",
+                "params": {
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

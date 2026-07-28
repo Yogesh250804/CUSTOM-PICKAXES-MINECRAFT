@@ -1,24 +1,24 @@
-﻿{
-    "id":  "prismarine_pickaxe",
-    "displayName":  "Prismarine Ocean Pickaxe",
-    "ingredient":  "minecraft:prismarine",
-    "durability":  1500,
-    "miningSpeed":  11.0,
-    "attackDamage":  5.5,
-    "rarity":  "RARE",
-    "cooldown":  60,
-    "tooltip":  "âš¡ Tidal Wave - Water wave sweep pushing mobs!",
-    "lore":  [
-                 "Â§3Carved from ancient ocean monument stone."
-             ],
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "distance":  12
-                                                         },
-                                              "ability":  "tidal_wave"
-                                          }
-                                      ]
-                 }
+{
+    "id": "prismarine_pickaxe",
+    "displayName": "Prismarine Pickaxe",
+    "ingredient": "minecraft:prismarine",
+    "durability": 1000,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a laser beam like an Elder Guardian.",
+    "lore": [
+        "Crafted from Prismarine."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "guardian_beam",
+                "params": {
+                    "damage": 8.0
+                }
+            }
+        ]
+    }
 }

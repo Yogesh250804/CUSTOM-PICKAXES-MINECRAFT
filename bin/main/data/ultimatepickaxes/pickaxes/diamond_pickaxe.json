@@ -1,22 +1,21 @@
-﻿{
-    "id":  "diamond_pickaxe",
-    "displayName":  "Diamond Pickaxe",
-    "ingredient":  "minecraft:diamond_block",
-    "durability":  2500,
-    "miningSpeed":  14.0,
-    "attackDamage":  7.0,
-    "rarity":  "LEGENDARY",
-    "cooldown":  120,
-    "tooltip":  "âš¡ Crystal Prison - Encases mob in diamond cage!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "duration":  140,
-                                                             "radius":  6
-                                                         },
-                                              "ability":  "crystal_prison"
-                                          }
-                                      ]
-                 }
+{
+    "id": "diamond_pickaxe",
+    "displayName": "Diamond Pickaxe",
+    "ingredient": "minecraft:diamond_block",
+    "durability": 2500,
+    "miningSpeed": 14.0,
+    "attackDamage": 9.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Encases nearby enemies in solid diamond crystals.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "crystal_prison",
+                "params": {
+                    "duration": 100
+                }
+            }
+        ]
+    }
 }

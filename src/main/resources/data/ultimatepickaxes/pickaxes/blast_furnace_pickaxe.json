@@ -1,0 +1,25 @@
+{
+    "id": "blast_furnace_pickaxe",
+    "displayName": "Blast Furnace Pickaxe",
+    "ingredient": "minecraft:blast_furnace",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Mines a 3x3 area of blocks.",
+    "lore": [
+        "Crafted from Blast Furnace."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "area_mine",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "id": "loom_pickaxe",
+    "displayName": "Loom Pickaxe",
+    "ingredient": "minecraft:loom",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Bores a 3x3 tunnel in your aim direction.",
+    "lore": [
+        "Crafted from Loom."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "tunnel_bore",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

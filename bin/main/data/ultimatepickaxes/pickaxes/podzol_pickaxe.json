@@ -1,21 +1,25 @@
-﻿{
-    "id":  "podzol_pickaxe",
-    "displayName":  "Podzol Pickaxe",
-    "ingredient":  "minecraft:podzol",
-    "durability":  400,
-    "miningSpeed":  5.5,
-    "attackDamage":  2.5,
-    "rarity":  "COMMON",
-    "cooldown":  35,
-    "tooltip":  "âš¡ Forest Wrath - Grows giant mushrooms \u0026 spore clouds!",
-    "triggers":  {
-                     "onRightClick":  [
-                                          {
-                                              "params":  {
-                                                             "radius":  6
-                                                         },
-                                              "ability":  "forest_wrath"
-                                          }
-                                      ]
-                 }
+{
+    "id": "podzol_pickaxe",
+    "displayName": "Podzol Pickaxe",
+    "ingredient": "minecraft:podzol",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Bores a 3x3 tunnel in your aim direction.",
+    "lore": [
+        "Crafted from Podzol."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "tunnel_bore",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
 }

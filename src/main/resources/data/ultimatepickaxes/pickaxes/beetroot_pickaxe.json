@@ -1,0 +1,19 @@
+{
+    "id": "beetroot_pickaxe",
+    "displayName": "Beetroot Pickaxe",
+    "ingredient": "minecraft:beetroot",
+    "durability": 350,
+    "miningSpeed": 6.0,
+    "attackDamage": 3.5,
+    "rarity": "COMMON",
+    "cooldown": 80,
+    "tooltip": "Supernova Illumination! Spawns glowing light sun that burns undead.",
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "supernova_illumination",
+                "params": {}
+            }
+        ]
+    }
+}

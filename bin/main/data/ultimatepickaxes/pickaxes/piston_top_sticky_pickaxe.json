@@ -1,0 +1,25 @@
+{
+    "id": "piston_top_sticky_pickaxe",
+    "displayName": "Piston Top Sticky Pickaxe",
+    "ingredient": "minecraft:piston_top_sticky",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Piston Top Sticky."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "item_magnet",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

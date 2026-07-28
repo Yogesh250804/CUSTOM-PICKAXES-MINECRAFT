@@ -1,0 +1,22 @@
+{
+    "id": "coal_ore_pickaxe",
+    "displayName": "Coal Ore Pickaxe",
+    "ingredient": "minecraft:coal_ore",
+    "durability": 800,
+    "miningSpeed": 7.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Coal Ore."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "auto_smelt",
+                "params": {}
+            }
+        ]
+    }
+}

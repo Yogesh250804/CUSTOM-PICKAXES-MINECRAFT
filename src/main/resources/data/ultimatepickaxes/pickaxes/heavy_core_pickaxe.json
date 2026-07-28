@@ -1,0 +1,24 @@
+{
+    "id": "heavy_core_pickaxe",
+    "displayName": "Heavy Core Pickaxe",
+    "ingredient": "minecraft:heavy_core",
+    "durability": 5000,
+    "miningSpeed": 16.0,
+    "attackDamage": 14.0,
+    "rarity": "MYTHIC",
+    "cooldown": 0,
+    "tooltip": "Rains heavy anvils from the sky onto enemies.",
+    "lore": [
+        "Crafted from Heavy Core."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "anvil_rain",
+                "params": {
+                    "count": 12
+                }
+            }
+        ]
+    }
+}

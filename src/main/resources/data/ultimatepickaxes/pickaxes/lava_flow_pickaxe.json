@@ -1,0 +1,25 @@
+{
+    "id": "lava_flow_pickaxe",
+    "displayName": "Lava Flow Pickaxe",
+    "ingredient": "minecraft:lava_flow",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Drills deep into bedrock and stone.",
+    "lore": [
+        "Crafted from Lava Flow."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "deep_drill",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

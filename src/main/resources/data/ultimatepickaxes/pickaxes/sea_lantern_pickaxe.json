@@ -1,0 +1,24 @@
+{
+    "id": "sea_lantern_pickaxe",
+    "displayName": "Sea Lantern Pickaxe",
+    "ingredient": "minecraft:sea_lantern",
+    "durability": 1000,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a laser beam like an Elder Guardian.",
+    "lore": [
+        "Crafted from Sea Lantern."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "guardian_beam",
+                "params": {
+                    "damage": 8.0
+                }
+            }
+        ]
+    }
+}

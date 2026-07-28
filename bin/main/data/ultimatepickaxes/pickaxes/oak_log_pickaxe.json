@@ -1,0 +1,24 @@
+{
+    "id": "oak_log_pickaxe",
+    "displayName": "Oak Log Pickaxe",
+    "ingredient": "minecraft:oak_log",
+    "durability": 450,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Instantly chops down entire connected trees.",
+    "lore": [
+        "Crafted from Oak Log."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "timber",
+                "params": {
+                    "maxBlocks": 32
+                }
+            }
+        ]
+    }
+}

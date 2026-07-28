@@ -1,0 +1,25 @@
+{
+    "id": "sweet_berry_bush_pickaxe",
+    "displayName": "Sweet Berry Bush Pickaxe",
+    "ingredient": "minecraft:sweet_berry_bush",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Sweet Berry Bush."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "push_entities",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

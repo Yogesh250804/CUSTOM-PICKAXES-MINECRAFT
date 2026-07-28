@@ -1,0 +1,24 @@
+{
+    "id": "netherite_block_pickaxe",
+    "displayName": "Netherite Block Pickaxe",
+    "ingredient": "minecraft:netherite_block",
+    "durability": 5000,
+    "miningSpeed": 18.0,
+    "attackDamage": 14.0,
+    "rarity": "MYTHIC",
+    "cooldown": 0,
+    "tooltip": "Rains a devastating barrage of meteors from the sky.",
+    "lore": [
+        "Crafted from Netherite Block."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "meteor_strike",
+                "params": {
+                    "count": 5
+                }
+            }
+        ]
+    }
+}

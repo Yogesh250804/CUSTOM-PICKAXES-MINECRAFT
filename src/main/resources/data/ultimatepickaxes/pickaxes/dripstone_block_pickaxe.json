@@ -1,0 +1,24 @@
+{
+    "id": "dripstone_block_pickaxe",
+    "displayName": "Dripstone Block Pickaxe",
+    "ingredient": "minecraft:dripstone_block",
+    "durability": 800,
+    "miningSpeed": 7.5,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Rains sharp dripstone stalactites from above.",
+    "lore": [
+        "Crafted from Dripstone Block."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "stalactite_rain",
+                "params": {
+                    "count": 4
+                }
+            }
+        ]
+    }
+}

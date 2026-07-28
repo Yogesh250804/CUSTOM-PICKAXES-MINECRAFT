@@ -1,0 +1,24 @@
+{
+    "id": "coarse_dirt_pickaxe",
+    "displayName": "Coarse Dirt Pickaxe",
+    "ingredient": "minecraft:coarse_dirt",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Places dirt blocks directly where you aim and right-click.",
+    "lore": [
+        "Crafted from Coarse Dirt."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "earth_wave",
+                "params": {
+                    "distance": 6
+                }
+            }
+        ]
+    }
+}

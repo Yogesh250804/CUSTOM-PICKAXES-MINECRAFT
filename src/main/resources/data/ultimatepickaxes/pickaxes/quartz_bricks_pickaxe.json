@@ -1,0 +1,24 @@
+{
+    "id": "quartz_bricks_pickaxe",
+    "displayName": "Quartz Bricks Pickaxe",
+    "ingredient": "minecraft:quartz_bricks",
+    "durability": 1000,
+    "miningSpeed": 9.0,
+    "attackDamage": 6.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Fires an intense solar beam.",
+    "lore": [
+        "Crafted from Quartz Bricks."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "solar_beam",
+                "params": {
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

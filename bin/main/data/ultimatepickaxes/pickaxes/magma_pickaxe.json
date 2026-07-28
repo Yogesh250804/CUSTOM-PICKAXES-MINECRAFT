@@ -1,37 +1,24 @@
 {
-  "id": "magma_pickaxe",
-  "displayName": "Magma Pickaxe",
-  "ingredient": "minecraft:magma_block",
-  "durability": 750,
-  "miningSpeed": 8.5,
-  "attackDamage": 4.5,
-  "rarity": "EPIC",
-  "cooldown": 100,
-  "tooltip": "Auto-smelts mined ores into ingots and releases lava eruptions!",
-  "lore": [
-    "§7Infused with molten nether energy."
-  ],
-  "triggers": {
-    "onMine": [
-      {
-        "ability": "auto_smelt",
-        "params": {}
-      }
+    "id": "magma_pickaxe",
+    "displayName": "Magma Pickaxe",
+    "ingredient": "minecraft:magma",
+    "durability": 900,
+    "miningSpeed": 8.0,
+    "attackDamage": 5.0,
+    "rarity": "UNCOMMON",
+    "cooldown": 0,
+    "tooltip": "Erupts magma and lava fountains beneath enemies.",
+    "lore": [
+        "Crafted from Magma."
     ],
-    "onRightClick": [
-      {
-        "ability": "burn",
-        "effects": {
-          "sound": "block.lava.extinguish",
-          "particle": "minecraft:flame",
-          "screenShake": { "intensity": 0.5, "duration": 10 },
-          "hudMessage": "§c🔥 Lava Eruption!"
-        },
-        "params": {
-          "radius": 5,
-          "duration": 6
-        }
-      }
-    ]
-  }
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "volcanic_eruption",
+                "params": {
+                    "distance": 6
+                }
+            }
+        ]
+    }
 }

@@ -1,0 +1,24 @@
+{
+    "id": "cave_vines_pickaxe",
+    "displayName": "Cave Vines Pickaxe",
+    "ingredient": "minecraft:cave_vines",
+    "durability": 400,
+    "miningSpeed": 5.5,
+    "attackDamage": 3.5,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Unleashes a razor-leaf forest storm.",
+    "lore": [
+        "Crafted from Cave Vines."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "forest_wrath",
+                "params": {
+                    "radius": 3
+                }
+            }
+        ]
+    }
+}

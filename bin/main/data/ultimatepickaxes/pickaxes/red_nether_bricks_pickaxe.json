@@ -1,0 +1,24 @@
+{
+    "id": "red_nether_bricks_pickaxe",
+    "displayName": "Red Nether Bricks Pickaxe",
+    "ingredient": "minecraft:red_nether_bricks",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Fires a focused beam of light.",
+    "lore": [
+        "Crafted from Red Nether Bricks."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "prism_beam",
+                "params": {
+                    "length": 6
+                }
+            }
+        ]
+    }
+}

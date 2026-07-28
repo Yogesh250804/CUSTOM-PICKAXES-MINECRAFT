@@ -1,21 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "pattern": [
-    "###",
-    " S ",
-    " S "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:sand"
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+        "###",
+        " S ",
+        " S "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:sand"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
     },
-    "S": {
-      "item": "minecraft:stick"
+    "result": {
+        "id": "ultimatepickaxes:sand_pickaxe",
+        "count": 1
     }
-  },
-  "result": {
-    "id": "ultimatepickaxes:sand_pickaxe",
-    "count": 1
-  }
 }

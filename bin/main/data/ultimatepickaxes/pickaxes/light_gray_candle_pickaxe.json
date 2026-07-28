@@ -1,0 +1,25 @@
+{
+    "id": "light_gray_candle_pickaxe",
+    "displayName": "Light Gray Candle Pickaxe",
+    "ingredient": "minecraft:light_gray_candle",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Drills deep into bedrock and stone.",
+    "lore": [
+        "Crafted from Light Gray Candle."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "deep_drill",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

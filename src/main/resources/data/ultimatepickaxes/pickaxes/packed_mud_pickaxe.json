@@ -1,0 +1,24 @@
+{
+    "id": "packed_mud_pickaxe",
+    "displayName": "Packed Mud Pickaxe",
+    "ingredient": "minecraft:packed_mud",
+    "durability": 500,
+    "miningSpeed": 6.0,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Places dirt blocks directly where you aim and right-click.",
+    "lore": [
+        "Crafted from Packed Mud."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "earth_wave",
+                "params": {
+                    "distance": 6
+                }
+            }
+        ]
+    }
+}

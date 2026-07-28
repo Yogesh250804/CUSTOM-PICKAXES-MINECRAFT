@@ -1,0 +1,24 @@
+{
+    "id": "sculk_catalyst_pickaxe",
+    "displayName": "Sculk Catalyst Pickaxe",
+    "ingredient": "minecraft:sculk_catalyst",
+    "durability": 5000,
+    "miningSpeed": 18.0,
+    "attackDamage": 14.0,
+    "rarity": "MYTHIC",
+    "cooldown": 0,
+    "tooltip": "Releases a 360-degree Sculk shockwave dealing massive damage.",
+    "lore": [
+        "Crafted from Sculk Catalyst."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "warden_nuke",
+                "params": {
+                    "damage": 40.0
+                }
+            }
+        ]
+    }
+}

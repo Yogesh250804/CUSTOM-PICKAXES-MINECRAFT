@@ -1,0 +1,25 @@
+{
+    "id": "crafter_west_crafting_pickaxe",
+    "displayName": "Crafter West Crafting Pickaxe",
+    "ingredient": "minecraft:crafter_west_crafting",
+    "durability": 500,
+    "miningSpeed": 6.5,
+    "attackDamage": 4.0,
+    "rarity": "COMMON",
+    "cooldown": 0,
+    "tooltip": "Grants special elemental power.",
+    "lore": [
+        "Crafted from Crafter West Crafting."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "item_magnet",
+                "params": {
+                    "radius": 3,
+                    "length": 8
+                }
+            }
+        ]
+    }
+}

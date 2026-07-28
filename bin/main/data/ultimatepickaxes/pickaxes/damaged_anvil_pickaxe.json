@@ -1,0 +1,24 @@
+{
+    "id": "damaged_anvil_pickaxe",
+    "displayName": "Damaged Anvil Pickaxe",
+    "ingredient": "minecraft:damaged_anvil",
+    "durability": 2000,
+    "miningSpeed": 10.0,
+    "attackDamage": 8.0,
+    "rarity": "RARE",
+    "cooldown": 0,
+    "tooltip": "Rains heavy anvils from the sky onto enemies.",
+    "lore": [
+        "Crafted from Damaged Anvil."
+    ],
+    "triggers": {
+        "ON_RIGHT_CLICK": [
+            {
+                "type": "anvil_rain",
+                "params": {
+                    "count": 6
+                }
+            }
+        ]
+    }
+}
