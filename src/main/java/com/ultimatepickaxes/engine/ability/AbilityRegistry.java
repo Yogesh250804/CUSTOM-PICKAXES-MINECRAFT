@@ -35,5 +35,7 @@ public class AbilityRegistry {
         register("plant_growth", new PlantGrowthAbility());
         register("sonic_boom", new SonicBoomAbility());
         register("ore_sense", new OreSenseAbility());
+        register("earth_wave", new EarthWaveAbility());
+        register("avalanche", new AvalancheAbility());
     }
 }

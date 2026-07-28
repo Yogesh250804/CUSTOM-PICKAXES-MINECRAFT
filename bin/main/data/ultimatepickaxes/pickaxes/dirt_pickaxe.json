@@ -6,20 +6,18 @@
   "miningSpeed": 4.0,
   "attackDamage": 1.5,
   "rarity": "COMMON",
-  "cooldown": 40,
+  "cooldown": 0,
   "tooltip": "Launches a rolling wave of earth blocks that flings mobs.",
   "triggers": {
     "onRightClick": [
       {
-        "ability": "push_entities",
+        "ability": "earth_wave",
         "effects": {
           "sound": "block.grass.place",
-          "particle": "minecraft:poof",
-          "hudMessage": "§2⚡ Earth Wave!"
+          "hudMessage": "§2⚡ Earth Wave Launched!"
         },
         "params": {
-          "radius": 6,
-          "force": 1.8
+          "distance": 10
         }
       }
     ]

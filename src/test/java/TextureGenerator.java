@@ -15,7 +15,7 @@ public class TextureGenerator {
         texturesDir.mkdirs();
 
         Map<String, Color[]> pickaxeColors = new HashMap<>();
-        // Original 30
+        // 50 Pickaxes
         pickaxeColors.put("dirt_pickaxe", new Color[]{new Color(134, 96, 67), new Color(87, 61, 38), new Color(175, 128, 91)});
         pickaxeColors.put("cobblestone_pickaxe", new Color[]{new Color(120, 120, 120), new Color(80, 80, 80), new Color(160, 160, 160)});
         pickaxeColors.put("tnt_pickaxe", new Color[]{new Color(219, 57, 43), new Color(168, 36, 24), new Color(245, 245, 245)});
@@ -46,8 +46,6 @@ public class TextureGenerator {
         pickaxeColors.put("prismarine_pickaxe", new Color[]{new Color(88, 163, 151), new Color(45, 100, 92), new Color(140, 210, 198)});
         pickaxeColors.put("end_stone_pickaxe", new Color[]{new Color(222, 224, 162), new Color(170, 172, 110), new Color(245, 247, 195)});
         pickaxeColors.put("shulker_pickaxe", new Color[]{new Color(151, 103, 153), new Color(95, 60, 97), new Color(195, 145, 198)});
-
-        // 20 NEW Pickaxes
         pickaxeColors.put("beacon_pickaxe", new Color[]{new Color(110, 225, 240), new Color(40, 140, 160), new Color(220, 255, 255)});
         pickaxeColors.put("bookshelf_pickaxe", new Color[]{new Color(160, 105, 55), new Color(100, 60, 30), new Color(210, 160, 90)});
         pickaxeColors.put("copper_pickaxe", new Color[]{new Color(195, 108, 77), new Color(135, 68, 45), new Color(235, 158, 127)});
@@ -78,60 +76,79 @@ public class TextureGenerator {
             BufferedImage img = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
             Graphics2D g = img.createGraphics();
 
-            Color stickColor = new Color(134, 96, 67);
+            // 1. EXACT VANILLA WOODEN STICK HANDLE (Untouched diagonal handle)
+            Color stickBase = new Color(134, 96, 67);
             Color stickDark = new Color(87, 61, 38);
 
-            // Handle Pixels
-            setPx(img, 2, 13, stickDark);
-            setPx(img, 3, 12, stickColor);
-            setPx(img, 4, 11, stickColor);
-            setPx(img, 5, 10, stickColor);
-            setPx(img, 6, 9, stickColor);
-            setPx(img, 7, 8, stickColor);
-            setPx(img, 8, 7, stickColor);
-            setPx(img, 9, 6, stickDark);
+            setPx(img, 2, 13, stickDark); setPx(img, 3, 14, stickDark);
+            setPx(img, 3, 12, stickBase); setPx(img, 4, 13, stickBase);
+            setPx(img, 4, 11, stickBase); setPx(img, 5, 12, stickBase);
+            setPx(img, 5, 10, stickBase); setPx(img, 6, 11, stickBase);
+            setPx(img, 6, 9, stickBase);  setPx(img, 7, 10, stickBase);
+            setPx(img, 7, 8, stickBase);  setPx(img, 8, 9, stickBase);
+            setPx(img, 8, 7, stickBase);  setPx(img, 9, 8, stickBase);
+            setPx(img, 9, 6, stickDark);  setPx(img, 10, 7, stickDark);
 
-            // Pickaxe Head
-            setPx(img, 6, 2, lightColor);
-            setPx(img, 7, 2, lightColor);
-            setPx(img, 8, 2, lightColor);
-            setPx(img, 9, 2, lightColor);
-            setPx(img, 10, 2, lightColor);
-            setPx(img, 11, 3, lightColor);
-            setPx(img, 12, 3, lightColor);
-            setPx(img, 13, 4, lightColor);
+            // 2. EXACT VANILLA PICKAXE HEAD SILHOUETTE (Only top head recolored per block material!)
+            // Highlight Arc (Top edge)
+            setPx(img, 6, 1, lightColor);
+            setPx(img, 7, 1, lightColor);
+            setPx(img, 8, 1, lightColor);
+            setPx(img, 9, 1, lightColor);
+            setPx(img, 10, 1, lightColor);
+            setPx(img, 11, 1, lightColor);
+            setPx(img, 12, 2, lightColor);
+            setPx(img, 13, 2, lightColor);
+            setPx(img, 14, 3, lightColor);
+            setPx(img, 5, 2, lightColor);
+            setPx(img, 4, 3, lightColor);
+            setPx(img, 3, 4, lightColor);
+            setPx(img, 2, 5, lightColor);
 
-            setPx(img, 5, 3, lightColor);
-            setPx(img, 4, 4, lightColor);
-            setPx(img, 3, 5, lightColor);
+            // Main Blade Body
+            setPx(img, 6, 2, mainColor);
+            setPx(img, 7, 2, mainColor);
+            setPx(img, 8, 2, mainColor);
+            setPx(img, 9, 2, mainColor);
+            setPx(img, 10, 2, mainColor);
+            setPx(img, 11, 2, mainColor);
 
+            setPx(img, 5, 3, mainColor);
             setPx(img, 6, 3, mainColor);
             setPx(img, 7, 3, mainColor);
             setPx(img, 8, 3, mainColor);
             setPx(img, 9, 3, mainColor);
             setPx(img, 10, 3, mainColor);
+            setPx(img, 11, 3, mainColor);
+            setPx(img, 12, 3, mainColor);
+            setPx(img, 13, 3, mainColor);
+
+            setPx(img, 4, 4, mainColor);
+            setPx(img, 5, 4, mainColor);
+            setPx(img, 6, 4, mainColor);
             setPx(img, 11, 4, mainColor);
             setPx(img, 12, 4, mainColor);
+            setPx(img, 13, 4, mainColor);
 
-            setPx(img, 5, 4, mainColor);
-            setPx(img, 4, 5, mainColor);
+            // Outer Blade Tips & Bottom Shadows
+            setPx(img, 3, 5, mainColor);
+            setPx(img, 4, 5, darkColor);
+            setPx(img, 2, 6, mainColor);
+            setPx(img, 3, 6, darkColor);
+            setPx(img, 1, 7, darkColor);
+            setPx(img, 2, 7, darkColor);
 
-            setPx(img, 2, 6, darkColor);
-            setPx(img, 3, 6, mainColor);
-            setPx(img, 3, 7, darkColor);
-            setPx(img, 4, 6, darkColor);
-
+            setPx(img, 12, 5, mainColor);
             setPx(img, 13, 5, darkColor);
             setPx(img, 13, 6, mainColor);
             setPx(img, 14, 6, darkColor);
-            setPx(img, 13, 7, darkColor);
+            setPx(img, 14, 7, darkColor);
+            setPx(img, 15, 7, darkColor);
 
             setPx(img, 7, 4, darkColor);
             setPx(img, 8, 4, darkColor);
             setPx(img, 9, 4, darkColor);
             setPx(img, 10, 4, darkColor);
-            setPx(img, 8, 5, darkColor);
-            setPx(img, 9, 5, darkColor);
 
             g.dispose();
 
@@ -149,7 +166,7 @@ public class TextureGenerator {
             }
         }
 
-        System.out.println("Generated 50 pixel-perfect pickaxe textures and handheld models successfully!");
+        System.out.println("Generated 50 authentic Vanilla pickaxe head textures successfully!");
     }
 
     private static void setPx(BufferedImage img, int x, int y, Color c) {
