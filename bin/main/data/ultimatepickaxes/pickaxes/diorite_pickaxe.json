@@ -1,0 +1,22 @@
+﻿{
+    "id":  "diorite_pickaxe",
+    "displayName":  "Diorite Pickaxe",
+    "ingredient":  "minecraft:diorite",
+    "durability":  450,
+    "miningSpeed":  6,
+    "attackDamage":  3,
+    "rarity":  "COMMON",
+    "cooldown":  40,
+    "tooltip":  "âš¡ Stone Spikes - Summons impaling stone pillars!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "count":  6,
+                                                             "damage":  8
+                                                         },
+                                              "ability":  "stone_spike"
+                                          }
+                                      ]
+                 }
+}

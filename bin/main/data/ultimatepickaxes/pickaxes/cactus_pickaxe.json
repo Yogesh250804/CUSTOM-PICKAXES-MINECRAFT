@@ -1,0 +1,22 @@
+﻿{
+    "id":  "cactus_pickaxe",
+    "displayName":  "Cactus Pickaxe",
+    "ingredient":  "minecraft:cactus",
+    "durability":  350,
+    "miningSpeed":  5.5,
+    "attackDamage":  3.5,
+    "rarity":  "COMMON",
+    "cooldown":  30,
+    "tooltip":  "âš¡ Cactus Thorns - Shoots cactus spines dealing thorns damage!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "damage":  8,
+                                                             "radius":  6
+                                                         },
+                                              "ability":  "thorns"
+                                          }
+                                      ]
+                 }
+}

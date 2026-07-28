@@ -1,31 +1,24 @@
-{
-  "id": "emerald_pickaxe",
-  "displayName": "Emerald Wealth Pickaxe",
-  "ingredient": "minecraft:emerald_block",
-  "durability": 2000,
-  "miningSpeed": 13.0,
-  "attackDamage": 6.0,
-  "rarity": "LEGENDARY",
-  "cooldown": 100,
-  "tooltip": "Emits an aura of wealth and grants Hero of the Village discount!",
-  "lore": [
-    "§aDeep emerald shine loved by villager merchants."
-  ],
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "status_effect",
-        "effects": {
-          "sound": "entity.villager.yes",
-          "particle": "minecraft:happy_villager",
-          "hudMessage": "§a💚 Hero of the Village Aura Active!"
-        },
-        "params": {
-          "effectId": "minecraft:hero_of_the_village",
-          "duration": 300,
-          "amplifier": 1
-        }
-      }
-    ]
-  }
+﻿{
+    "id":  "emerald_pickaxe",
+    "displayName":  "Emerald Wealth Pickaxe",
+    "ingredient":  "minecraft:emerald_block",
+    "durability":  2000,
+    "miningSpeed":  13.0,
+    "attackDamage":  6.0,
+    "rarity":  "LEGENDARY",
+    "cooldown":  100,
+    "tooltip":  "âš¡ Wealth Explosion - Drops emeralds/gold + Hero of Village!",
+    "lore":  [
+                 "Â§aDeep emerald shine loved by villager merchants."
+             ],
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+
+                                                         },
+                                              "ability":  "wealth_explosion"
+                                          }
+                                      ]
+                 }
 }

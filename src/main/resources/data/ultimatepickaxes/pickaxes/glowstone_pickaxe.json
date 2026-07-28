@@ -1,28 +1,25 @@
-{
-  "id": "glowstone_pickaxe",
-  "displayName": "Glowstone Pickaxe",
-  "ingredient": "minecraft:glowstone",
-  "durability": 600,
-  "miningSpeed": 8.0,
-  "attackDamage": 3.0,
-  "rarity": "UNCOMMON",
-  "cooldown": 50,
-  "tooltip": "Illuminates hidden underground ores through solid rock!",
-  "lore": [
-    "§eRadiates luminous Nether light."
-  ],
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "ore_sense",
-        "effects": {
-          "sound": "block.glowstone.step",
-          "hudMessage": "§e✨ Nearby Hidden Ores Highlighted!"
-        },
-        "params": {
-          "radius": 10
-        }
-      }
-    ]
-  }
+﻿{
+    "id":  "glowstone_pickaxe",
+    "displayName":  "Glowstone Pickaxe",
+    "ingredient":  "minecraft:glowstone",
+    "durability":  600,
+    "miningSpeed":  8.0,
+    "attackDamage":  3.0,
+    "rarity":  "UNCOMMON",
+    "cooldown":  50,
+    "tooltip":  "âš¡ Supernova Flash - Blinding light explosion!",
+    "lore":  [
+                 "Â§eRadiates luminous Nether light."
+             ],
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "duration":  160,
+                                                             "radius":  15
+                                                         },
+                                              "ability":  "supernova"
+                                          }
+                                      ]
+                 }
 }

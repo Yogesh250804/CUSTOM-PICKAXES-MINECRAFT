@@ -1,0 +1,21 @@
+﻿{
+    "id":  "mycelium_pickaxe",
+    "displayName":  "Mycelium Pickaxe",
+    "ingredient":  "minecraft:mycelium",
+    "durability":  400,
+    "miningSpeed":  5.5,
+    "attackDamage":  2.5,
+    "rarity":  "COMMON",
+    "cooldown":  35,
+    "tooltip":  "âš¡ Fungal Bloom - Spreads mycelium \u0026 poisonous spores!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "radius":  8
+                                                         },
+                                              "ability":  "fungal_bloom"
+                                          }
+                                      ]
+                 }
+}

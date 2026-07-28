@@ -1,0 +1,22 @@
+﻿{
+    "id":  "calcite_pickaxe",
+    "displayName":  "Calcite Pickaxe",
+    "ingredient":  "minecraft:calcite",
+    "durability":  500,
+    "miningSpeed":  6.5,
+    "attackDamage":  3.5,
+    "rarity":  "COMMON",
+    "cooldown":  40,
+    "tooltip":  "âš¡ Shield Dome - Constructs protective crystal dome!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "material":  "minecraft:calcite",
+                                                             "radius":  4
+                                                         },
+                                              "ability":  "shield_dome"
+                                          }
+                                      ]
+                 }
+}

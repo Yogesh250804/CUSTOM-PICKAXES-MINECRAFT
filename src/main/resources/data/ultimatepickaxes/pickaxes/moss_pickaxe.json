@@ -1,25 +1,22 @@
-{
-  "id": "moss_pickaxe",
-  "displayName": "Moss Pickaxe",
-  "ingredient": "minecraft:moss_block",
-  "durability": 500,
-  "miningSpeed": 6.0,
-  "attackDamage": 2.5,
-  "rarity": "COMMON",
-  "cooldown": 30,
-  "tooltip": "Spawns a lush wave of foliage trapping enemies and boosting nature.",
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "plant_growth",
-        "effects": {
-          "sound": "block.moss.place",
-          "hudMessage": "§2🌿 Nature Overgrowth!"
-        },
-        "params": {
-          "radius": 5
-        }
-      }
-    ]
-  }
+﻿{
+    "id":  "moss_pickaxe",
+    "displayName":  "Moss Pickaxe",
+    "ingredient":  "minecraft:moss_block",
+    "durability":  500,
+    "miningSpeed":  6.0,
+    "attackDamage":  2.5,
+    "rarity":  "COMMON",
+    "cooldown":  30,
+    "tooltip":  "âš¡ Root Snare - Entangles enemies in vine roots!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "duration":  100,
+                                                             "radius":  6
+                                                         },
+                                              "ability":  "root_snare"
+                                          }
+                                      ]
+                 }
 }

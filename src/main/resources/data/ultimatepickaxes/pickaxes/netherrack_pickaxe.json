@@ -1,0 +1,21 @@
+﻿{
+    "id":  "netherrack_pickaxe",
+    "displayName":  "Netherrack Pickaxe",
+    "ingredient":  "minecraft:netherrack",
+    "durability":  400,
+    "miningSpeed":  8,
+    "attackDamage":  3,
+    "rarity":  "COMMON",
+    "cooldown":  30,
+    "tooltip":  "âš¡ Nether Trail - Leaves fire trail and grants fire res!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "radius":  3
+                                                         },
+                                              "ability":  "fire_trail"
+                                          }
+                                      ]
+                 }
+}

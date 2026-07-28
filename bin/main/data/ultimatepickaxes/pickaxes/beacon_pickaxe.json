@@ -1,28 +1,21 @@
-{
-  "id": "beacon_pickaxe",
-  "displayName": "Beacon Pickaxe",
-  "ingredient": "minecraft:beacon",
-  "durability": 5000,
-  "miningSpeed": 25.0,
-  "attackDamage": 10.0,
-  "rarity": "DIVINE",
-  "cooldown": 120,
-  "tooltip": "Summons a celestial orbital beam vaporizing everything in front.",
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "sonic_boom",
-        "effects": {
-          "sound": "block.beacon.activate",
-          "particle": "minecraft:end_rod",
-          "screenShake": { "intensity": 1.5, "duration": 30 },
-          "hudMessage": "§b💎 Orbital Laser Beam Fired!"
-        },
-        "params": {
-          "range": 24.0,
-          "damage": 20.0
-        }
-      }
-    ]
-  }
+﻿{
+    "id":  "beacon_pickaxe",
+    "displayName":  "Beacon Pickaxe",
+    "ingredient":  "minecraft:beacon",
+    "durability":  5000,
+    "miningSpeed":  25.0,
+    "attackDamage":  10.0,
+    "rarity":  "DIVINE",
+    "cooldown":  120,
+    "tooltip":  "âš¡ Orbital Laser - Beam of light from the sky!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "damage":  25
+                                                         },
+                                              "ability":  "orbital_laser"
+                                          }
+                                      ]
+                 }
 }

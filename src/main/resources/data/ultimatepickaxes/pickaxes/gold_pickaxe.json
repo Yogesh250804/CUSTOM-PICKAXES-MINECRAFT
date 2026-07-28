@@ -1,27 +1,21 @@
-{
-  "id": "gold_pickaxe",
-  "displayName": "Golden Pickaxe",
-  "ingredient": "minecraft:gold_block",
-  "durability": 600,
-  "miningSpeed": 18.0,
-  "attackDamage": 3.0,
-  "rarity": "UNCOMMON",
-  "cooldown": 50,
-  "tooltip": "Strikes targets with golden energy causing bonus particle bursts.",
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "push_entities",
-        "effects": {
-          "sound": "entity.experience_orb.pickup",
-          "particle": "minecraft:glow",
-          "hudMessage": "§e✨ Midas Touch!"
-        },
-        "params": {
-          "radius": 8,
-          "force": 2.0
-        }
-      }
-    ]
-  }
+﻿{
+    "id":  "gold_pickaxe",
+    "displayName":  "Golden Pickaxe",
+    "ingredient":  "minecraft:gold_block",
+    "durability":  600,
+    "miningSpeed":  18.0,
+    "attackDamage":  3.0,
+    "rarity":  "UNCOMMON",
+    "cooldown":  50,
+    "tooltip":  "âš¡ Midas Touch - Converts surrounding blocks to solid gold!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "radius":  2
+                                                         },
+                                              "ability":  "midas"
+                                          }
+                                      ]
+                 }
 }

@@ -1,30 +1,24 @@
-{
-  "id": "cake_pickaxe",
-  "displayName": "Cake Pickaxe",
-  "ingredient": "minecraft:cake",
-  "durability": 350,
-  "miningSpeed": 5.5,
-  "attackDamage": 2.0,
-  "rarity": "UNCOMMON",
-  "cooldown": 40,
-  "tooltip": "Delicious sweet tool that fills your hunger bar completely!",
-  "lore": [
-    "§dThe cake is NOT a lie!"
-  ],
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "status_effect",
-        "effects": {
-          "sound": "entity.generic.eat",
-          "hudMessage": "§d🍰 Sweet Cake Feast!"
-        },
-        "params": {
-          "effectId": "minecraft:saturation",
-          "duration": 40,
-          "amplifier": 4
-        }
-      }
-    ]
-  }
+﻿{
+    "id":  "cake_pickaxe",
+    "displayName":  "Cake Pickaxe",
+    "ingredient":  "minecraft:cake",
+    "durability":  350,
+    "miningSpeed":  5.5,
+    "attackDamage":  2.0,
+    "rarity":  "UNCOMMON",
+    "cooldown":  40,
+    "tooltip":  "âš¡ Sugar Rush - Speed V, Haste IV, Jump Boost III!",
+    "lore":  [
+                 "Â§dThe cake is NOT a lie!"
+             ],
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "duration":  160
+                                                         },
+                                              "ability":  "sugar_rush"
+                                          }
+                                      ]
+                 }
 }

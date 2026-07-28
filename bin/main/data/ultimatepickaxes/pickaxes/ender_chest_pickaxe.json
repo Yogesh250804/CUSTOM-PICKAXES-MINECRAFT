@@ -1,27 +1,21 @@
-{
-  "id": "ender_chest_pickaxe",
-  "displayName": "Ender Chest Pickaxe",
-  "ingredient": "minecraft:ender_chest",
-  "durability": 3000,
-  "miningSpeed": 14.0,
-  "attackDamage": 7.0,
-  "rarity": "EPIC",
-  "cooldown": 60,
-  "tooltip": "Opens an ethereal pocket dimension vacuuming items and teleporting player.",
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "item_magnet",
-        "effects": {
-          "sound": "block.ender_chest.open",
-          "particle": "minecraft:portal",
-          "hudMessage": "§5🔮 Void Stash Vacuumed Items!"
-        },
-        "params": {
-          "radius": 16,
-          "pullForce": 1.5
-        }
-      }
-    ]
-  }
+﻿{
+    "id":  "ender_chest_pickaxe",
+    "displayName":  "Ender Chest Pickaxe",
+    "ingredient":  "minecraft:ender_chest",
+    "durability":  3000,
+    "miningSpeed":  14.0,
+    "attackDamage":  7.0,
+    "rarity":  "EPIC",
+    "cooldown":  60,
+    "tooltip":  "âš¡ Void Storage - Opens void stash to Ender Chest!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+
+                                                         },
+                                              "ability":  "void_storage"
+                                          }
+                                      ]
+                 }
 }

@@ -1,0 +1,22 @@
+﻿{
+    "id":  "blue_ice_pickaxe",
+    "displayName":  "Blue Ice Pickaxe",
+    "ingredient":  "minecraft:blue_ice",
+    "durability":  800,
+    "miningSpeed":  8,
+    "attackDamage":  4.5,
+    "rarity":  "RARE",
+    "cooldown":  50,
+    "tooltip":  "âš¡ Absolute Zero - Freezes mobs inside solid ice!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "duration":  160,
+                                                             "radius":  8
+                                                         },
+                                              "ability":  "encase_in_ice"
+                                          }
+                                      ]
+                 }
+}

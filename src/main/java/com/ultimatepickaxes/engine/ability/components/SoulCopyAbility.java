@@ -1,0 +1,39 @@
+package com.ultimatepickaxes.engine.ability.components;
+
+import com.google.gson.JsonObject;
+import com.ultimatepickaxes.engine.ability.AbilityComponent;
+import com.ultimatepickaxes.engine.ability.AbilityContext;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
+
+public class SoulCopyAbility implements AbilityComponent {
+
+    @Override
+    public boolean execute(JsonObject params, AbilityContext context) {
+        if (!(context.getWorld() instanceof ServerWorld world) || context.getPlayer() == null) {
+            return false;
+        }
+
+        int radius = params.has("radius") ? params.get("radius").getAsInt() : 10;
+        float damage = params.has("damage") ? params.get("damage").getAsFloat() : 18.0f;
+
+        BlockPos center = context.getPlayer().getBlockPos();
+        world.playSound(null, center, SoundEvents.PARTICLE_SOUL_ESCAPE.value(), SoundCategory.PLAYERS, 2.0f, 0.8f);
+        world.spawnParticles(ParticleTypes.SOUL_FIRE_FLAME, center.getX() + 0.5, center.getY() + 1, center.getZ() + 0.5, 60, radius / 2.0, 1.0, radius / 2.0, 0.1);
+
+        Box area = new Box(center).expand(radius);
+        for (LivingEntity entity : world.getEntitiesByClass(LivingEntity.class, area, e -> e != context.getPlayer())) {
+            entity.damage(world.getDamageSources().wither(), damage);
+            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 160, 2, false, true));
+            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 160, 0, false, true));
+        }
+        return true;
+    }
+}

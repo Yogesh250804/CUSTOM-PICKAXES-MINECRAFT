@@ -1,26 +1,21 @@
-{
-  "id": "wool_pickaxe",
-  "displayName": "Wool Pickaxe",
-  "ingredient": "minecraft:white_wool",
-  "durability": 300,
-  "miningSpeed": 4.0,
-  "attackDamage": 1.5,
-  "rarity": "COMMON",
-  "cooldown": 30,
-  "tooltip": "Negates all fall damage and creates a soft bounce cushion.",
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "launch_player",
-        "effects": {
-          "sound": "block.wool.place",
-          "hudMessage": "§f☁️ Cushion Cushion Bounce!"
-        },
-        "params": {
-          "upwardForce": 1.1,
-          "forwardForce": 0.4
-        }
-      }
-    ]
-  }
+﻿{
+    "id":  "wool_pickaxe",
+    "displayName":  "Wool Pickaxe",
+    "ingredient":  "minecraft:white_wool",
+    "durability":  300,
+    "miningSpeed":  4.0,
+    "attackDamage":  1.5,
+    "rarity":  "COMMON",
+    "cooldown":  30,
+    "tooltip":  "âš¡ Cloud Walk - Creates floating wool platforms underfoot!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "radius":  3
+                                                         },
+                                              "ability":  "cloud_walk"
+                                          }
+                                      ]
+                 }
 }

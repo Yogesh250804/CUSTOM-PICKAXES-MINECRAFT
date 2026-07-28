@@ -1,30 +1,25 @@
-{
-  "id": "shulker_pickaxe",
-  "displayName": "Shulker Box Pickaxe",
-  "ingredient": "minecraft:shulker_box",
-  "durability": 2200,
-  "miningSpeed": 12.5,
-  "attackDamage": 6.5,
-  "rarity": "EPIC",
-  "cooldown": 60,
-  "tooltip": "Repels enemies and floats surrounding hostiles into the air!",
-  "lore": [
-    "§5Crafted from sturdy purple shulker shells."
-  ],
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "push_entities",
-        "effects": {
-          "sound": "entity.shulker.open",
-          "particle": "minecraft:witch",
-          "hudMessage": "§5🔮 Shulker Levitation Blast!"
-        },
-        "params": {
-          "radius": 8,
-          "force": 2.5
-        }
-      }
-    ]
-  }
+﻿{
+    "id":  "shulker_pickaxe",
+    "displayName":  "Shulker Box Pickaxe",
+    "ingredient":  "minecraft:shulker_box",
+    "durability":  2200,
+    "miningSpeed":  12.5,
+    "attackDamage":  6.5,
+    "rarity":  "EPIC",
+    "cooldown":  60,
+    "tooltip":  "âš¡ Gravity Well - Black hole sucking entities inward!",
+    "lore":  [
+                 "Â§5Crafted from sturdy purple shulker shells."
+             ],
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "damage":  12,
+                                                             "radius":  10
+                                                         },
+                                              "ability":  "gravity_well"
+                                          }
+                                      ]
+                 }
 }

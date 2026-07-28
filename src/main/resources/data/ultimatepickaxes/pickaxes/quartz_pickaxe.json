@@ -1,27 +1,22 @@
-{
-  "id": "quartz_pickaxe",
-  "displayName": "Quartz Pickaxe",
-  "ingredient": "minecraft:quartz_block",
-  "durability": 1000,
-  "miningSpeed": 11.0,
-  "attackDamage": 5.0,
-  "rarity": "UNCOMMON",
-  "cooldown": 40,
-  "tooltip": "Reflects brilliant Nether quartz light blinding mobs and dealing holy fire damage.",
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "burn",
-        "effects": {
-          "sound": "block.glass.place",
-          "particle": "minecraft:end_rod",
-          "hudMessage": "§f☀️ Solar Flash Burst!"
-        },
-        "params": {
-          "radius": 6,
-          "duration": 4
-        }
-      }
-    ]
-  }
+﻿{
+    "id":  "quartz_pickaxe",
+    "displayName":  "Quartz Pickaxe",
+    "ingredient":  "minecraft:quartz_block",
+    "durability":  1000,
+    "miningSpeed":  11.0,
+    "attackDamage":  5.0,
+    "rarity":  "UNCOMMON",
+    "cooldown":  40,
+    "tooltip":  "âš¡ Solar Beam - Fires intense beam burning blocks and mobs!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "range":  20,
+                                                             "damage":  12
+                                                         },
+                                              "ability":  "solar_beam"
+                                          }
+                                      ]
+                 }
 }

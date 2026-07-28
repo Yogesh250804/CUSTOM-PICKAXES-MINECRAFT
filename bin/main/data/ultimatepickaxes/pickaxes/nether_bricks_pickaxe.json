@@ -1,0 +1,21 @@
+﻿{
+    "id":  "nether_bricks_pickaxe",
+    "displayName":  "Nether Bricks Pickaxe",
+    "ingredient":  "minecraft:nether_bricks",
+    "durability":  650,
+    "miningSpeed":  7,
+    "attackDamage":  4,
+    "rarity":  "UNCOMMON",
+    "cooldown":  35,
+    "tooltip":  "âš¡ Blaze Volley - Shoots 5 blaze fireballs!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "count":  5
+                                                         },
+                                              "ability":  "blaze_volley"
+                                          }
+                                      ]
+                 }
+}

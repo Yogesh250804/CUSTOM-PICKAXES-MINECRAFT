@@ -1,0 +1,22 @@
+﻿{
+    "id":  "clay_pickaxe",
+    "displayName":  "Clay Pickaxe",
+    "ingredient":  "minecraft:clay",
+    "durability":  300,
+    "miningSpeed":  5,
+    "attackDamage":  2,
+    "rarity":  "COMMON",
+    "cooldown":  30,
+    "tooltip":  "âš¡ Mud Trap - Sinks and slows enemies in mud!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "duration":  100,
+                                                             "radius":  5
+                                                         },
+                                              "ability":  "mud_trap"
+                                          }
+                                      ]
+                 }
+}

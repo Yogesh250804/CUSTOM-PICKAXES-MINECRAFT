@@ -1,27 +1,21 @@
-{
-  "id": "wood_pickaxe",
-  "displayName": "Wooden Pickaxe",
-  "ingredient": "minecraft:oak_log",
-  "durability": 200,
-  "miningSpeed": 3.5,
-  "attackDamage": 1.5,
-  "rarity": "COMMON",
-  "cooldown": 40,
-  "tooltip": "Spawns wooden log barricades that launch forward.",
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "bridge",
-        "effects": {
-          "sound": "block.wood.place",
-          "hudMessage": "§6🪵 Timber Strike!"
-        },
-        "params": {
-          "material": "minecraft:oak_log",
-          "width": 3,
-          "length": 4
-        }
-      }
-    ]
-  }
+﻿{
+    "id":  "wood_pickaxe",
+    "displayName":  "Wooden Pickaxe",
+    "ingredient":  "minecraft:oak_log",
+    "durability":  200,
+    "miningSpeed":  3.5,
+    "attackDamage":  1.5,
+    "rarity":  "COMMON",
+    "cooldown":  40,
+    "tooltip":  "âš¡ Timber Strike - Instantly breaks entire connected tree!",
+    "triggers":  {
+                     "onMine":  [
+                                    {
+                                        "params":  {
+                                                       "maxBlocks":  128
+                                                   },
+                                        "ability":  "timber"
+                                    }
+                                ]
+                 }
 }

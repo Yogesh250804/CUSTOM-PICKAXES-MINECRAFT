@@ -1,28 +1,21 @@
-{
-  "id": "netherite_pickaxe",
-  "displayName": "Netherite Pickaxe",
-  "ingredient": "minecraft:netherite_block",
-  "durability": 4500,
-  "miningSpeed": 20.0,
-  "attackDamage": 10.0,
-  "rarity": "MYTHIC",
-  "cooldown": 100,
-  "tooltip": "Summons a fiery nether meteor crashing down from the sky.",
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "explosion",
-        "effects": {
-          "sound": "entity.dragon_fireball.explode",
-          "particle": "minecraft:flame",
-          "screenShake": { "intensity": 1.2, "duration": 25 },
-          "hudMessage": "§4☄️ Meteor Strike!"
-        },
-        "params": {
-          "power": 5.0,
-          "launchProjectile": true
-        }
-      }
-    ]
-  }
+﻿{
+    "id":  "netherite_pickaxe",
+    "displayName":  "Netherite Pickaxe",
+    "ingredient":  "minecraft:netherite_block",
+    "durability":  4500,
+    "miningSpeed":  20.0,
+    "attackDamage":  10.0,
+    "rarity":  "MYTHIC",
+    "cooldown":  100,
+    "tooltip":  "âš¡ Meteor Strike - Summons fireballs from the sky!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "count":  3
+                                                         },
+                                              "ability":  "meteor_strike"
+                                          }
+                                      ]
+                 }
 }

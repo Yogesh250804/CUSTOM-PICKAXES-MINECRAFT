@@ -1,0 +1,22 @@
+﻿{
+    "id":  "granite_pickaxe",
+    "displayName":  "Granite Pickaxe",
+    "ingredient":  "minecraft:granite",
+    "durability":  450,
+    "miningSpeed":  6,
+    "attackDamage":  3,
+    "rarity":  "COMMON",
+    "cooldown":  40,
+    "tooltip":  "âš¡ Tectonic Slam - Creates ground fissures!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "damage":  10,
+                                                             "length":  10
+                                                         },
+                                              "ability":  "tectonic_slam"
+                                          }
+                                      ]
+                 }
+}

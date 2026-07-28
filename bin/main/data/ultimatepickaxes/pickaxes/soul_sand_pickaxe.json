@@ -1,26 +1,23 @@
-{
-  "id": "soul_sand_pickaxe",
-  "displayName": "Soul Sand Pickaxe",
-  "ingredient": "minecraft:soul_sand",
-  "durability": 700,
-  "miningSpeed": 6.5,
-  "attackDamage": 3.0,
-  "rarity": "UNCOMMON",
-  "cooldown": 40,
-  "tooltip": "Summons soul sand hands from the ground dragging hostiles down.",
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "freeze",
-        "effects": {
-          "sound": "particle.soul_escape",
-          "hudMessage": "§8👻 Soul Drag Dragged Enemies!"
-        },
-        "params": {
-          "radius": 6,
-          "duration": 100
-        }
-      }
-    ]
-  }
+﻿{
+    "id":  "soul_sand_pickaxe",
+    "displayName":  "Soul Sand Pickaxe",
+    "ingredient":  "minecraft:soul_sand",
+    "durability":  700,
+    "miningSpeed":  6.5,
+    "attackDamage":  3.0,
+    "rarity":  "UNCOMMON",
+    "cooldown":  40,
+    "tooltip":  "âš¡ Soul Drain - Drains life force from mobs to heal you!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "radius":  6,
+                                                             "heal":  4,
+                                                             "damage":  8
+                                                         },
+                                              "ability":  "soul_drain"
+                                          }
+                                      ]
+                 }
 }

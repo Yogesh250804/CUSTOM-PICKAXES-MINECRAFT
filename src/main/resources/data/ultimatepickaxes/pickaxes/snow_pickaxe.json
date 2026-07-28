@@ -1,0 +1,22 @@
+﻿{
+    "id":  "snow_pickaxe",
+    "displayName":  "Snow Pickaxe",
+    "ingredient":  "minecraft:snow_block",
+    "durability":  250,
+    "miningSpeed":  5,
+    "attackDamage":  2,
+    "rarity":  "COMMON",
+    "cooldown":  30,
+    "tooltip":  "âš¡ Blizzard - Creates snowstorm that blinds and freezes!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "duration":  100,
+                                                             "radius":  10
+                                                         },
+                                              "ability":  "blizzard"
+                                          }
+                                      ]
+                 }
+}

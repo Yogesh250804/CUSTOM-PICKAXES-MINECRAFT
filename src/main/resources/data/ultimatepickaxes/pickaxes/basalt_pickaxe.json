@@ -1,0 +1,21 @@
+﻿{
+    "id":  "basalt_pickaxe",
+    "displayName":  "Basalt Pickaxe",
+    "ingredient":  "minecraft:basalt",
+    "durability":  600,
+    "miningSpeed":  7,
+    "attackDamage":  3.5,
+    "rarity":  "UNCOMMON",
+    "cooldown":  40,
+    "tooltip":  "âš¡ Basalt Pillar - Shoots up basalt columns under target!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "height":  8
+                                                         },
+                                              "ability":  "basalt_pillar"
+                                          }
+                                      ]
+                 }
+}

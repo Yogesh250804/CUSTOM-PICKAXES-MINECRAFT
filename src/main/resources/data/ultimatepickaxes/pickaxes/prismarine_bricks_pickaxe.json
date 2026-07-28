@@ -1,25 +1,22 @@
-{
-  "id": "prismarine_bricks_pickaxe",
-  "displayName": "Prismarine Bricks Pickaxe",
-  "ingredient": "minecraft:prismarine_bricks",
-  "durability": 1800,
-  "miningSpeed": 12.0,
-  "attackDamage": 6.0,
-  "rarity": "RARE",
-  "cooldown": 60,
-  "tooltip": "Clears water in an 8x8 radius while boosting aquatic movement speed.",
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "freeze",
-        "effects": {
-          "sound": "ambient.underwater.exit",
-          "hudMessage": "§3🌊 Ocean Trench Cleared!"
-        },
-        "params": {
-          "radius": 8
-        }
-      }
-    ]
-  }
+﻿{
+    "id":  "prismarine_bricks_pickaxe",
+    "displayName":  "Prismarine Bricks Pickaxe",
+    "ingredient":  "minecraft:prismarine_bricks",
+    "durability":  1800,
+    "miningSpeed":  12.0,
+    "attackDamage":  6.0,
+    "rarity":  "RARE",
+    "cooldown":  60,
+    "tooltip":  "âš¡ Guardian Beam - Fires guardian laser beam attack!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "range":  18,
+                                                             "damage":  14
+                                                         },
+                                              "ability":  "guardian_beam"
+                                          }
+                                      ]
+                 }
 }

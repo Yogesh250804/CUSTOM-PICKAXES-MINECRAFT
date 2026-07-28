@@ -1,27 +1,22 @@
-{
-  "id": "crying_obsidian_pickaxe",
-  "displayName": "Crying Obsidian Pickaxe",
-  "ingredient": "minecraft:crying_obsidian",
-  "durability": 3500,
-  "miningSpeed": 15.0,
-  "attackDamage": 8.5,
-  "rarity": "EPIC",
-  "cooldown": 70,
-  "tooltip": "Tears open a purple vortex draining life from nearby enemies.",
-  "triggers": {
-    "onRightClick": [
-      {
-        "ability": "burn",
-        "effects": {
-          "sound": "block.respawn_anchor.charge",
-          "particle": "minecraft:witch",
-          "hudMessage": "§5🔮 Soul Tear Vortex!"
-        },
-        "params": {
-          "radius": 7,
-          "duration": 6
-        }
-      }
-    ]
-  }
+﻿{
+    "id":  "crying_obsidian_pickaxe",
+    "displayName":  "Crying Obsidian Pickaxe",
+    "ingredient":  "minecraft:crying_obsidian",
+    "durability":  3500,
+    "miningSpeed":  15.0,
+    "attackDamage":  8.5,
+    "rarity":  "EPIC",
+    "cooldown":  70,
+    "tooltip":  "âš¡ Soul Tear - Rips souls from nearby mobs!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "damage":  18,
+                                                             "radius":  10
+                                                         },
+                                              "ability":  "soul_copy"
+                                          }
+                                      ]
+                 }
 }

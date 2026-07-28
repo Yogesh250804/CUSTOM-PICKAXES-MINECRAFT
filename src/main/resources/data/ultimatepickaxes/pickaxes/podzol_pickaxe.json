@@ -1,0 +1,21 @@
+﻿{
+    "id":  "podzol_pickaxe",
+    "displayName":  "Podzol Pickaxe",
+    "ingredient":  "minecraft:podzol",
+    "durability":  400,
+    "miningSpeed":  5.5,
+    "attackDamage":  2.5,
+    "rarity":  "COMMON",
+    "cooldown":  35,
+    "tooltip":  "âš¡ Forest Wrath - Grows giant mushrooms \u0026 spore clouds!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "radius":  6
+                                                         },
+                                              "ability":  "forest_wrath"
+                                          }
+                                      ]
+                 }
+}

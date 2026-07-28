@@ -1,0 +1,6 @@
+﻿{
+    "parent":  "minecraft:item/handheld",
+    "textures":  {
+                     "layer0":  "ultimatepickaxes:item/nether_bricks_pickaxe"
+                 }
+}

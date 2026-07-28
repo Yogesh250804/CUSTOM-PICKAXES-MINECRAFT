@@ -1,0 +1,23 @@
+﻿{
+    "id":  "andesite_pickaxe",
+    "displayName":  "Andesite Pickaxe",
+    "ingredient":  "minecraft:andesite",
+    "durability":  450,
+    "miningSpeed":  6,
+    "attackDamage":  3,
+    "rarity":  "COMMON",
+    "cooldown":  40,
+    "tooltip":  "âš¡ Petrify - Encases mobs in stone then shatters!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "radius":  8,
+                                                             "duration":  120,
+                                                             "shatterDamage":  15
+                                                         },
+                                              "ability":  "petrify"
+                                          }
+                                      ]
+                 }
+}

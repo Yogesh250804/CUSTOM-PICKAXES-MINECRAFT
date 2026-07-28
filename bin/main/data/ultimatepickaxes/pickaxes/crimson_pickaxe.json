@@ -1,0 +1,21 @@
+﻿{
+    "id":  "crimson_pickaxe",
+    "displayName":  "Crimson Pickaxe",
+    "ingredient":  "minecraft:crimson_hyphae",
+    "durability":  600,
+    "miningSpeed":  7,
+    "attackDamage":  4,
+    "rarity":  "UNCOMMON",
+    "cooldown":  50,
+    "tooltip":  "âš¡ Blood Rage - Strength, Regen, and Resistance mode!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "duration":  200
+                                                         },
+                                              "ability":  "lifesteal"
+                                          }
+                                      ]
+                 }
+}

@@ -1,0 +1,22 @@
+﻿{
+    "id":  "dripstone_pickaxe",
+    "displayName":  "Dripstone Pickaxe",
+    "ingredient":  "minecraft:pointed_dripstone",
+    "durability":  400,
+    "miningSpeed":  6,
+    "attackDamage":  4.5,
+    "rarity":  "COMMON",
+    "cooldown":  30,
+    "tooltip":  "âš¡ Stalactite Rain - Rains pointed dripstone spears!",
+    "triggers":  {
+                     "onRightClick":  [
+                                          {
+                                              "params":  {
+                                                             "count":  15,
+                                                             "damage":  8
+                                                         },
+                                              "ability":  "stalactite_rain"
+                                          }
+                                      ]
+                 }
+}
