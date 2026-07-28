@@ -22,6 +22,7 @@ public class UltimatePickaxes implements ModInitializer {
 
         // 1. Initialize Parametric Ability Component Engine
         AbilityRegistry.init();
+        com.ultimatepickaxes.engine.ability.components.UndeadAllyProtectionHandler.init();
 
         // 2. Initialize Custom Enchantments
         EnchantmentRegistry.init();
